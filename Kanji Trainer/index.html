@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset="UTF-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <link href="css\bootstrap.css" rel="stylesheet">
+	  <script src="js\jquery.js"></script>
+	  <script src="js\bootstrap.js"></script>
+	  <style type="text/css">* { cursor: url('img/cursor.cur'), auto; }</style>
+	<script>
+		$(document).ready(function(){
+			$("#nav-placeholder").load("nav.html", function(){
+				$("#menuIndex").addClass("active");
+			});
+			if(!sessionStorage.useVoice || sessionStorage.useVoice === "")
+			{
+				sessionStorage.useVoice = false;
+			}
+			if(!sessionStorage.totalPerSession || sessionStorage.totalPerSession === "")
+			{
+				sessionStorage.totalPerSession = "50";
+			}
+			if(!sessionStorage.minIndex || sessionStorage.minIndex === "")
+			{
+				sessionStorage.minIndex = "0";
+			}
+			if(!sessionStorage.maxIndex || sessionStorage.maxIndex === "")
+			{
+				sessionStorage.maxIndex = "50";
+			}
+			if(!sessionStorage.level || sessionStorage.level === "")
+			{
+				sessionStorage.level = "ANY";
+			}
+		});
+	</script>
+	</head>
+	<body class="d-flex flex-column bg-dark">
+	  <div id="nav-placeholder"></div>
+	  <div class="flex-grow-1 d-flex" oncontextmenu="return false;">
+		<div class="flex-grow-1 overflow-auto">
+		  <div class="tab-content container p-2" id="v-pills-tabContent">
+			<div class="form-group col-md-12">
+				<div class="d-flex justify-content-center">
+					<p id="mainKanji" class="text-light d-flex justify-content-center" style="font-weight:bold; font-size:300px;">漢字
+				</div>
+			</div>			
+		  </div>
+		</div>
+	  </div>
+	</body>
+</html>

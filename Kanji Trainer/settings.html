@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset="UTF-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <link href="css\bootstrap.css" rel="stylesheet">
+	  <script src="js\jquery.js"></script>
+	  <script src="js\bootstrap.js"></script>
+	  <style type="text/css">* { cursor: url('img/cursor.cur'), auto; }</style>
+	<script>
+		var kanjiDB;
+		var maximumAllowedIndex;
+
+		$(document).ready(function(){
+			console.log(sessionStorage);
+			$.getJSON('db/kanji.json', function(data) {
+				kanjiDB = data;
+				setCountMaxIndex();
+			});
+			$("#nav-placeholder").load("nav.html", function(){
+				$("#menuSettings").addClass("active");
+			});
+			$("#totalPerSession").val(sessionStorage.totalPerSession);
+			$("#minimumIndex").val(sessionStorage.minIndex);
+			$("#maximumIndex").val(sessionStorage.maxIndex);
+			$("#level").val(sessionStorage.level);
+			var useVoice = false;
+			if(sessionStorage.useVoice && sessionStorage.useVoice === "true")
+			{
+				useVoice = true;
+			}
+			$("#checkUseVoice").prop("checked", useVoice);
+			$("#level").change(function(){
+				setCountMaxIndex();
+			});
+			/*
+			var msg = new SpeechSynthesisUtterance();
+			speechSynthesis.getVoices();
+			window.speechSynthesis.onvoiceschanged = function() {
+				speechSynthesis.getVoices().forEach(function(voice, index) {
+					var $option = $('<option>')
+					  .val(index)
+					  .html(voice.name + (voice.default ? ' (default)' :''));
+					console.log(voice);
+					$("#voicesSelect").append($option);
+				});
+			};*/
+		});
+		function saveSettings()
+		{
+			var minimumIndex = $("#minimumIndex").val().trim();
+			if(minimumIndex == "")
+			{
+				$("#modalErrorDescription").text("Minimum Index is incorrect!");
+				showModalError();
+				return;
+			}
+			var maximumIndex = $("#maximumIndex").val().trim();
+			if(maximumIndex == "" || maximumIndex == "0" || maximumIndex > maximumAllowedIndex)
+			{
+				$("#modalErrorDescription").text("Maximum Index is incorrect!");
+				showModalError();
+				return;
+			}
+			var totalPerSession = $("#totalPerSession").val().trim();
+			if(totalPerSession == "" || totalPerSession == "0" || (parseInt(maximumIndex) - parseInt(minimumIndex) < parseInt(totalPerSession)))
+			{
+				$("#modalErrorDescription").text("Total per session is incorrect! Must be in range of Minimum and Maximum Index!");
+				showModalError();
+				return;
+			}
+			sessionStorage.totalPerSession = $("#totalPerSession").val().trim();
+			sessionStorage.minIndex = $("#minimumIndex").val().trim();
+			sessionStorage.maxIndex = $("#maximumIndex").val().trim();
+			sessionStorage.level = $("#level").val();
+			sessionStorage.useVoice = $("#checkUseVoice").is(':checked');
+			//sessionStorage.voice = $("#voicesSelect option:selected").text();
+			showModalSaved();
+		}
+		
+		function showModalError()
+		{
+			var modalError = new bootstrap.Modal(document.getElementById('modalError'), {
+			  keyboard: false
+			});
+			modalError.show();
+		}
+		
+		function showModalSaved()
+		{
+			var modalSaved = new bootstrap.Modal(document.getElementById('modalSaved'), {
+			  keyboard: false
+			});
+			modalSaved.show();
+		}
+		
+		function setCountMaxIndex()
+		{
+			var cnt = 0;
+			var level = $("#level").val();
+			if(level == "ANY")
+			{
+				cnt = Object.keys(kanjiDB).length;
+			}
+			else
+			{
+				for(const i in kanjiDB)
+				{
+					if(kanjiDB[i].jlpt_new == level.slice(1))
+					{
+						cnt++;
+					}
+				}
+			}
+			maximumAllowedIndex = cnt;
+			$("#maximumIndexHelp").text("*Max " + cnt + ", depends on Noken Level");
+		}
+	</script>
+	</head>
+	<body class="d-flex flex-column bg-dark">
+	  <div id="nav-placeholder"></div>
+	  <div class="flex-grow-1 d-flex" oncontextmenu="return false;">
+		<div class="flex-grow-1 overflow-auto">
+		  <div class="tab-content container p-2" id="v-pills-tabContent">
+			<div class="form-group col-md-12">
+				<div class="d-flex justify-content-center">
+					<form>
+					  <div class="mb-3">
+						<label for="totalPerSession" class="form-label text-light">Total Kanjis per session</label>
+						<input class="form-control bg-dark text-light" id="totalPerSession" placeholder="50">
+					  </div>
+					  <div class="mb-3">
+						<label for="minimumIndex" class="form-label text-light">Minimum Index</label>
+						<input class="form-control bg-dark text-light" id="minimumIndex" placeholder="0">
+					  </div>
+					  <div class="mb-3">
+						<label for="maximumIndex" class="form-label text-light">Maximum Index</label>
+						<input class="form-control bg-dark text-light" id="maximumIndex" aria-describedby="maximumIndexHelp" placeholder="50">
+						<div id="maximumIndexHelp" class="form-text">*Max 13108, depends on Noken Level</div>
+					  </div>
+					  <div class="mb-3">
+						<label for="level" class="form-label text-light">Noken Level</label>
+						  <select id="level" class="form-select bg-dark text-light form-control" aria-label="Noken Level Select">
+							  <option value="ANY">ANY</option>
+							  <option value="N1">N1</option>
+							  <option value="N2">N2</option>
+							  <option value="N3">N3</option>
+							  <option value="N4">N4</option>
+							  <option value="N5">N5</option>
+						  </select>
+						  <div id="levelHelp" class="form-text">*This option is experimental, use ANY for best results</div>
+					  </div>
+					  <!--<div class="mb-3">
+						<label for="voicesSelect" class="form-label text-light">TTS Voices</label>
+						  <select id="voicesSelect" class="form-select bg-dark text-light form-control" aria-label="TTS Voice Select">
+						  </select>
+						  <div id="levelHelp" class="form-text">*This option is experimental, use ANY for best results</div>
+					  </div>-->
+					  <div class="mb-3 form-check">
+						<input type="checkbox" class="form-check-input" id="checkUseVoice">
+						<label class="form-check-label text-light" for="checkUseVoice">Use TTS voice</label>
+						<div id="checkUseVoiceHelp" class="form-text">*Experimental leave unchecked if unsure</div>
+					  </div>
+					  <button type="button" onclick="saveSettings()" class="btn btn-primary">Save Settings</button>
+					</form>
+				</div>			
+			</div>			
+		  </div>
+		</div>
+	  </div>
+	  <div class="modal fade" id="modalError" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalError" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 id="modalErrorTitle" class="modal-title text-danger" id="staticBackdropLabel">ERROR!</h5>
+				<!--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+			  </div>
+			  <div id="modalErrorDescription" class="modal-body">
+				...
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<div class="modal fade" id="modalSaved" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalSaved" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 id="modalESavedTitle" class="modal-title text-success" id="staticBackdropLabel">Settings Saved!</h5>
+				<!--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+			  </div>
+			  <div id="modalSavedDescription" class="modal-body">
+				Settings saved successfully!
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</body>
+</html>
