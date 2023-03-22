@@ -1,0 +1,224 @@
+<!DOCTYPE html><html class="hcfe" lang="en"><head>
+
+<style>
+samp {
+    font-family: monospace;
+}
+</style>
+
+<title>Tunnel Manager - [Docs]</title>
+<style data-id="all">html{-webkit-text-size-adjust:100%}html.hcfe{background-color:#f5f5f5;overflow-y:scroll}body.mobile{margin:0;position:relative}div{outline:none}.hcfe{background-color:#fff;color:#212121;font-family:Roboto, "Helvetica Neue", Helvetica, sans-serif;font-size:14px;line-height:20px}.hcfe p{margin:5px 0}.hcfe a{color:#4285f4;text-decoration:none}.hcfe a img{border:0}.hcfe article section section{padding:0}.hcfe ol,.hcfe ul{margin:0;outline:0;padding:0;vertical-align:baseline}.hcfe h1,.hcfe h2,.hcfe h3,.hcfe h4,.hcfe h5{color:#212121;font-weight:400}.hcfe h1{font-size:24px;line-height:32px;margin:0 0 8px}.hcfe h2{font-size:20px;line-height:32px;margin:32px 0 8px}.hcfe h3{font-size:18px;font-weight:500;line-height:28px;margin:24px 0 8px}.hcfe h4{font-size:16px;font-weight:700;line-height:24px;margin:20px 0 4px}.hcfe h5{font-size:14px;font-weight:inherit;line-height:24px;margin:16px 0 4px}.hcfe button,.hcfe input,.hcfe select,.hcfe textarea{color:#212121;font-family:Roboto, "Helvetica Neue", Helvetica, sans-serif;font-size:14px;line-height:20px}.hcfe select{background:none;border:solid #d9d9d9;border-width:0 0 1px 0;font-size:13px;font-weight:bold;max-width:100%;outline:0;padding:5px}.hcfe img{vertical-align:middle}.hcfe article section{padding:16px}.hcfe>header{background-color:#4285f4}.searchbar{background-color:#4285f4;color:#fff;overflow:hidden;padding:0 65px 0 16px;text-overflow:ellipsis;white-space:nowrap}.searchbar ::-webkit-input-placeholder{color:#757575}.searchbar ::-moz-placeholder{color:#757575}.searchbar svg{fill:#fff;height:24px;width:24px}.hcfe .search-title{color:#fff;font-size:20px;line-height:56px}.toggles{position:absolute;right:16px;top:12px}.toggles>.more-toggle,.toggles>.search-toggle{background:none;border:0;padding:4px 3px 0;position:relative;z-index:1}.toggles>.more-toggle{margin-left:8px}button.search-toggle:focus,button.more-toggle:focus{outline:dotted thin #fff}.search-toggle .close-icon,.search-toggle.active .search-icon{display:none}.search-toggle.active .close-icon{display:inline-block}.search-toggle.active svg{fill:#757575}.search-toggle.active+.more-toggle{display:none}.search{display:none}.searchbar .search-back{left:16px;position:absolute;top:16px}.rtl .searchbar .search-back svg{transform:scaleX(-1)}form.search .search-box{background-color:#f5f5f5;border:none;border-radius:0;color:#212121;font-size:18px;height:56px;outline:0;padding:0 40px 0 72px;width:100%;-webkit-appearance:none}.show-search .search{display:inline}.search-container.show-search{background-color:#3367d6;left:0;position:absolute;top:0;width:100%}.search-overlay{display:none}.search-overlay.active{background-color:#212121;bottom:0;display:block;opacity:.5;position:absolute;top:56px;width:100%;z-index:1000}input[type=text]::-ms-clear{display:none;width:0;height:0}input[type=text]::-ms-reveal{display:none;width:0;height:0}input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-results-button,input[type="search"]::-webkit-search-results-decoration{display:none}.appbar-link-container{display:inline-block;margin-right:4px}.appbar-link-container>a{color:#fff;padding:0 16px;line-height:48px;text-transform:uppercase}.appbar-link-container>a svg{fill:#fff;height:24px;margin-bottom:2px;margin-left:9.5px;vertical-align:middle;width:24px}.appbar{background-color:#4285f4}.cc{word-wrap:break-word}.cc h1{margin:24px 0 8px}.cc>h2>a,.cc>h3>a,.cc>h4>a{color:#212121}.cc>h2>a:hover,.cc>h3>a:hover,.cc>h4>a:hover{text-decoration:none}.cc div,.cc p,.cc ol,.cc ul{margin:4px 0 12px}.cc ul li{margin:4px 0 4px 26px}.cc ol li{margin:4px 0 4px 20px}.cc ol ol{list-style-type:lower-latin}.cc ul ul,.cc ol ul{list-style-type:disc}.cc code{color:#060}.cc pre{direction:ltr;margin:0;text-align:left;white-space:pre-wrap;word-wrap:break-word}.cc a:visited{color:#7759ae}.cc a[target="_blank"]:after,.notification a[target="_blank"]:after{content:'';background:no-repeat url(https://ssl.gstatic.com/support/content/images/sprites/core-mobile-52bf8ba6d40a366fb44d1a5ebcd44e8c.png) 0 0;display:inline-block;height:10px;margin:0 3px 0 5px;width:10px}.rtl .cc a[target="_blank"]:after,.rtl .notification a[target="_blank"]:after{transform:scaleX(-1)}.cc iframe{max-width:100%}.cc ul>li>ul{margin:0}.cc ul:not(.no-bullets):not(.no_bullets)>li{list-style-type:none;margin-left:0;padding-left:16px}.cc ul:not(.no-bullets):not(.no_bullets)>li:before{content:"\002022";float:left;font-size:16px;margin-left:-14px}.cc blockquote{margin:0 0 0 30px}.cc hr{border:none;border-top:1px dashed #e5e5e5}.img-2g{display:inline-block;height:auto !important}.hcfe img.float-left{float:left;margin-right:1em;max-width:50%}.hcfe img.float-right{float:right;margin-left:1em;max-width:50%}.hcfe img.screenshot{height:auto !important;width:100%}.cc img{max-width:100%}.cc table{border-collapse:collapse;border-spacing:0;margin:0;padding:0;border:0;outline:0}.cc .table-basic,.cc .table-stacked{margin-top:16px}.cc .table-basic caption,.cc .table-stacked caption{color:#212121;font-size:20px;font-weight:400;line-height:24px;padding-bottom:16px;text-align:left}@media all and (max-width:770px){.cc .table-basic caption,.cc .table-stacked caption{color:#757575}}.cc td{vertical-align:top}.cc td,.cc th{padding:13px 5px;position:relative}.cc th{color:#757575;font-weight:bold;text-align:left;vertical-align:baseline}.cc table .align-middle{vertical-align:middle}.page{display:inline-block;position:relative;width:100%}.page{box-shadow:0 2px 5px 0 rgba(0,0,0,.26)}.sub-article-container.shaded{border-top:1px solid #e0e0e0;background-color:#fafafa}.sub-article-container{clear:both;margin-top:-16px}.as{padding:31px 10px 46px 10px}.as.rated{padding-bottom:40px}.as.submitted{padding-bottom:16px}.as .title{color:#757575;font-weight:bold}.as .subtitle{color:#757575;margin-bottom:10px}.as:not(.rated) form,.as.rated .as-button,.as.submitted form{display:none}.as .as-button{background-color:#fafafa;border:0;border-radius:3px;box-shadow:0 2px 5px 0 rgba(0,0,0,.26);display:inline-block;line-height:16px;margin:6px 8px 6px 0;min-width:88px;padding:10px 0;text-align:center;text-transform:uppercase}.as .as-button:active{background-color:#e0e0e0}.as .as-button:hover{color:#757575}.as form{padding-top:0}.as .field{margin:16px 0}.as .field:first-of-type{margin-top:4px}.as textarea{border:1px solid #e0e0e0;box-sizing:border-box;color:#222222;max-width:448px;outline:none;padding:16px;resize:none;width:100%}.as .submit-button{background:#4285f4;border:0;border-radius:3px;box-shadow:0 2px 5px 0 rgba(0,0,0,.26);color:#fff;font-size:14px;line-height:16px;margin-top:8px;outline:0;padding:10px 16px;text-transform:uppercase}.as .submit-button:active{background:#3367d6;box-shadow:0 4px 8px 0 rgba(0,0,0,.4)}.social-sharing-widgets{border-top:0}.primary-nav{background-color:#4285f4}.primary-nav nav{margin-left:10px;width:256px}.sibling-nav{display:inline-block;margin-top:10px}.sibling-nav h4{margin-bottom:16px}.sibling-nav>ul{list-style:none}.sibling-nav a.title-link,.sibling-nav a.title-link:visited{color:#fff}.sibling-nav .sibling-list{margin-bottom:15px}.sibling-nav .sibling-list li{padding:0}.sibling-nav .sibling-list a.sibling-link.sibling-link--current{border-left:2px solid #fff;color:#fff;font-weight:700}.sibling-nav .sibling-list a.sibling-link{border-left:2px solid transparent;color:#e3edfe;display:block;padding:14px 0 14px 14px}.sibling-nav .sibling-list a.sibling-link.sibling-link--current.sibling-link--has-children{border-left-color:transparent}.sibling-nav .sibling-link--has-children:before{content:'▶';margin-left:-16px;position:absolute;transform:scale(.3,.6)}.sibling-nav .sibling-link--has-children.sibling-link--show-children:before{content:'▼';margin-left:-18px;transform:scale(.6,.3)}.sibling-nav .sibling-link--has-children+.sibling-sublist{display:none}.sibling-nav .sibling-link--has-children.sibling-link--show-children+.sibling-sublist{display:block}.sibling-nav .sibling-sublist{list-style:none;padding-left:20px}footer{background-color:#f5f5f5;padding:16px 0}footer ul{display:inline-block;list-style:none;margin:0;outline:0;padding:0;vertical-align:baseline}footer li{display:inline-block}footer li+li:before{content:'-'}footer>div{margin:10px 20px 20px 20px}.slow_con_container{text-align:center}.footer-links{color:#999;margin:0 10px}.footer-links a{color:#999;text-decoration:none}.footer-links ul{font-size:13px;line-height:48px;width:initial}.language-selector{display:inline-block}.language-selector select{font-size:11px;padding:6px 3px}.csi{display:none}</style><link></head><body class="mobile">    <div class="hcfe"> <header><div class="searchbar" st-ve="10">
+
+
+<a class="search-title" href="https://elmodo7.github.io/tunnel_manager">Download Tunnel Manager</a>
+
+<div st-ve="32"><div class="appbar"><div class="appbar-links"><span class="appbar-icon appbar-link-container">
+
+<a href="https://github.com/elModo7"st-ve="36" target="_blank"><span itemprop="title">My GitHub Profile</span><svg viewbox="0 0 48 48"><path d="M20.17 31.17L23 34l10-10-10-10-2.83 2.83L25.34 22H6v4h19.34l-5.17 5.17zM38 6H10c-2.21 0-4 1.79-4 4v8h4v-8h28v28H10v-8H6v8c0 2.21 1.79 4 4 4h28c2.21 0 4-1.79 4-4V10c0-2.21-1.79-4-4-4z"></path></svg></a></span>
+
+</div></div></div></header><div class="search-overlay search-toggle"></div>     <section class="primary-container">    <article class="page"> <section data-tracking-cat="article-container" st-ve="35">
+
+<!-- Navigation Links At Top -->
+<a href="#Description">Description</a>
+
+
+<p><a href="#Functions">Functions</a></p
+<p><a href="#Labels">Labels</a></p>
+
+<!-- ScriptName -->
+<h1 id="Description">Tunnel Manager Source Code Documentation</h1><div class="cc">
+<pre>; OS Version ...: Windows 10 x64 and Above (Support not guaranteed on Windows 7)
+;@Ahk2Exe-SetName elModo7's Tunnel Manager
+;@Ahk2Exe-SetDescription SSH Tunnel Manager for proxying`, securing and pivoting.
+;@Ahk2Exe-SetVersion 1.2.16
+;@Ahk2Exe-SetCopyright Copyright (c) 2023`, elModo7
+;@Ahk2Exe-SetOrigFilename Tunnel Manager.exe
+; INITIALIZE
+; *******************************
+TODO:
+- TCP / Websocket Interop (Server)
+
+REQUIERE:
+- Windows 7 x64 (Windows 10+ Recommended)
+- AutoHotkey U64 1.1.31+
+
+PARAMS:
+-silent (Disables GUI)
+-notray (Removes Tray Icon)
+-profile <profile_path>
+
+SERIAL:
+(ommited for the docs) <- Master key serial
+(ommited for the docs) <- Master key serial
+
+FEATURES:
+- Support Local, Remote and Dynamic SSH Tunneling
+- Server and Tunnel Profiling
+- Full Neutron Web UI
+- Console Output
+- Auto Accept SSH Key
+- Silent Mode with Profile Select
+- Hide Tray icon option for Shadow Mode (1.2.16+)
+- DRM Copy Protection included via Online Validation of Serial based on Hardware Fingerprint
+- Temporary Tunnels without Saving
+- Relaunch Tunnel on disconnect
+- No need for a full reload on profile select
+- Online version checker based on GitHub repo
+- Allow enabling/disabling per proflie+tunnel configuration
+- Keep track of last used profile (path)
+- Config checks on repeated/incorrect tunnel configurations (Improved in 1.2.11+)
+- DRM Two Way Encryption (1.2.10+)
+- Quick Copy Tunnel (1.2.14+)
+
+DROPPED / DISCARDED:
+- Keep Serial active for 7 days before asking again (DRM Security Risk)
+- Change order of each individual Tunnel
+
+FUTURE PLANS:
+- Fully Open Source
+- Remove DRM Protection
+- Track Updates with GitHub Releases (https://api.github.com/repos/elModo7/Tunnel_Manager/releases/latest)
+- IRC Control Plugin
+- Telegram API Control Plugin
+- Discord WebHook Notify / Telegram API Notify / PushBullet Notify / IRC Notify
+</pre>
+<p></p>
+<p></p>
+<p><center><strong><q>2233 LINES </q></strong></center></p>
+</ul>
+
+</ul>
+<h1 id="Functions">Functions</h1>
+<ul>
+<code>_init()</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>connect(host, port)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>bind(host, port)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>listen(backlog=32)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>accept()</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>disconnect()</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>msgSize()</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>send(addr, length)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>sendText(msg, encoding="UTF-8")</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>recv(byref buffer, wait=1)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>recvText(wait=1, encoding="UTF-8")</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>__getAddrInfo(host, port)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>__eventProcRegister(obj, msg)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>__eventProcUnregister(obj)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>SocketEventProc(wParam, lParam, msg, hwnd)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>enableBroadcast()</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>disableBroadcast()</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>RunCMD(CmdLine, WorkingDir:="", Codepage:="CP0", Fn:="RunCMD_Output")</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>Encrypt(string, password, alg)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>Decrypt(string, password, alg)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>Crypt(ByRef encr_Buf, ByRef Buf_Len, password, ALG_ID, CryptMode := 1)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>StrPutVar(string, ByRef var, addBufLen := 0, encoding := "UTF-8")</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>b64Encode(ByRef VarIn, SizeIn)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>b64Decode(ByRef VarIn, ByRef VarOut)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>ProcessExist(Name)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>OnMsgBox()</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>settings(neutronEvent)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>selectProfile(neutronEvent)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>saveServerSettings(neutronEvent)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>saveRules(neutronEvent)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>runTunnel(neutronEvent)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>saveAndRun(neutronEvent)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>stopTunnel(neutronEvent)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>showErrorModal(title, content)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>hasVal(haystack, needle)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>tunnelsSampleFile()</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>writeSerial(neutronEvent)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>readSerial(neutronEvent)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>checkValidSerial(neutronEvent)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>copyTunnel(neutronEvent, tunnelIp := "")</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>OnTcpRecvCliente(this)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>downloadLatestVersion(neutronEvent)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>VerCmp(V1, V2)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>urlDownloadToVar(url,raw:=0,userAgent:="",headers:="")</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>closeApp(neutronEvent)</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+
+</ul>
+<h1 id="Labels">Labels</h1>
+<ul>
+<code>default:</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>runTunnelThread:</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>toggleVisibility:</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>ResetLicenseInfo:</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>checkValidation:</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>createPCData:</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>lookForUpdates:</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>NeutronClose:</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>GuiClose:</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+<code>ExitSub:</code><span style="padding-left:4em"></span> 
+ <blockquote></blockquote> 
+
+</ul>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<!-- Navigation Links At Bottom -->
+<a href="#Description">Description</a>
+
+
+<p><a href="#Functions">Functions</a></p
+<p><a href="#Labels">Labels</a></p>
+
+
+
+</section><footer><div class="slow_con_container" data-tracking-cat="footer-standard" st-ve="18">Víctor Santiago Martínez Picardo<br> <a href="https://github.com/elModo7/">GitHub Profile</a></div>
