@@ -65,7 +65,7 @@
                         <div class="full">
                            <div class="center-desk">
                               <div class="logo">
-                                 <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                                 <a href="index.html"><img src="images/logo.png" alt="#" width="150"/></a>
                               </div>
                            </div>
                         </div>
@@ -188,7 +188,7 @@
                   <div class="col-md-7">
                      <div class="titlepage">
                         <h2>How it <span class="blu">Works </span></h2>
-                        <p>Tunnel Manager provides of a Neutron based, Bootstrap GUI that wraps all the complexity and features of Plink, by Simon Tatham.<br>It is portable, low specs friendly and very lightweight (~1Mb).<br><br>Whether you want to protect an insecure connection, pivot, proxy, or forward some application outside of your corporate network, Tunnel Manager has you covered.</p>
+                        <p>Tunnel Manager provides of a Neutron based, Bootstrap GUI that wraps all the complexity and features of Plink, by Simon Tatham.<br>It is portable, low specs friendly and very lightweight (~3Mb).<br><br>Whether you want to protect an insecure connection, pivot, proxy, or forward some application outside of your corporate network, Tunnel Manager has you covered.</p>
                      </div>
                   </div>
                   <div class="col-md-5">
@@ -206,7 +206,7 @@
 			  <div class="container">
 				 <div class="row">
 					<div class="col-md-12">
-					   <p>Copyright 2023 All Right Reserved By Víctor S. Martínez Picardo</a></p>
+					   <p id="copyright_footer">Copyright 2024 All Rights Reserved By Víctor Santiago Martínez Picardo (elModo7)</p>
 					</div>
 				 </div>
 			  </div>
@@ -225,6 +225,7 @@
       <script src="js/custom.js"></script>
       <script type="text/javascript">
          $(document).ready(function() {
+			document.getElementById("copyright_footer").innerHTML = "Copyright " + new Date().getFullYear() + " All Rights Reserved By Víctor Santiago Martínez Picardo (elModo7)";
              $("#sidebar").mCustomScrollbar({
                  theme: "minimal"
              });
