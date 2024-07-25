@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset="UTF-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <link href="css\bootstrap.css" rel="stylesheet">
+	  <script src="js\jquery.js"></script>
+	  <script src="js\bootstrap.js"></script>
+	  <style type="text/css">* { cursor: url('img/cursor.cur'), auto; }</style>
+	<script>
+		var kanjiDB;
+		var randomKanji;
+		var randomMeanings;
+		var totalPerSession = sessionStorage.totalPerSession;
+		var minIndex = sessionStorage.minIndex;
+		var maxIndex = sessionStorage.maxIndex;
+		var level = sessionStorage.level;
+		var useVoice = sessionStorage.useVoice;
+		var right = 0;
+		var wrong = 0;
+		var missedKanjis = [];
+		var msg = new SpeechSynthesisUtterance();
+		speechSynthesis.getVoices();
+		msg.rate = 1;
+		msg.pitch = 1;
+		window.speechSynthesis.onvoiceschanged = function() {
+			speechSynthesis.getVoices().forEach(function(voice, index) {
+				if(voice.lang.trim() == "ja-JP" || voice.lang.trim() == "ja_JP")
+				{
+					msg.voice = voice;
+				}
+			});
+		};
+		
+		$(document).ready(function(){
+			$("#nav-placeholder").load("nav.html", function(){
+				$("#menuKanjiToMeaning").addClass("active");
+			});
+			$.getJSON('db/kanji.json', function(data) {
+				if(level == "ANY")
+				{
+					kanjiDB = data;
+				}
+				else
+				{
+					kanjiDB = {};
+					for(const i in data)
+					{
+						if(data[i].jlpt_new == level.slice(1))
+						{
+							kanjiDB[i] = data[i];
+						}
+					}
+				}
+				nextRandomKanji();
+				$("#ratio").text("Success Ratio: 100%");
+				$("#completion").text("Completion: " + (right + wrong) + " / " + sessionStorage.totalPerSession);
+			});
+		});
+		
+		function nextRandomKanji()
+		{
+			hideMeanings();
+			hideOnyomis();
+			hideKunyomis();
+			randomKanji = getRandomKanji(kanjiDB);
+			while(randomKanji.data.meanings[0] === undefined)
+			{
+				randomKanji = getRandomKanji(kanjiDB);
+			}
+			//console.log(randomKanji);
+			$("#mainKanji").text(randomKanji.kanji);
+			var kunyomis = "";
+			for(const i in randomKanji.data.readings_kun)
+			{
+				kunyomis += randomKanji.data.readings_kun[i] + ", ";
+			}
+			kunyomis = kunyomis.slice(0, -2)
+			$("#kunyomis").text(kunyomis);
+			var onyomis = "";
+			for(const i in randomKanji.data.readings_on)
+			{
+				onyomis += randomKanji.data.readings_on[i] + ", ";
+			}
+			onyomis = onyomis.slice(0, -2)
+			$("#onyomis").text(onyomis);
+			var meanings = "";
+			for(const i in randomKanji.data.meanings)
+			{
+				meanings += randomKanji.data.meanings[i] + ", ";
+			}
+			meanings = meanings.slice(0, -2)
+			$("#meanings").text(meanings);
+			get4RandomMeanings(randomKanji.data.meanings[0]);
+			if(useVoice === "true")
+			{
+				speakTTS();
+			}
+		}
+		
+		function solve()
+		{
+			showOnyomis();
+			showKunyomis();
+			showMeanings();
+		}
+		
+		function jishoSearchByKanji()
+		{
+			window.open("https://jisho.org/search/" + $("#mainKanji").text().trim(), '_blank');
+		}
+		
+		function showOnyomis()
+		{
+			$("#onyomisDiv").removeClass("d-none");
+			$("#onyomisBtn").addClass("d-none");
+		}
+		
+		function showKunyomis()
+		{
+			$("#kunyomisDiv").removeClass("d-none");
+			$("#kunyomisBtn").addClass("d-none");
+		}
+		
+		function showMeanings()
+		{
+			$("#meaningsDiv").removeClass("d-none");
+			$("#meaningsBtn").addClass("d-none");
+		}
+		
+		function hideOnyomis()
+		{
+			$("#onyomisDiv").addClass("d-none");
+			$("#onyomisBtn").removeClass("d-none");
+		}
+		
+		function hideKunyomis()
+		{
+			$("#kunyomisDiv").addClass("d-none");
+			$("#kunyomisBtn").removeClass("d-none");
+		}
+		
+		function hideMeanings()
+		{
+			$("#meaningsDiv").addClass("d-none");
+			$("#meaningsBtn").removeClass("d-none");
+		}
+		
+		function getRandomKanji(obj)
+		{
+			const keys = Object.keys(obj);
+			const random = Math.random();
+			return {kanji : keys[Math.floor(random * keys.length)], data : obj[keys[Math.floor(random * keys.length)]]};
+		}
+		
+		function get4RandomMeanings(randomKanjiMeaning)
+		{
+		console.log(randomKanjiMeaning);
+			randomMeanings = [];
+			for(var i = 0; i < 4; i++)
+			{
+				var currentMeaning = getRandomKanji(kanjiDB).data.meanings[0];
+				while(currentMeaning === undefined)
+				{
+					currentMeaning = getRandomKanji(kanjiDB).data.meanings[0];
+				}
+				randomMeanings.push(currentMeaning);
+			}
+			randomMeanings.push(randomKanjiMeaning);
+			randomMeanings = randomMeanings.sort((a, b) => 0.5 - Math.random());
+			for(var i = 0; i < 5; i++)
+			{
+				$("#btnOption" + (i+1)).text(randomMeanings[i]);
+			}
+			console.log(randomMeanings);
+		}
+		
+		function checkAnswer(nButton)
+		{
+			totalPerSession--;
+			/*if($("#btnOption" + nButton).text() == randomKanji.data.meanings[0])
+			{
+				$("#modalResultTitle").text("CORRECT!");
+				$("#modalResultDescription").text("You got the correct answer!");
+				$("#modalResultTitle").addClass("text-success");
+				$("#modalResultDescription").addClass("text-success");
+				$("#modalResultTitle").removeClass("text-danger");
+				$("#modalResultDescription").removeClass("text-danger");
+				showModalResult();
+			}*/
+			if($("#btnOption" + nButton).text() != randomKanji.data.meanings[0])
+			{
+				wrong++;
+				$("#modalResultTitle").text("OOPS...");
+				$("#modalResultDescription").text("The correct answer was: " + randomKanji.data.meanings[0]);
+				$("#modalResultTitle").removeClass("text-success");
+				$("#modalResultDescription").removeClass("text-success");
+				$("#modalResultTitle").addClass("text-danger");
+				$("#modalResultDescription").addClass("text-danger");
+				var missedKanji = {};
+				missedKanji[randomKanji.kanji] = randomKanji.data.meanings[0];
+				missedKanjis.push(missedKanji);
+				showModalResult();
+			}
+			else
+			{
+				right++;
+				if(totalPerSession > 0)
+				{
+					nextRandomKanji();
+				}
+				if(totalPerSession <= 0)
+				{
+					$("#modalRestartDescription").text("Session finished! Your success ratio was: " + getRatio());
+					var missedKanjisTxt = "";
+					for(const i in missedKanjis)
+					{
+						missedKanjisTxt += "\n" + Object.keys(missedKanjis[i]) + " - " + missedKanjis[i][Object.keys(missedKanjis[i])] + "\n";
+					}
+					if(missedKanjisTxt != "")
+					{
+						$("#modalRestartDescription2").text("This are the kanjis that you missed: " + missedKanjisTxt);
+					}
+					else
+					{
+						$("#modalRestartDescription2").text("");
+					}
+					var restartModal = new bootstrap.Modal(document.getElementById('modalRestart'), {
+						keyboard: false
+					});
+					restartModal.show();
+				}
+			}
+			$("#ratio").text("Ratio: " + getRatio());
+			$("#completion").text("Completion: " + (right + wrong) + " / " + sessionStorage.totalPerSession);
+		}
+		
+		function showModalResult()
+		{
+			var resultModal = new bootstrap.Modal(document.getElementById('modalResult'), {
+			  keyboard: false
+			});
+			resultModal.show();
+		}
+		
+		function hideModalResult()
+		{
+			var resultModal = new bootstrap.Modal(document.getElementById('modalResult'), {
+			  keyboard: false
+			});
+			if(totalPerSession > 0)
+			{
+				nextRandomKanji();
+			}
+			resultModal.hide();
+			if(totalPerSession <= 0)
+			{
+				$("#modalRestartDescription").text("Session finished! Your success ratio was: " + getRatio());
+				var missedKanjisTxt = "";
+				for(const i in missedKanjis)
+				{
+					missedKanjisTxt += "\n" + Object.keys(missedKanjis[i]) + " - " + missedKanjis[i][Object.keys(missedKanjis[i])];
+				}
+				if(missedKanjisTxt != "")
+				{
+					$("#modalRestartDescription2").text("This are the kanjis that you missed: " + missedKanjisTxt);
+				}
+				else
+				{
+					$("#modalRestartDescription2").text("");
+				}
+				var restartModal = new bootstrap.Modal(document.getElementById('modalRestart'), {
+					keyboard: false
+				});
+				restartModal.show();
+			}
+		}
+		
+		function hideModalRestart()
+		{
+			totalPerSession = sessionStorage.totalPerSession;
+			right = 0;
+			wrong = 0;
+			missedKanjis = [];
+			$("#ratio").text("Success Ratio: 100%");
+			$("#completion").text("Completion: " + (right + wrong) + " / " + sessionStorage.totalPerSession);
+			nextRandomKanji();
+			var restartModal = new bootstrap.Modal(document.getElementById('modalRestart'), {
+				keyboard: false
+			});
+			restartModal.hide();
+		}
+		
+		function getRatio()
+		{
+			return Math.floor(right * 100 / (right + wrong)) + "%";
+		}
+		
+		function speakTTS()
+		{
+			msg.text = randomKanji.kanji;
+			speechSynthesis.speak(msg);
+		}
+	</script>
+	</head>
+	<body class="d-flex flex-column bg-dark">
+	  <div id="nav-placeholder"></div>
+	  <div class="flex-grow-1 d-flex" oncontextmenu="return false;">
+		<div class="flex-grow-1 overflow-auto">
+		  <div class="tab-content container p-2" id="v-pills-tabContent">
+			<div class="form-group col-md-12">
+				<div class="d-flex justify-content-center">
+					<p id="mainKanji" class="text-light d-flex justify-content-center" style="font-weight:normal; font-size:200px;">
+						<div>
+							<div class="container">
+							  <div class="row">
+								<div class="col"><span class="row text-light d-flex justify-content-center" style="font-weight:bold; font-size:20px;">おんよみ:&nbsp;&nbsp;&nbsp;</span></div>
+								<div id="onyomisDiv" class="col d-none"><span id="onyomis" class="row text-success d-flex justify-content-center" style="font-weight:bold; font-size:20px;"></span></div>
+								<div class="col"><button id="onyomisBtn" type="button" onclick="showOnyomis()" class="btn btn-outline-info">Show</button></div>
+								<div class="w-100"></div>
+								<div class="col"><p class="row text-light d-flex justify-content-center" style="font-weight:bold; font-size:20px;">くんよみ:&nbsp;&nbsp;&nbsp;</p></div>
+								<div id="kunyomisDiv" class="col d-none"><p id="kunyomis" class="row text-success d-flex justify-content-center" style="font-weight:bold; font-size:20px;"></p></div>
+								<div class="col"><button id="kunyomisBtn" type="button" onclick="showKunyomis()" class="btn btn-outline-info">Show</button></div>
+								<div class="w-100"></div>
+								<div class="col"><p class="row text-light d-flex justify-content-center" style="font-weight:bold; font-size:20px;">Meanings:&nbsp;&nbsp;&nbsp;</p></div>
+								<div id="meaningsDiv" class="col d-none"><p id="meanings" class="row text-warning d-flex justify-content-center" style="font-weight:bold; font-size:20px;"></p></div>
+								<div class="col"><button id="meaningsBtn" type="button" onclick="showMeanings()" class="btn btn-outline-info">Show</button></div>
+								<div class="w-100"></div>
+								<div class="col"><p id="ratio" class="row text-primary d-flex justify-content-center" style="font-weight:bold; font-size:20px;">Success Ratio:</p></div>
+								<div class="col"><p id="completion" class="row text-primary d-flex justify-content-center" style="font-weight:bold; font-size:20px;">Completion</p></div>
+							  </div>
+							  <div class="row d-flex justify-content-center">
+								<button style="max-width:50%" type="button" class="btn btn-warning" onclick="speakTTS()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-volume-up-fill" viewBox="0 0 16 16"><path d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"/><path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"/><path d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707zM6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06z"/></svg> Play</button>
+							  	<button style="max-width:50%" type="button" class="btn btn-success" onclick="solve()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/></svg> Solve</button>
+							  </div>
+							  <div class="row d-flex justify-content-center">
+							  </div>
+							  <div class="row d-flex justify-content-center">
+								<button style="max-width:100%" type="button" class="btn btn-light" onclick="jishoSearchByKanji()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg> Jisho Search</button>
+							  </div>
+							</div>
+						</div>
+					</p>
+				</div>
+				<div class="row d-flex justify-content-center mt-1">
+					<button id="btnOption1" onclick="checkAnswer(1)" type="button" class="btn btn-secondary">Bike</button>
+				</div>
+				<div class="row d-flex justify-content-center mt-1">
+					<button id="btnOption2" onclick="checkAnswer(2)" type="button" class="btn btn-secondary">Study</button>
+				</div>
+				<div class="row d-flex justify-content-center mt-1">
+					<button id="btnOption3" onclick="checkAnswer(3)" type="button" class="btn btn-secondary">Play</button>
+				</div>
+				<div class="row d-flex justify-content-center mt-1">
+					<button id="btnOption4" onclick="checkAnswer(4)" type="button" class="btn btn-secondary">Manufacture</button>
+				</div>
+				<div class="row d-flex justify-content-center mt-1">
+					<button id="btnOption5" onclick="checkAnswer(5)" type="button" class="btn btn-secondary">Enterprise</button>
+				</div>
+			</div>			
+		  </div>
+		</div>
+	  </div>
+	  
+	  <div class="modal fade" id="modalResult" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalResult" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 id="modalResultTitle" class="modal-title" id="staticBackdropLabel">Result</h5>
+				<!--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+			  </div>
+			  <div id="modalResultDescription" class="modal-body">
+				...
+			  </div>
+			  <div class="modal-footer">
+				<button onclick="hideModalResult()" type="button" class="btn btn-primary" data-bs-dismiss="modal">Next Kanji&nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16"><path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z"/></svg></button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<div class="modal fade" id="modalRestart" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalRestart" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 id="modalRestartTitle" class="modal-title" id="staticBackdropLabel">FINISHED!</h5>
+			  </div>
+			  <div id="modalRestartDescription" class="modal-body">asdfs</div>
+			  <div class="modal-body"><pre id="modalRestartDescription2"></pre></div>
+			  <div class="modal-footer">
+				<button onclick="hideModalRestart()" type="button" class="btn btn-primary" data-bs-dismiss="modal">New Session!&nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16"><path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z"/></svg></button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</body>
+</html>
