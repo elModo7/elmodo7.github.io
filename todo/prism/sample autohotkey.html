@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="coy/prism.css" rel="stylesheet" />
+</head>
+<body>
+	<script src="coy/prism.js"></script>
+	<pre><code class="language-css">
+	MemoryRead(hwnd, address, datatype="int", length=4, offset=0)
+	{
+		VarSetCapacity(readvalue,length, 0)
+		DllCall("ReadProcessMemory","Uint",hwnd,"Uint",address+offset,"Str",readvalue,"Uint",length,"Uint *",0)
+		finalvalue := NumGet(readvalue,0,datatype)
+		return finalvalue
+	}
+	</code></pre>
+	<code class="language-css">DllCall("ReadProcessMemory","Uint",hwnd,"Uint",address+offset,"Str",readvalue,"Uint",length,"Uint *",0)</code>
+</body>
+</html>
