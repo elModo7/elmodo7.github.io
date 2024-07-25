@@ -10,4 +10,5 @@ Basically a *very minified* version of my:
 > All in all it shows how I have been **improving over the years** and this site is a way for me to be able to, in the future, **_look back_** and see what I was writing time ago.
 
 ### Web Preview:
-![chrome_nkcFGJgFWo](https://github.com/user-attachments/assets/af4bffa7-11a6-476e-9a26-ea785dc53b83)
+![chrome_Xfo0Vl8kOm](https://github.com/user-attachments/assets/68f14048-947b-41ea-8b91-c90916194a60)
+
