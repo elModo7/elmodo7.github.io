@@ -1,7 +1,7 @@
 var pillsPage = 0;
 
 function pillsEvents(){
-	unbindPagination();
+	unbindEvents();
 	var itemsPerRow = 6;
 	itemsPerPage = 18;
 	var pillsHTML = '';
@@ -18,8 +18,8 @@ function pillsEvents(){
 			pillsHTML +=	'<span class="badge ' + valueBadge.color + '">' + valueBadge.name + '</span> ';
 		}
 		pillsHTML += '<span class="badge"> </span>'; // Needed for frame possition
-		pillsHTML += '<a href="' + value.url + '" class="link"><div class="position-relative">';
-		pillsHTML +=	'<img src="static/img/sample.png" alt="Photo 1" class="img-fluid">';
+		pillsHTML += '<a ' + (value.url == '' ? '' : ('href="' + value.url + '" target="_blank"')) + ' class="link article-link" article="' + value.page + '" title="' + value.title + '" description="' + value.description + '"><div class="position-relative">';
+		pillsHTML +=	'<img src="' + value.img + '" alt="Photo 1" class="img-fluid">';
 		if(value.ribbon.color && value.ribbon.name){
 			pillsHTML +=	'<div class="ribbon-wrapper ribbon-lg">';
 			pillsHTML +=	'<div class="ribbon ' + value.ribbon.color + ' text-lg">' + value.ribbon.name + '</div></div>';
@@ -44,8 +44,9 @@ function pillsEvents(){
 	}
 	
 	$("#body_pills").html(pillsHTML);
-	loadAboutMeEvent();
+	loadBreadcrumbEvents();
 	bindPillsPagination();
+	bindArticles(); // Important after pagination
 }
 
 function bindPillsPagination(){

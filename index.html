@@ -8,7 +8,8 @@
         <link type="text/css" rel="stylesheet" href="static/css/all.min.css"/>
         <link type="text/css" rel="stylesheet" href="static/css/icheck-bootstrap.min.css"/>
         <link type="text/css" rel="stylesheet" href="static/css/adminlte.min.css"/>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"/>
+		<link type="text/css" rel="stylesheet" href="static/css/prism/themes/coy.css"/>
+        <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"/>
 		<script type="text/JavaScript" src="static/js/jquery.min.js"></script>
         <script type="text/javascript" src="static/js/bootstrap.bundle.min.js"></script>
         <script type="text/JavaScript" src="static/js/adminlte.min.js"></script>
@@ -18,6 +19,7 @@
         <script type="text/JavaScript" src="static/js/personal_projects.js"></script>
         <script type="text/JavaScript" src="static/js/work_projects.js"></script>
         <script type="text/JavaScript" src="static/js/pills.js"></script>
+        <!--<script type="text/JavaScript" src="static/js/prism.js"></script>-->
 		<script>
 			var personalProjects = null;
 			var workProjects = null;
@@ -26,6 +28,7 @@
 			var personalProjectsTotalPages = 0;
 			var workProjectsTotalPages = 0;
 			var pillsTotalPages = 0;
+			var currentMenuTab = "about_me";
 			$(function(){
 				fetch('static/data/personal_projects.json').then((response) => response.json()).then((json) => {
 					personalProjects = json;
@@ -57,7 +60,7 @@
 				<div class="float-right d-none d-sm-block">
 					<b>Version</b> 0.0.1
 				</div>
-				<strong>Copyright © <span id="year_footer">2024</span> <a href="https://github.com/elModo7">elModo7's GitHub</a>.</strong> All rights reserved.
+				<strong>Copyright © <span id="year_footer">2024</span> <a href="https://github.com/elModo7" target="_blank">elModo7's GitHub</a>.</strong> All rights reserved.
 			</footer>
         </div>
     </body>

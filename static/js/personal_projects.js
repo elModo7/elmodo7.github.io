@@ -1,7 +1,7 @@
 var personalProjectsPage = 0;
 
 function personalProjectsEvents(){
-	unbindPagination();
+	unbindEvents();
 	var itemsPerRow = 4;
 	itemsPerPage = 12;
 	var personalProjectsHTML = '';
@@ -18,9 +18,9 @@ function personalProjectsEvents(){
 			personalProjectsHTML +=	'<span class="badge ' + valueBadge.color + '">' + valueBadge.name + '</span> ';
 		}
 		personalProjectsHTML += '<span class="badge"> </span>'; // Needed for frame possition
-		personalProjectsHTML += '<a href="' + value.url + '" class="link"><div class="position-relative">';
+		personalProjectsHTML += '<a ' + (value.url == '' ? '' : ('href="' + value.url + '" target="_blank"')) + ' class="link article-link" article="' + value.page + '"><div class="position-relative">';
 		if(value.ribbon.color && value.ribbon.name){
-			personalProjectsHTML +=	'<img src="static/img/sample.png" alt="Photo 1" class="img-fluid">';
+			personalProjectsHTML +=	'<img src="' + value.img + '" alt="Photo 1" class="img-fluid">';
 			personalProjectsHTML +=	'<div class="ribbon-wrapper ribbon-lg">';
 		}
 		personalProjectsHTML +=	'<div class="ribbon ' + value.ribbon.color + ' text-lg">' + value.ribbon.name + '</div></div>';
@@ -44,8 +44,9 @@ function personalProjectsEvents(){
 	}
 	
 	$("#body_personal_projects").html(personalProjectsHTML);
-	loadAboutMeEvent();
+	loadBreadcrumbEvents();
 	bindPersonalProjectsPagination();
+	bindArticles(); // Important after pagination
 }
 
 function bindPersonalProjectsPagination(){
