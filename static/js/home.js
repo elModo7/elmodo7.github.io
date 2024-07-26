@@ -22,19 +22,25 @@ $(document).ready(function () {
 		});
 	});
 		
-	$("#divMainContent").load("about.html");
+	$("#divMainContent").load("about.html", function(){
+		loadBreadcrumbEvents();
+	});
 		
 	document.getElementById("year_footer").innerHTML = new Date().getFullYear();
 });
 
 function goAboutMe(){
+	event.preventDefault();
 	currentMenuTab = "about_me";
 	$(".nav-link").removeClass("active");
 	$("#btn_about").addClass("active");
-	$("#divMainContent").load("about.html");
+	$("#divMainContent").load("about.html", function(){
+		loadBreadcrumbEvents();
+	});
 }
 
 function goWorkProjects(){
+	event.preventDefault();
 	currentMenuTab = "work_projects";
 	$(".nav-link").removeClass("active");
 	$("#btn_work_projects").addClass("active");
@@ -44,6 +50,7 @@ function goWorkProjects(){
 }
 
 function goPersonalProjects(){
+	event.preventDefault();
 	currentMenuTab = "personal_projects";
 	$(".nav-link").removeClass("active");
 	$("#btn_personal_projects").addClass("active");
@@ -53,6 +60,7 @@ function goPersonalProjects(){
 }
 
 function goPills(){
+	event.preventDefault();
 	currentMenuTab = "pills";
 	$(".nav-link").removeClass("active");
 	$("#btn_pills").addClass("active");
