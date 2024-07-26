@@ -103,7 +103,6 @@ function removeBreadcrumbClasses(){
 	$("#article_breadcrumb_menu").removeClass("goPills");
 }
 
-// Unused
 function loadJS(FILE_URL, async = true) {
   let scriptEle = document.createElement("script");
 
