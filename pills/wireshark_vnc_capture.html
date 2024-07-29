@@ -1,5 +1,28 @@
 <div>
 	<div>
-		<pre><code class="language-clike">((tcp || vnc) && ip.dst_host == &lt;ip_dst&gt;) && (data.len == 8 || frame.len == 62)</code></pre>
+		<br>
+		<h2>Exploiting the vulnerability</h2>
+		<p>
+			I use <b>VNC</b> quite a bit for accessing my home boxes.<br>While I rely on <b>RDP</b> mostly for Windows machines I do use VNC as fallback and when I want to use desktop apps on my Linux devices.
+			<br><br>
+			VNC, by default, is <b>NOT secure</b>, all inputs are sent in plain-text, you can think of it as the <i>"telnet"</i> of remote desktops.
+			<br>
+			This leads into <b>big security risks</b>, like <i>credentials sniffing</i> and such.
+			<br><br>
+			In this article, we will learn <b>how to exploit this vulnerability</b> as simple as possible, using <b>Wireshark</b> for two common VNC clients, like <b>RealVNC Viewer</b> and <b>TightVNC Viewer</b>.
+			<br><br>
+			If we <i>start capturing packets</i> with Wireshark, we can apply this filter, to only get inputs sent using VNC to a specific host.
+			<br>The variable <code>&lt;ip_dst&gt;</code> is the one we are interested in replacing with our target VNC Server IP:
+		</p>
+		<pre class="col-md-6"><code class="language-clike">((tcp || vnc) && ip.dst_host == &lt;ip_dst&gt;) && (data.len == 8 || frame.len == 62)</code></pre>
+		<p>
+			<br>This example is me sending <b>"hello world"</b> to one of my computers <b>outside of my home LAN</b>:
+			<br><br><img class="shadow-lg" src="static/img/pills/wireshark_vnc_capture_filter/hello_world_capture.gif"></img><br>
+			<br>You can see how the <b><span style="color:blue;">highlighted in blue</span></b> (at the bottom) output shows clearly visible the <b>"hello world"</b> I typed while capturing.
+			<br>We see <b>two packets per key input</b> because this client sends two events, one for <b>key down</b> and a <b>key up</b> event each time we type something.
+			<br><br>One could just make a rule to skip every <b>key_up</b> event and start logging all traffic that would match our filter, then <b>remove the ip_dst</b> restriction, capturing that way all outbound VNC traffic inputs.
+		</p>
+		<br>
+		<h2>Protecting against it</h2>
 	</div>
 </div>
