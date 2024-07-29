@@ -26,6 +26,7 @@
 		<script type="text/JavaScript" src="static/js/jquery.flot.pie.js"></script>
 
 		<script>
+			const isMobile = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 			var personalProjects = null;
 			var workProjects = null;
 			var pills = null;

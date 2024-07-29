@@ -25,6 +25,12 @@ $(document).ready(function () {
 	$("#divMainContent").load("about.html", function(){
 		loadBreadcrumbEvents();
 	});
+	
+	if(isMobile){
+		$(".sidebar-mini").addClass("sidebar-collapse");
+	}else{
+		$(".sidebar-mini").removeClass("sidebar-collapse");
+	}
 		
 	document.getElementById("year_footer").innerHTML = new Date().getFullYear();
 });
