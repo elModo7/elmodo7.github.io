@@ -13,7 +13,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -40,7 +40,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -67,7 +67,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -94,7 +94,7 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -121,7 +121,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -148,7 +148,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -175,7 +175,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -202,7 +202,7 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -229,7 +229,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -256,7 +256,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -283,7 +283,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -310,7 +310,7 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -337,7 +337,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -364,7 +364,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -391,7 +391,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -418,7 +418,7 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -445,7 +445,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -472,7 +472,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -499,7 +499,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -526,115 +526,7 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 4",
-        "url": "https://google.com"
-    },
-	    {
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Automation"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Cybersecurity"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "A GUI wrapper for plink with profiling, notifications and more.",
-        "id": 0,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-success",
-            "name": "Finished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "SSH Tunnel Manager",
-        "url": "https://github.com/elModo7/SSH_Tunnel_Manager/"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 2",
-        "id": 1,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 2",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 3",
-        "id": 2,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 3",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 4",
-        "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -661,7 +553,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -688,7 +580,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -715,7 +607,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -742,7 +634,7 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -769,7 +661,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -796,7 +688,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -823,7 +715,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -850,115 +742,7 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 4",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Automation"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Cybersecurity"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "A GUI wrapper for plink with profiling, notifications and more.",
-        "id": 0,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-success",
-            "name": "Finished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "SSH Tunnel Manager",
-        "url": "https://github.com/elModo7/SSH_Tunnel_Manager/"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 2",
-        "id": 1,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 2",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 3",
-        "id": 2,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 3",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 4",
-        "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -985,7 +769,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -1012,7 +796,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -1039,7 +823,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -1066,7 +850,115 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 4",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Automation"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Cybersecurity"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "A GUI wrapper for plink with profiling, notifications and more.",
+        "id": 0,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "Finished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "SSH Tunnel Manager",
+        "url": "https://github.com/elModo7/SSH_Tunnel_Manager/"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 2",
+        "id": 1,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 2",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 3",
+        "id": 2,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 3",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 4",
+        "id": 3,
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -1093,7 +985,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -1120,7 +1012,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -1147,7 +1039,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -1174,7 +1066,7 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -1201,7 +1093,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -1228,7 +1120,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -1255,7 +1147,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -1282,115 +1174,7 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 4",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Automation"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Cybersecurity"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "A GUI wrapper for plink with profiling, notifications and more.",
-        "id": 0,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-success",
-            "name": "Finished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "SSH Tunnel Manager",
-        "url": "https://github.com/elModo7/SSH_Tunnel_Manager/"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 2",
-        "id": 1,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 2",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 3",
-        "id": 2,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 3",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 4",
-        "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -1417,7 +1201,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -1444,7 +1228,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -1471,7 +1255,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -1498,7 +1282,115 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 4",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Automation"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Cybersecurity"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "A GUI wrapper for plink with profiling, notifications and more.",
+        "id": 0,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "Finished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "SSH Tunnel Manager",
+        "url": "https://github.com/elModo7/SSH_Tunnel_Manager/"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 2",
+        "id": 1,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 2",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 3",
+        "id": 2,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 3",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 4",
+        "id": 3,
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -1525,7 +1417,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -1552,7 +1444,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -1579,7 +1471,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -1606,7 +1498,7 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -1633,7 +1525,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -1660,7 +1552,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -1687,7 +1579,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -1714,115 +1606,7 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 4",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Automation"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Cybersecurity"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "A GUI wrapper for plink with profiling, notifications and more.",
-        "id": 0,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-success",
-            "name": "Finished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "SSH Tunnel Manager",
-        "url": "https://github.com/elModo7/SSH_Tunnel_Manager/"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 2",
-        "id": 1,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 2",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 3",
-        "id": 2,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 3",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 4",
-        "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -1849,7 +1633,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -1876,7 +1660,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -1903,7 +1687,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -1930,7 +1714,115 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 4",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Automation"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Cybersecurity"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "A GUI wrapper for plink with profiling, notifications and more.",
+        "id": 0,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "Finished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "SSH Tunnel Manager",
+        "url": "https://github.com/elModo7/SSH_Tunnel_Manager/"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 2",
+        "id": 1,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 2",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 3",
+        "id": 2,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 3",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 4",
+        "id": 3,
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -1957,7 +1849,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -1984,7 +1876,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -2011,7 +1903,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -2038,7 +1930,7 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -2065,7 +1957,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -2092,7 +1984,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -2119,7 +2011,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -2146,115 +2038,7 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 4",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Automation"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Cybersecurity"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "A GUI wrapper for plink with profiling, notifications and more.",
-        "id": 0,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-success",
-            "name": "Finished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "SSH Tunnel Manager",
-        "url": "https://github.com/elModo7/SSH_Tunnel_Manager/"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 2",
-        "id": 1,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 2",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 3",
-        "id": 2,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 3",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 4",
-        "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -2281,7 +2065,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -2308,7 +2092,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -2335,7 +2119,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -2362,7 +2146,115 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 4",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Automation"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Cybersecurity"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "A GUI wrapper for plink with profiling, notifications and more.",
+        "id": 0,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "Finished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "SSH Tunnel Manager",
+        "url": "https://github.com/elModo7/SSH_Tunnel_Manager/"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 2",
+        "id": 1,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 2",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 3",
+        "id": 2,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 3",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 4",
+        "id": 3,
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -2389,7 +2281,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -2416,7 +2308,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -2443,7 +2335,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -2470,7 +2362,7 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -2497,7 +2389,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -2524,7 +2416,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -2551,7 +2443,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -2578,115 +2470,7 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 4",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Automation"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Cybersecurity"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "A GUI wrapper for plink with profiling, notifications and more.",
-        "id": 0,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-success",
-            "name": "Finished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "SSH Tunnel Manager",
-        "url": "https://github.com/elModo7/SSH_Tunnel_Manager/"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 2",
-        "id": 1,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 2",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 3",
-        "id": 2,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 3",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 4",
-        "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -2713,7 +2497,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -2740,7 +2524,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -2767,7 +2551,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -2794,7 +2578,115 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 4",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Automation"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Cybersecurity"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "A GUI wrapper for plink with profiling, notifications and more.",
+        "id": 0,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "Finished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "SSH Tunnel Manager",
+        "url": "https://github.com/elModo7/SSH_Tunnel_Manager/"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 2",
+        "id": 1,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 2",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 3",
+        "id": 2,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 3",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 4",
+        "id": 3,
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -2821,7 +2713,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -2848,7 +2740,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -2875,7 +2767,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -2902,7 +2794,7 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -2929,7 +2821,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -2956,7 +2848,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -2983,7 +2875,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -3010,115 +2902,7 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 4",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Automation"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Cybersecurity"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "A GUI wrapper for plink with profiling, notifications and more.",
-        "id": 0,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-success",
-            "name": "Finished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "SSH Tunnel Manager",
-        "url": "https://github.com/elModo7/SSH_Tunnel_Manager/"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 2",
-        "id": 1,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 2",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 3",
-        "id": 2,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 3",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 4",
-        "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -3145,7 +2929,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -3172,7 +2956,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -3199,7 +2983,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -3226,7 +3010,115 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 4",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Automation"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Cybersecurity"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "A GUI wrapper for plink with profiling, notifications and more.",
+        "id": 0,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "Finished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "SSH Tunnel Manager",
+        "url": "https://github.com/elModo7/SSH_Tunnel_Manager/"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 2",
+        "id": 1,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 2",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 3",
+        "id": 2,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 3",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 4",
+        "id": 3,
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -3253,7 +3145,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -3280,7 +3172,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -3307,7 +3199,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -3334,7 +3226,7 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -3361,7 +3253,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -3388,7 +3280,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -3415,7 +3307,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -3442,115 +3334,7 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 4",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Automation"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Cybersecurity"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "A GUI wrapper for plink with profiling, notifications and more.",
-        "id": 0,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-success",
-            "name": "Finished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "SSH Tunnel Manager",
-        "url": "https://github.com/elModo7/SSH_Tunnel_Manager/"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 2",
-        "id": 1,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 2",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 3",
-        "id": 2,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 3",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 4",
-        "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -3577,7 +3361,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -3604,7 +3388,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -3631,7 +3415,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -3658,7 +3442,115 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 4",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Automation"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Cybersecurity"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "A GUI wrapper for plink with profiling, notifications and more.",
+        "id": 0,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "Finished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "SSH Tunnel Manager",
+        "url": "https://github.com/elModo7/SSH_Tunnel_Manager/"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 2",
+        "id": 1,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 2",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 3",
+        "id": 2,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 3",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 4",
+        "id": 3,
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -3685,7 +3577,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -3712,7 +3604,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -3739,7 +3631,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -3766,7 +3658,7 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -3793,7 +3685,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -3820,7 +3712,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -3847,7 +3739,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -3874,115 +3766,7 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 4",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Automation"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Cybersecurity"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "A GUI wrapper for plink with profiling, notifications and more.",
-        "id": 0,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-success",
-            "name": "Finished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "SSH Tunnel Manager",
-        "url": "https://github.com/elModo7/SSH_Tunnel_Manager/"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 2",
-        "id": 1,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 2",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 3",
-        "id": 2,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 3",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 4",
-        "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -4009,7 +3793,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -4036,7 +3820,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -4063,7 +3847,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -4090,7 +3874,115 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 4",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Automation"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Cybersecurity"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "A GUI wrapper for plink with profiling, notifications and more.",
+        "id": 0,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "Finished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "SSH Tunnel Manager",
+        "url": "https://github.com/elModo7/SSH_Tunnel_Manager/"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 2",
+        "id": 1,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 2",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 3",
+        "id": 2,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 3",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 4",
+        "id": 3,
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -4117,7 +4009,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -4144,7 +4036,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -4171,7 +4063,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -4198,7 +4090,7 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -4225,7 +4117,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -4252,7 +4144,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -4279,7 +4171,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -4306,115 +4198,7 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 4",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Automation"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Cybersecurity"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "A GUI wrapper for plink with profiling, notifications and more.",
-        "id": 0,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-success",
-            "name": "Finished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "SSH Tunnel Manager",
-        "url": "https://github.com/elModo7/SSH_Tunnel_Manager/"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 2",
-        "id": 1,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 2",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 3",
-        "id": 2,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 3",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 4",
-        "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -4441,7 +4225,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -4468,7 +4252,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -4495,7 +4279,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -4522,7 +4306,115 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 4",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Automation"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Cybersecurity"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "A GUI wrapper for plink with profiling, notifications and more.",
+        "id": 0,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "Finished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "SSH Tunnel Manager",
+        "url": "https://github.com/elModo7/SSH_Tunnel_Manager/"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 2",
+        "id": 1,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 2",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 3",
+        "id": 2,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 3",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 4",
+        "id": 3,
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -4549,7 +4441,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -4576,7 +4468,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -4603,7 +4495,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -4630,7 +4522,7 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -4657,7 +4549,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -4684,7 +4576,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -4711,7 +4603,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -4738,115 +4630,7 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 4",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Automation"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Cybersecurity"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "A GUI wrapper for plink with profiling, notifications and more.",
-        "id": 0,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-success",
-            "name": "Finished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "SSH Tunnel Manager",
-        "url": "https://github.com/elModo7/SSH_Tunnel_Manager/"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 2",
-        "id": 1,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 2",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 3",
-        "id": 2,
-        "img": "static/img/sample.png",
-        "ribbon": {
-            "color": "bg-warning",
-            "name": "Unfinished"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "ssh"
-        ],
-        "title": "Example 3",
-        "url": "https://google.com"
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Test"
-            },
-            {
-                "color": "badge-danger",
-                "name": "Example"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Sample 4",
-        "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -4873,7 +4657,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -4900,7 +4684,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -4927,7 +4711,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -4954,7 +4738,115 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 4",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Automation"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Cybersecurity"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "A GUI wrapper for plink with profiling, notifications and more.",
+        "id": 0,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "Finished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "SSH Tunnel Manager",
+        "url": "https://github.com/elModo7/SSH_Tunnel_Manager/"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 2",
+        "id": 1,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 2",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 3",
+        "id": 2,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 3",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 4",
+        "id": 3,
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -4981,7 +4873,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -5008,7 +4900,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -5035,7 +4927,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -5062,7 +4954,7 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -5089,7 +4981,7 @@
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "Finished"
@@ -5116,7 +5008,7 @@
         "date": "2024/01/07",
         "description": "Sample 2",
         "id": 1,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -5143,7 +5035,7 @@
         "date": "2024/01/07",
         "description": "Sample 3",
         "id": 2,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
@@ -5170,7 +5062,115 @@
         "date": "2024/01/07",
         "description": "Sample 4",
         "id": 3,
-        "img": "static/img/sample.png",
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 4",
+        "url": "https://google.com"
+    },
+	    {
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Automation"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Cybersecurity"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "A GUI wrapper for plink with profiling, notifications and more.",
+        "id": 0,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "Finished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "SSH Tunnel Manager",
+        "url": "https://github.com/elModo7/SSH_Tunnel_Manager/"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 2",
+        "id": 1,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 2",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 3",
+        "id": 2,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-warning",
+            "name": "Unfinished"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "ssh"
+        ],
+        "title": "Example 3",
+        "url": "https://google.com"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Test"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Example"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Sample 4",
+        "id": 3,
+        "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-warning",
             "name": "Unfinished"
