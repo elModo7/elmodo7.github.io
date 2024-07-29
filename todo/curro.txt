@@ -5,6 +5,7 @@
 2019 Coferdroza MDI, WPF, MVVM, Desktop, .Net
 2019 ACL .Net, Visual Basic, Android, WPF, Desktop, SQL Server
 2020-2024 Fiatc Java 8, SQL Server, Websockets, JavaScript, Ajax, JQuery, HTML5, CSS, Bootstrap, Jenkins, Tomcat
+
 2021-2023 Vodafone Microservices, Java Spring Boot, 3 Layer architecture, Microsoft SSO, MariaDB, Spring Security, Spring Web, Spring Data, Log4j, Lombok, Alerta.io, Feign, OAuth2, Encryption, Tomcat, Nginx, Reverse Proxy, API Rest, Thymeleaf, Linux (Cron, Deploys, Logs), Team Lead, Scrum, Xamarin
 2022 Trox Containarize APP, Install Wizard, Automatic Updates & Desploys
 2023 IBM Watson (Discovery, WatsonX, Assistant), HTML5, CSS, Ajax, JQuery, Websockets
