@@ -44,33 +44,35 @@ function unbindEvents(){
 
 function bindArticles(){
 	$(".article-link").click(function(){
-		var articlePath = $(this).attr("article");
-		var articleTitle = $(this).attr("title");
-		var articleDescription = $(this).attr("description");
-		$("#divMainContent").load("common/article.html", function(){
-			$("#article_title").html(articleTitle);
-			$("#article_title_description").html(articleDescription);
-			removeBreadcrumbClasses();
-			if(currentMenuTab == "about_me"){
-				$("#article_breadcrumb_menu").addClass("goAboutMe");
-				$("#article_breadcrumb_menu").html("About me");
-			}else if(currentMenuTab == "work_projects"){
-				$("#article_breadcrumb_menu").addClass("goWorkProjects");
-				$("#article_breadcrumb_menu").html("Work projects");
-			}else if(currentMenuTab == "personal_projects"){
-				$("#article_breadcrumb_menu").addClass("goPersonalProjects");
-				$("#article_breadcrumb_menu").html("Personal projects");
-			}else if(currentMenuTab == "pills"){
-				$("#article_breadcrumb_menu").addClass("goPills");
-				$("#article_breadcrumb_menu").html("Pills & Code Snippets");
-			}
-			$("#article_breadcrumb").html(articleTitle);
-			
-			loadBreadcrumbEvents();
-			$("#article_body").load(articlePath, function(){
-				loadJS("static/js/prism.js", true);
+		if($(this).attr('href') === undefined) { 
+			var articlePath = $(this).attr("article");
+			var articleTitle = $(this).attr("title");
+			var articleDescription = $(this).attr("description");
+			$("#divMainContent").load("common/article.html", function(){
+				$("#article_title").html(articleTitle);
+				$("#article_title_description").html(articleDescription);
+				removeBreadcrumbClasses();
+				if(currentMenuTab == "about_me"){
+					$("#article_breadcrumb_menu").addClass("goAboutMe");
+					$("#article_breadcrumb_menu").html("About me");
+				}else if(currentMenuTab == "work_projects"){
+					$("#article_breadcrumb_menu").addClass("goWorkProjects");
+					$("#article_breadcrumb_menu").html("Work projects");
+				}else if(currentMenuTab == "personal_projects"){
+					$("#article_breadcrumb_menu").addClass("goPersonalProjects");
+					$("#article_breadcrumb_menu").html("Personal projects");
+				}else if(currentMenuTab == "pills"){
+					$("#article_breadcrumb_menu").addClass("goPills");
+					$("#article_breadcrumb_menu").html("Pills & Code Snippets");
+				}
+				$("#article_breadcrumb").html(articleTitle);
+				
+				loadBreadcrumbEvents();
+				$("#article_body").load(articlePath, function(){
+					loadJS("static/js/prism.js", true);
+				});
 			});
-		});
+		}
 	});
 }
 
