@@ -8,6 +8,14 @@
             {
                 "color": "badge-danger",
                 "name": "Cybersecurity"
+            },
+            {
+                "color": "badge-dark",
+                "name": "SSH"
+            },
+            {
+                "color": "badge-dark",
+                "name": "VNC"
             }
         ],
         "date": "2024/07/25",
@@ -15,8 +23,8 @@
         "id": 0,
         "img": "static/img/pills/wireshark_vnc_capture_filter.png",
         "ribbon": {
-            "color": "bg-success",
-            "name": "Beginner"
+            "color": "bg-danger",
+            "name": "CYBERSEC"
         },
         "tags": [
             "hacking",
