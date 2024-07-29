@@ -17,7 +17,7 @@
 		<pre class="col-md-12"><code class="language-clike">((tcp || vnc) && ip.dst_host == &lt;ip_dst&gt;) && (data.len == 8 || frame.len == 62)</code></pre>
 		<p>
 			<br>This example is me sending <b>"hello world"</b> to one of my computers <b>outside of my home LAN</b>:
-			<br><br><img class="shadow-lg" src="static/img/pills/wireshark_vnc_capture_filter/hello_world_capture.gif"></img><br>
+			<br><br><img class="shadow-lg" style="width:100%" src="static/img/pills/wireshark_vnc_capture_filter/hello_world_capture.gif"></img><br>
 			<br>You can see how the <b><span style="color:blue;">highlighted in blue</span></b> (at the bottom) output shows clearly visible the <b>"hello world"</b> I typed while capturing.
 			<br>We see <b>two packets per key input</b> because this client sends two events, one for <b>key down</b> and a <b>key up</b> event each time we type something.
 			<br><br>One could just make a rule to skip every <b>key_up</b> event and start logging all traffic that would match our filter, then <b>remove the ip_dst</b> restriction, capturing that way all outbound VNC traffic inputs.
@@ -29,7 +29,7 @@
 			<br>In later articles I may update this one, because I have been doing a <i>few tunnels, <u>specifically</u> for VNC</i>, but this time we will be tunneling our connection using my <b><a href="https://github.com/elModo7/SSH_Tunnel_Manager">SSH Tunnel Manager</a></b>.
 			<br><b><a href="https://github.com/elModo7/SSH_Tunnel_Manager">SSH Tunnel Manager</a></b> is a tool that allows us to use our <b>existing SSH Server for securely tunneling connections</b>.
 			<br><br>In this case we are going to configure a tunnel like this:
-			<br><br><a class="shadow-lg" href="https://github.com/elModo7/SSH_Tunnel_Manager"><img src="static/img/pills/wireshark_vnc_capture_filter/tunnel_manager.png"></img></a>
+			<br><br><a class="shadow-lg" href="https://github.com/elModo7/SSH_Tunnel_Manager"><img style="width:100%" src="static/img/pills/wireshark_vnc_capture_filter/tunnel_manager.png"></img></a>
 			<br><br>This will allow us to connect to <b>127.0.0.1:51900</b> <i>(localhost)</i> through port <b>51900</b> and that will be <b>securely redirected to our VNC Server endpoint</b> at 192.168.1.128:5900.
 			<br>In this case we are using a <i>local IP address</i> but you get the idea. We can use this to secure our WAN VNC sessions.
 			<br><br><br>And this would conclude our pill for today, note this is actually <b>the first pill that I write</b> and it's <b>the first version of my articles's framework</b>, but I think it's starting to look decent after all 😀.
