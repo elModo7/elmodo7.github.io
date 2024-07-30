@@ -336,10 +336,6 @@
                 "name": "Java"
             },
 			{
-                "color": "badge-dark",
-                "name": "Websockets"
-            },
-			{
                 "color": "badge-primary",
                 "name": "SQL Server"
             },
@@ -408,6 +404,95 @@
 			"web"
         ],
         "title": "Insurance Company Framework",
+        "url": ""
+    },
+	{
+        "badges": [
+			{
+                "color": "badge-warning",
+                "name": "Java"
+            },
+			{
+                "color": "badge-dark",
+                "name": "Spring Boot"
+            },
+			{
+                "color": "badge-primary",
+                "name": "MySQL"
+            },
+			{
+                "color": "badge-dark",
+                "name": "API Rest"
+            },
+			{
+                "color": "badge-primary",
+                "name": "SSO"
+            },
+			{
+                "color": "badge-dark",
+                "name": "OAuth2"
+            },
+			{
+                "color": "badge-primary",
+                "name": "Tomcat"
+            },
+			{
+                "color": "badge-primary",
+                "name": "NGINX"
+            },
+			{
+                "color": "badge-primary",
+                "name": "Reverse Proxy"
+            },
+			{
+                "color": "badge-success",
+                "name": "Linux"
+            },
+			{
+                "color": "badge-secondary",
+                "name": "Scrum"
+            },
+			{
+                "color": "badge-dark",
+                "name": "Log4j"
+            },
+			{
+                "color": "badge-warning",
+                "name": "Project Lead"
+            }
+        ],
+        "date": "2021/01/12",
+        "description": "<b>3 Layer</b> Spring Boot API, connecting a <b>Xamarin App</b> with a <b>MariaDB</b> backend. Layers 2 and 3 were on a <b>DMZ</b> and <i>only the front API, Web and SSO frontend were public</i>.",
+        "id": 6,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "2021"
+        },
+        "tags": [
+            "java",
+            "html",
+            "html5",
+			"css",
+			"bootstrap",
+			"mariadb",
+			"mysql",
+			"microservices",
+			"sso",
+			"nginx",
+			"oauth2",
+			"api",
+			"rest",
+			"log4j",
+			"lombok",
+			"jquery",
+			"js",
+			"tomcat",
+			"jenkins",
+			"ajax",
+			"web"
+        ],
+        "title": "Microservices Java Rest API + Microsoft SSO",
         "url": ""
     }
 ]
