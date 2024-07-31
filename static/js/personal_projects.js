@@ -19,11 +19,11 @@ function personalProjectsEvents(){
 		}
 		personalProjectsHTML += '<span class="badge"> </span>'; // Needed for frame possition
 		personalProjectsHTML += '<a ' + (value.url == '' ? '' : ('href="' + value.url + '" target="_blank"')) + ' class="link article-link" article="' + value.page + '"><div class="position-relative">';
+		personalProjectsHTML +=	'<div class="hover01 column"><div><figure><img src="' + value.img + '" alt="Photo 1" class="img-fluid hover01"></figure></div></div>';
 		if(value.ribbon.color && value.ribbon.name){
-			personalProjectsHTML +=	'<img src="' + value.img + '" alt="Photo 1" class="img-fluid">';
 			personalProjectsHTML +=	'<div class="ribbon-wrapper ribbon-lg">';
+			personalProjectsHTML +=	'<div class="ribbon ' + value.ribbon.color + ' text-lg">' + value.ribbon.name + '</div></div>';
 		}
-		personalProjectsHTML +=	'<div class="ribbon ' + value.ribbon.color + ' text-lg">' + value.ribbon.name + '</div></div>';
 		personalProjectsHTML += '<h3 style="text-align:center">' + value.title + '</h3><p style="text-align:center">' + value.description + '</p></div></a></div>';
 		if((key + 1) % itemsPerRow == 0 || cntKeys + 1 == itemsPerPage || cntKeys + 1 == personalProjects.length){
 			personalProjectsHTML += '</div>';

@@ -19,7 +19,7 @@ function pillsEvents(){
 		}
 		pillsHTML += '<span class="badge"> </span>'; // Needed for frame possition
 		pillsHTML += '<a ' + (value.url == '' ? '' : ('href="' + value.url + '" target="_blank"')) + ' class="link article-link" article="' + value.page + '" title="' + value.title + '" description="' + value.description + '"><div class="position-relative">';
-		pillsHTML +=	'<img src="' + value.img + '" alt="Photo 1" class="img-fluid">';
+		pillsHTML += '<div class="hover01 column"><div><figure><img src="' + value.img + '" alt="Photo 1" class="img-fluid hover01"></figure></div></div>';
 		if(value.ribbon.color && value.ribbon.name){
 			pillsHTML +=	'<div class="ribbon-wrapper ribbon-lg">';
 			pillsHTML +=	'<div class="ribbon ' + value.ribbon.color + ' text-lg">' + value.ribbon.name + '</div></div>';

@@ -1,1 +1,3 @@
 languages
+cursor pointer para los articulos
+pequeña animación redimensionar al hacer hover
