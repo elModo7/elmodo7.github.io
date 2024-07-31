@@ -9,6 +9,7 @@ figure {
 	background: #fff;
 	overflow: hidden;
 }
+
 figure:hover+span {
 	bottom: -36px;
 	opacity: 1;
@@ -32,11 +33,15 @@ a:hover {
 	transform: scale(1.3);
 }
 
+.article-image img {
+  border-radius: 3%;
+}
+
 /* Shine */
-.hover01 figure {
+.article-image figure {
 	position: relative;
 }
-.hover01 figure::before {
+.article-image figure::before {
 	position: absolute;
 	top: 0;
 	left: -75%;
@@ -50,7 +55,7 @@ a:hover {
 	-webkit-transform: skewX(-25deg);
 	transform: skewX(-25deg);
 }
-.hover01 figure:hover::before {
+.article-image figure:hover::before {
 	-webkit-animation: shine .75s;
 	animation: shine .75s;
 }

@@ -19,7 +19,7 @@ function workProjectsEvents(){
 		}
 		workProjectsHTML += '<span class="badge"> </span>'; // Needed for frame possition
 		workProjectsHTML += '<a ' + (value.url == '' ? '' : ('href="' + value.url + '" target="_blank"')) + ' class="link article-link" article="' + value.page + '"><div class="position-relative">';
-		workProjectsHTML +=	'<div class="hover01 column"><div><figure><img src="' + value.img + '" alt="Photo 1" class="img-fluid hover01"></figure></div></div>';
+		workProjectsHTML +=	'<div class="article-image column"><div><figure><img src="' + value.img + '" alt="Photo 1" class="img-fluid article-image"></figure></div></div>';
 		if(value.ribbon.color && value.ribbon.name){
 			workProjectsHTML +=	'<div class="ribbon-wrapper ribbon-lg">';
 			workProjectsHTML +=	'<div class="ribbon ' + value.ribbon.color + ' text-lg">' + value.ribbon.name + '</div></div>';

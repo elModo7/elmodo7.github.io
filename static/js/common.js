@@ -76,7 +76,9 @@ function bindArticles(){
 					$("#article_breadcrumb").html("Under construction!");
 					$("#article_body").load("common/under_construction.html", function(){
 						$("#article_title").html("Ooops, there is no more info about this article yet!");
-						$("#article_title_description").html("This is probably due to me adding the article to the list before making a page for it.<br>If you want more <i>information about this specific topic</i>, you can always <u><a class='text-primary' href='mailto:martinez.picardo.victor@gmail.com'>contact me</a></u> to fill in this article or have <span class='text-warning'>real time feedback on it.</span>");
+						$("#article_title_description").html("This is probably due to me adding the article to the list before making a page for it.<br>If you want more <i>information about this specific topic</i>, you can always <a class='text-danger' href='mailto:martinez.picardo.victor@gmail.com' target='_blank'>contact me <i class='fas fa-envelope'></i></a> to fill in this article.");
+						$("#article_title_description").append('<br>I am also available for <span class="text-warning">real time feedback about it on </span><a class="text-primary" href="https://discord.gg/stu2vkJ" target="_blank">Discord <i class="fab fa-discord"></i></a>.');
+						$("#article_title_description").append('<br>And you can also find me on <a class="text-info" href="https://t.me/victor_smp" target="_blank">Telegram <i class="fab fa-telegram-plane"></i></a>.');
 					});
 				}
 			});
@@ -98,7 +100,7 @@ function loadBreadcrumbEvents(){
 	$(".goPersonalProjects").unbind();
 	$(".goPersonalProjects").click(function(){
 		goPersonalProjects();
-	});
+	})	;
 	
 	$(".goPills").unbind();
 	$(".goPills").click(function(){
