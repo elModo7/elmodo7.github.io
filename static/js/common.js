@@ -67,7 +67,7 @@ function bindArticles(){
 				}
 				
 				loadBreadcrumbEvents();
-				if(articlePath != "undefined"){
+				if(articlePath != "undefined" && articlePath != ""){
 					$("#article_breadcrumb").html(articleTitle);
 					$("#article_body").load(articlePath, function(){
 						loadJS("static/js/prism.js", true);
