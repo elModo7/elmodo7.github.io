@@ -6,24 +6,150 @@
                 "name": "Automation"
             },
             {
+                "color": "badge-success",
+                "name": "AutoHotkey"
+            },
+            {
                 "color": "badge-danger",
                 "name": "Cybersecurity"
+            },
+            {
+                "color": "badge-dark",
+                "name": "HTML5"
+            },
+            {
+                "color": "badge-dark",
+                "name": "CSS3"
+            },
+            {
+                "color": "badge-dark",
+                "name": "JS"
+            },
+            {
+                "color": "badge-dark",
+                "name": "JQuery"
             }
         ],
         "date": "2024/01/07",
         "description": "A GUI wrapper for plink with profiling, notifications and more.",
         "id": 0,
-        "img": "static/img/coming_soon.jpg",
+        "img": "static/img/personal_projects/tunnel_manager/preview.png",
         "ribbon": {
             "color": "bg-success",
-            "name": "Finished"
+            "name": "Public"
         },
         "tags": [
             "automation",
             "networking",
-            "ssh"
+            "ssh",
+			"autohotkey",
+			"cybersecurity",
+			"html",
+			"css",
+			"js",
+			"jquery",
+			"windows",
+			"desktop",
+			"json"
         ],
-        "title": "SSH Tunnel Manager",
-        "url": "https://github.com/elModo7/SSH_Tunnel_Manager/"
+        "title": "<b>SSH Tunnel Manager</b>",
+        "url": "https://github.com/elModo7/SSH_Tunnel_Manager/",
+		"page": ""
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Automation"
+            },
+            {
+                "color": "badge-success",
+                "name": "AutoHotkey"
+            },
+            {
+                "color": "badge-primary",
+                "name": "Windows"
+            },
+            {
+                "color": "badge-primary",
+                "name": "Desktop"
+            },
+            {
+                "color": "badge-secondary",
+                "name": "TCP"
+            },
+            {
+                "color": "badge-secondary",
+                "name": "Websockets"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "An easily configurable Macro Panel designed for <b>touchscreen</b> input in mind with <b>remote command</b> support via <i>TCP sockets</i>.<br><b>Folder support, auto-generated code snippets and more</b>",
+        "id": 1,
+        "img": "static/img/personal_projects/nova_macros/preview.gif",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "Public"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "autohotkey",
+			"windows",
+			"desktop",
+			"tcp",
+			"websockets",
+			"json"
+        ],
+        "title": "<b>Nova Macros</b>: A <i>Stream Deck</i> clone",
+        "url": "https://github.com/elModo7/Nova-Macros-Offline",
+		"page": ""
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-primary",
+                "name": "Web"
+            },
+            {
+                "color": "badge-dark",
+                "name": "HTML5"
+            },
+            {
+                "color": "badge-dark",
+                "name": "CSS3"
+            },
+            {
+                "color": "badge-dark",
+                "name": "JS"
+            },
+            {
+                "color": "badge-dark",
+                "name": "JQuery"
+            },
+            {
+                "color": "badge-dark",
+                "name": "Bootstrap"
+            }
+        ],
+        "date": "2024/07/31",
+        "description": "<b>Zero database, content-driven GitHub hosted online portfolio</b> for showcasing my projects and life as a developer",
+        "id": 2,
+        "img": "static/img/personal_projects/web_portfolio.png",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "Public"
+        },
+        "tags": [
+            "web",
+            "html",
+            "css",
+			"jquery",
+			"js",
+			"json"
+        ],
+        "title": "<b>My Online Portfolio</b> <i>(This)</i>",
+        "url": "https://github.com/elModo7/elmodo7.github.io",
+		"page": ""
     }
 ]

@@ -54,7 +54,8 @@
 			"mvc"
         ],
         "title": "Warehouse Production & Management",
-        "url": ""
+        "url": "",
+		"page": ""
     },
 	    {
         "badges": [
@@ -116,7 +117,8 @@
 			"ftp"
         ],
         "title": "PDA Warehouse Management",
-        "url": ""
+        "url": "",
+		"page": ""
     },
 	    {
         "badges": [
@@ -178,7 +180,8 @@
 			"ftp"
         ],
         "title": "PDA Airport Airway Bill Management",
-        "url": ""
+        "url": "",
+		"page": ""
     },
 	{
         "badges": [
@@ -210,7 +213,8 @@
 			"sql_server"
         ],
         "title": "Asana - Navision Task Management Sync",
-        "url": ""
+        "url": "",
+		"page": ""
     },
 	{
         "badges": [
@@ -266,7 +270,8 @@
 			"mvvm"
         ],
         "title": "MDI Accountability Management System",
-        "url": ""
+        "url": "",
+		"page": ""
     },
 	{
         "badges": [
@@ -327,7 +332,8 @@
 			"tcp"
         ],
         "title": "PDA Airport Airway Bill Management #2",
-        "url": ""
+        "url": "",
+		"page": ""
     },
 	{
         "badges": [
@@ -404,7 +410,8 @@
 			"web"
         ],
         "title": "Insurance Company Framework",
-        "url": ""
+        "url": "",
+		"page": ""
     },
 	{
         "badges": [
@@ -493,7 +500,8 @@
 			"web"
         ],
         "title": "Microservices Java Rest API + Microsoft SSO",
-        "url": ""
+        "url": "",
+		"page": ""
     },
 	{
         "badges": [
@@ -538,7 +546,8 @@
 			"ftp"
         ],
         "title": "Windows C# App Containerization",
-        "url": ""
+        "url": "",
+		"page": ""
     },
 	{
         "badges": [
@@ -592,7 +601,8 @@
 			"chat"
         ],
         "title": "IBM Watson Assistant Chat-Bot",
-        "url": ""
+        "url": "",
+		"page": ""
     },
 	{
         "badges": [
@@ -652,7 +662,8 @@
 			"lombok"
         ],
         "title": "Cloud to On-Premise Microservices Java Migration AWS S3",
-        "url": ""
+        "url": "",
+		"page": ""
     },
 	{
         "badges": [
@@ -713,7 +724,8 @@
 			"rest"
         ],
         "title": "Assistance Company Web + API Rest",
-        "url": ""
+        "url": "",
+		"page": ""
     },
 	{
         "badges": [
@@ -752,6 +764,48 @@
 			"voice_to_text"
         ],
         "title": "Call Recording Classification System",
-        "url": ""
+        "url": "",
+		"page": ""
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-primary",
+                "name": "Web"
+            },
+			{
+                "color": "badge-dark",
+                "name": "HTML5"
+            },
+			{
+                "color": "badge-dark",
+                "name": "JS"
+            },
+			{
+                "color": "badge-dark",
+                "name": "CSS3"
+            },
+			{
+                "color": "badge-primary",
+                "name": "Wordpress"
+            }
+        ],
+        "date": "2016/07/14",
+        "description": "A webpage to showcase local wines and wine-related activities<br>Made from a Wordpress template and a few custom JS plugins",
+        "id": 13,
+        "img": "static/img/work_projects/espacio_lugus.jpg",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "2016"
+        },
+        "tags": [
+            "web",
+            "html",
+            "js",
+			"css"
+        ],
+        "title": "Local Wines Webpage",
+        "url": "https://www.espaciolugus.com/",
+		"page": ""
     }
 ]
