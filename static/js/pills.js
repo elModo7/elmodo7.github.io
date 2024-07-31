@@ -54,5 +54,6 @@ function bindPillsPagination(){
 		event.preventDefault();
 		pillsPage = parseInt($(this).attr("data-dt-idx")) - 1;
 		pillsEvents();
+		animateToTop();
 	});
 }

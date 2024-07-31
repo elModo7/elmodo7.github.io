@@ -96,7 +96,7 @@
             }
         ],
         "date": "2018/02/07",
-        "description": "Two Apps, one a <b>Desktop package management system</b> and a <b>Windows CE</b> App for <i>scanning and distributing packages</i> via <b>FTP and SQL Server queries</b>.",
+        "description": "Two Apps, one a <b>Desktop package management system</b> and a <b>Windows CE</b> App for <i>scanning and distributing packages</i> via <b>FTP and SQL Server queries</b>",
         "id": 1,
         "img": "static/img/work_projects/warehouse_management.jpg",
         "ribbon": {
@@ -248,7 +248,7 @@
             }
         ],
         "date": "2019/01/12",
-        "description": "An accountability management system for an Ironmongery group for their in-house management tools.<br>A port from <b>Visual FoxPro to C# WPF</b>.",
+        "description": "An accountability management system for an Ironmongery group for their in-house management tools.<br>A port from <b>Visual FoxPro to C# WPF</b>",
         "id": 4,
         "img": "static/img/coming_soon.jpg",
         "ribbon": {
@@ -308,7 +308,7 @@
             }
         ],
         "date": "2019/01/12",
-        "description": "<b>AWB concurrent IO</b> scanning and distribution of pallets and packages for storage and plane distribution.",
+        "description": "<b>AWB concurrent IO</b> scanning and distribution of pallets and packages for storage and plane distribution",
         "id": 5,
         "img": "static/img/work_projects/airport_management_2.jpeg",
         "ribbon": {
@@ -381,8 +381,8 @@
             }
         ],
         "date": "2020/01/12",
-        "description": "<b>Java framework of Apps and Modules</b> for the management of an insurance company, from <i>payment management and bills to sinister creation, users, groups, permissions, documentation handling and communication with insureds</i>.",
-        "id": 6,
+        "description": "<b>Java framework of Apps and Modules</b> for the management of an insurance company, from <i>payment management and bills to accident creation, users, groups, permissions, documentation handling and communication with insureds</i>",
+        "id": 7,
         "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
@@ -462,8 +462,8 @@
             }
         ],
         "date": "2021/01/12",
-        "description": "<b>3 Layer</b> Spring Boot API, connecting a <b>Xamarin App</b> with a <b>MariaDB</b> backend. Layers 2 and 3 were on a <b>DMZ</b> and <i>only the front API, Web and SSO frontend were public</i>.",
-        "id": 6,
+        "description": "<b>3 Layer</b> Spring Boot API, connecting a <b>Xamarin App</b> with a <b>MariaDB</b> backend. Layers 2 and 3 were on a <b>DMZ</b> and <i>only the front API, Web and SSO frontend were public</i>",
+        "id": 8,
         "img": "static/img/coming_soon.jpg",
         "ribbon": {
             "color": "bg-success",
@@ -493,6 +493,265 @@
 			"web"
         ],
         "title": "Microservices Java Rest API + Microsoft SSO",
+        "url": ""
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-dark",
+                "name": "C#"
+            },
+			{
+                "color": "badge-dark",
+                "name": ".Net"
+            },
+			{
+                "color": "badge-secondary",
+                "name": "Desktop"
+            },
+			{
+                "color": "badge-secondary",
+                "name": "FTP"
+            },
+			{
+                "color": "badge-primary",
+                "name": "Windows"
+            },
+			{
+                "color": "",
+                "name": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+            }
+        ],
+        "date": "2022/07/14",
+        "description": "Containerize existing application, <b>install wizard, portable deploys, automatic updates system</b>",
+        "id": 9,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "2022"
+        },
+        "tags": [
+            "c#",
+            "desktop",
+			"windows",
+			".net",
+			"ftp"
+        ],
+        "title": "Windows C# App Containerization",
+        "url": ""
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-dark",
+                "name": "HTML5"
+            },
+			{
+                "color": "badge-dark",
+                "name": "CSS3"
+            },
+			{
+                "color": "badge-dark",
+                "name": "Ajax"
+            },
+			{
+                "color": "badge-dark",
+                "name": "JQuery"
+            },
+			{
+                "color": "badge-dark",
+                "name": "Websockets"
+            },
+			{
+                "color": "badge-primary",
+                "name": "Web"
+            },
+			{
+                "color": "badge-primary",
+                "name": "AI"
+            },
+			{
+                "color": "badge-primary",
+                "name": "Chat-Bot"
+            }
+        ],
+        "date": "2023/07/14",
+        "description": "A few document driven conversational bots for different clients using <b>IBM Watson Assistant, Discovery and WatsonX AI models</b>",
+        "id": 10,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "2023"
+        },
+        "tags": [
+            "ai",
+            "ibm",
+			"watson",
+			"web",
+			"websockets",
+			"chat"
+        ],
+        "title": "IBM Watson Assistant Chat-Bot",
+        "url": ""
+    },
+	{
+        "badges": [
+			{
+                "color": "badge-warning",
+                "name": "Java"
+            },
+			{
+                "color": "badge-dark",
+                "name": "Spring Boot"
+            },
+			{
+                "color": "badge-primary",
+                "name": "PostgreSQL"
+            },
+			{
+                "color": "badge-dark",
+                "name": "API Rest"
+            },
+			{
+                "color": "badge-primary",
+                "name": "Docker"
+            },
+			{
+                "color": "badge-warning",
+                "name": "AWS"
+            },
+			{
+                "color": "badge-success",
+                "name": "English"
+            },
+			{
+                "color": "badge-warning",
+                "name": "Project Lead"
+            }
+        ],
+        "date": "2023/01/12",
+        "description": "Whole infrastructure migration to on-premise system using <b>Docker, Payara application server + war deployment, PostgreSQL server and AWS S3 to local storage file server</b>",
+        "id": 6,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "2023"
+        },
+        "tags": [
+            "java",
+			"postgresql",
+			"microservices",
+			"payara",
+			"docker",
+			"api",
+			"aws",
+			"cloud",
+			"on_premise",
+			"rest",
+			"log4j",
+			"lombok"
+        ],
+        "title": "Cloud to On-Premise Microservices Java Migration AWS S3",
+        "url": ""
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-dark",
+                "name": "C#"
+            },
+			{
+                "color": "badge-dark",
+                "name": ".Net"
+            },
+			{
+                "color": "badge-dark",
+                "name": "ASP"
+            },
+			{
+                "color": "badge-primary",
+                "name": "SQL Server"
+            },
+			{
+                "color": "badge-secondary",
+                "name": "Web"
+            },
+			{
+                "color": "badge-secondary",
+                "name": "API"
+            },
+			{
+                "color": "badge-secondary",
+                "name": "Rest"
+            },
+			{
+                "color": "badge-secondary",
+                "name": "MVC"
+            },
+			{
+                "color": "badge-primary",
+                "name": "Windows IIS"
+            }
+        ],
+        "date": "2024/07/14",
+        "description": "Data exchange between <b>Insurance Company data and Assistance Company work orders</b></b>",
+        "id": 11,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "2024"
+        },
+        "tags": [
+            "asp",
+            "c#",
+            "web",
+			"windows",
+			".net",
+			"sql_server",
+			"iis",
+			"api",
+			"rest"
+        ],
+        "title": "Assistance Company Web + API Rest",
+        "url": ""
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-primary",
+                "name": "Voice to Text"
+            },
+			{
+                "color": "badge-dark",
+                "name": "GPT-4"
+            },
+			{
+                "color": "badge-primary",
+                "name": "OpenAI"
+            },
+			{
+                "color": "badge-primary",
+                "name": "Azure"
+            },
+			{
+                "color": "badge-primary",
+                "name": "AI"
+            }
+        ],
+        "date": "2024/07/14",
+        "description": "A process to convert previously recorded audio <b>calls to text</b> and then <i>clasify by topic/department</i> each of this calls for later management",
+        "id": 12,
+        "img": "static/img/coming_soon.jpg",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "2024"
+        },
+        "tags": [
+            "ai",
+            "gpt",
+			"voice_to_text"
+        ],
+        "title": "Call Recording Classification System",
         "url": ""
     }
 ]

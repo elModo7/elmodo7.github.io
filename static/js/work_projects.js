@@ -54,5 +54,6 @@ function bindWorkProjectsPagination(){
 		event.preventDefault();
 		workProjectsPage = parseInt($(this).attr("data-dt-idx")) - 1;
 		workProjectsEvents();
+		animateToTop();
 	});
 }

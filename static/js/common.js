@@ -123,3 +123,7 @@ function loadJS(FILE_URL, async = true) {
     console.log("Error on loading file", ev);
   });
 }
+
+function animateToTop(){
+	$("html, body").animate({ scrollTop: 0 }, "slow");
+}

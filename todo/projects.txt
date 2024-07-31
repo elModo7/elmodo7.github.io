@@ -1,9 +1,0 @@
-Id -> Innecesario?
-Title
-Description
-Tags[]
-Image
-Url
-Badges[{}] -> Estilos y nombre
-Ribbon
-Date

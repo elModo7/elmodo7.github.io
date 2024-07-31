@@ -54,5 +54,6 @@ function bindPersonalProjectsPagination(){
 		event.preventDefault();
 		personalProjectsPage = parseInt($(this).attr("data-dt-idx")) - 1;
 		personalProjectsEvents();
+		animateToTop();
 	});
 }
