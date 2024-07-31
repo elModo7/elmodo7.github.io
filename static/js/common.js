@@ -65,12 +65,20 @@ function bindArticles(){
 					$("#article_breadcrumb_menu").addClass("goPills");
 					$("#article_breadcrumb_menu").html("Pills & Code Snippets");
 				}
-				$("#article_breadcrumb").html(articleTitle);
 				
 				loadBreadcrumbEvents();
-				$("#article_body").load(articlePath, function(){
-					loadJS("static/js/prism.js", true);
-				});
+				if(articlePath != "undefined"){
+					$("#article_breadcrumb").html(articleTitle);
+					$("#article_body").load(articlePath, function(){
+						loadJS("static/js/prism.js", true);
+					});
+				}else{
+					$("#article_breadcrumb").html("Under construction!");
+					$("#article_body").load("common/under_construction.html", function(){
+						$("#article_title").html("Ooops, there is no more info about this article yet!");
+						$("#article_title_description").html("This is probably due to me adding the article to the list before making a page for it.<br>If you want more <i>information about this specific topic</i>, you can always <u><a class='text-primary' href='mailto:martinez.picardo.victor@gmail.com'>contact me</a></u> to fill in this article or have <span class='text-warning'>real time feedback on it.</span>");
+					});
+				}
 			});
 		}
 	});
