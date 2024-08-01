@@ -6,10 +6,6 @@
                 "name": "Automation"
             },
             {
-                "color": "badge-success",
-                "name": "AutoHotkey"
-            },
-            {
                 "color": "badge-danger",
                 "name": "Cybersecurity"
             },
@@ -28,6 +24,10 @@
             {
                 "color": "badge-dark",
                 "name": "JQuery"
+            },
+            {
+                "color": "badge-dark",
+                "name": "AHK"
             }
         ],
         "date": "2024/01/07",
@@ -63,8 +63,8 @@
                 "name": "Automation"
             },
             {
-                "color": "badge-success",
-                "name": "AutoHotkey"
+                "color": "badge-dark",
+                "name": "AHK"
             },
             {
                 "color": "badge-primary",
