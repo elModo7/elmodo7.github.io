@@ -19,6 +19,11 @@ a:hover {
 	cursor:pointer;
 }
 
+.article-inner-image {
+	max-width:100%; 
+	height:auto;
+}
+
 
 /* Article Effects */
 /* Zoom */
