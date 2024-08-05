@@ -1,6 +1,11 @@
 $(document).ready(function () {
 	let searchParams = new URLSearchParams(window.location.search);
-	$("#header").load("common/header.html"); 
+	$("#header").load("common/header.html", function(){
+		$("#contact_me_header").click(function(){
+			event.preventDefault();
+			goContactMe();
+		});
+	}); 
 	$("#menu").load("common/menu.html", function(){
 		$("#btn_about").click(function(){
 			event.preventDefault();
@@ -115,4 +120,16 @@ function goPills(){
 	$("#divMainContent").load("pills.html", function(){
 		pillsEvents();
 	});
+}
+
+function goContactMe(){
+	event.preventDefault();
+	alert("Not yet implemented");
+	/*removeBreadcrumbClasses();
+	$("#article_breadcrumb_menu").addClass("goAboutMe");
+	$("#article_breadcrumb_menu").html("About me");
+	loadBreadcrumbEvents();
+	$("#divMainContent").load("contact.html", function(){
+		pillsEvents();
+	});*/
 }
