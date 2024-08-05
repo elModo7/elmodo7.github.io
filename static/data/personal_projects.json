@@ -151,5 +151,59 @@
         "title": "<b>My Online Portfolio</b> <i>(This)</i>",
         "url": "https://github.com/elModo7/elmodo7.github.io",
 		"page": ""
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-primary",
+                "name": "Web"
+            },
+            {
+                "color": "badge-dark",
+                "name": "HTML5"
+            },
+            {
+                "color": "badge-dark",
+                "name": "CSS3"
+            },
+            {
+                "color": "badge-dark",
+                "name": "JS"
+            },
+            {
+                "color": "badge-dark",
+                "name": "JQuery"
+            },
+            {
+                "color": "badge-dark",
+                "name": "Bootstrap"
+            },
+			{
+                "color": "badge-dark",
+                "name": "AHK"
+            },
+            {
+                "color": "badge-primary",
+                "name": "Windows"
+            }
+        ],
+        "date": "2020/07/31",
+        "description": "An HTTP server that reads a rom folder and <i>dynamically generates a web UI</i> for <b>playing your games on the web or your phone with touch controls!</b>",
+        "id": 3,
+        "img": "static/img/personal_projects/web_portfolio.png",
+        "ribbon": {
+            
+        },
+        "tags": [
+            "web",
+            "html",
+            "css",
+			"jquery",
+			"js",
+			"json"
+        ],
+        "title": "<b>GameBoy</b> <i>online</i> Library",
+        "url": "https://github.com/elModo7/elmodo7.github.io",
+		"page": ""
     }
 ]

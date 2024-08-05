@@ -76,7 +76,7 @@ function bindArticles(){
 					$("#article_breadcrumb").html("Under construction!");
 					$("#article_body").load("common/under_construction.html", function(){
 						$("#article_title").html("Ooops, there is no more info about this article yet!");
-						$("#article_title_description").html("This is probably due to me adding the article to the list before making a page for it.<br>If you want more <i>information about this specific topic</i>, you can always <a class='text-danger' href='mailto:martinez.picardo.victor@gmail.com' target='_blank'>contact me <i class='fas fa-envelope'></i></a> to fill in this article.");
+						$("#article_title_description").html("This is probably due to me adding the article to the list before making a page for it.<br>If you want more <i>information about this specific topic</i>, you can always <a class='text-danger' href='mailto:martinez.picardo.victor@gmail.com' target='_blank' onclick='copyMail()'>contact me <i class='fas fa-envelope'></i></a> to fill in this article.");
 						$("#article_title_description").append('<br>I am also available for <span class="text-warning">real time feedback about it on </span><a class="text-primary" href="https://discord.gg/stu2vkJ" target="_blank">Discord <i class="fab fa-discord"></i></a>.');
 						$("#article_title_description").append('<br>And you can also find me on <a class="text-info" href="https://t.me/victor_smp" target="_blank">Telegram <i class="fab fa-telegram-plane"></i></a>.');
 					});
@@ -136,4 +136,28 @@ function loadJS(FILE_URL, async = true) {
 
 function animateToTop(){
 	$("html, body").animate({ scrollTop: 0 }, "slow");
+}
+
+function copyMail(){
+	navigator.clipboard.writeText("martinez.picardo.victor@gmail.com");
+
+	toastr.options = {
+	  "closeButton": false,
+	  "debug": false,
+	  "newestOnTop": false,
+	  "progressBar": false,
+	  "positionClass": "toast-top-center",
+	  "preventDuplicates": false,
+	  "onclick": null,
+	  "showDuration": "300",
+	  "hideDuration": "1000",
+	  "timeOut": "5000",
+	  "extendedTimeOut": "1000",
+	  "showEasing": "swing",
+	  "hideEasing": "linear",
+	  "showMethod": "fadeIn",
+	  "hideMethod": "fadeOut"
+	}
+	toastr["success"]("My mail is now ready to paste", "Copied to Clipboard")
+	//toastr.success('Mail copied to the clipboard!', 'Copied');
 }
