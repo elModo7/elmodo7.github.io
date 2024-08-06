@@ -60,6 +60,7 @@ $(document).ready(function () {
 				$("#article_breadcrumb").html(articleTitle);
 				$("#article_body").load(articlePath, function(){
 					loadJS("static/js/prism.js", true);
+					animateToTop();
 				});
 			}else{
 				$("#article_breadcrumb").html("Under construction!");
@@ -68,6 +69,7 @@ $(document).ready(function () {
 					$("#article_title_description").html("This is probably due to me adding the article to the list before making a page for it.<br>If you want more <i>information about this specific topic</i>, you can always <a class='text-danger' href='mailto:martinez.picardo.victor@gmail.com' target='_blank'>contact me <i class='fas fa-envelope'></i></a> to fill in this article.");
 					$("#article_title_description").append('<br>I am also available for <span class="text-warning">real time feedback about it on </span><a class="text-primary" href="https://discord.gg/stu2vkJ" target="_blank">Discord <i class="fab fa-discord"></i></a>.');
 					$("#article_title_description").append('<br>And you can also find me on <a class="text-info" href="https://t.me/victor_smp" target="_blank">Telegram <i class="fab fa-telegram-plane"></i></a>.');
+					animateToTop();
 				});
 			}
 		});
@@ -89,6 +91,7 @@ function goAboutMe(){
 	$("#btn_about").addClass("active");
 	$("#divMainContent").load("about.html", function(){
 		loadBreadcrumbEvents();
+		animateToTop();
 	});
 }
 
@@ -99,6 +102,7 @@ function goWorkProjects(){
 	$("#btn_work_projects").addClass("active");
 	$("#divMainContent").load("work_projects.html", function(){
 		workProjectsEvents();
+		animateToTop();
 	});
 }
 
@@ -109,6 +113,7 @@ function goPersonalProjects(){
 	$("#btn_personal_projects").addClass("active");
 	$("#divMainContent").load("personal_projects.html", function(){
 		personalProjectsEvents();
+		animateToTop();
 	});
 }
 
@@ -119,6 +124,7 @@ function goPills(){
 	$("#btn_pills").addClass("active");
 	$("#divMainContent").load("pills.html", function(){
 		pillsEvents();
+		animateToTop();
 	});
 }
 
@@ -131,5 +137,6 @@ function goContactMe(){
 	loadBreadcrumbEvents();
 	$("#divMainContent").load("contact.html", function(){
 		pillsEvents();
+		animateToTop();
 	});*/
 }
