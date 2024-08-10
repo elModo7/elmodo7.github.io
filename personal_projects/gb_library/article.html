@@ -4,7 +4,8 @@
 
 			<div class="cl-preview-section">
 				<blockquote>
-					<p><strong>Note:</strong> This is just an article showcase of my tool, not the final development.</p>
+					<p><strong>Note:</strong> This is just an article showcase of my tool, not the final development.<br>
+					Also, code for this program was made in Spanish, some variables have been translated into English for reading convenience.</p>
 				</blockquote>
 			</div>
 			<div class="row">
@@ -27,10 +28,8 @@
 					It does also generate an onClick event for each cover linking it to the emulator.<br>
 					It is based upon the built in emulator in <strong><a href="https://www.gbstudio.dev/">GB Studio</a></strong>.
 				</p>
-				
 			</div>
 			
-			<br>
 			<div class="row">
 				<div class="col-md-2 col-sm-6 col-12">
 					<h4>Phone Preview</h4>
@@ -41,8 +40,72 @@
 				<div class="col-md-6 col-sm-6 col-12">
 					<h4>Project Structure</h4>
 					<img class="shadow-lg article-inner-image" src="static/img/personal_projects/gb_library/folder_structure.png"></img>
+					<h4>Libraries and Configuration</h4>
+					<pre class="col-md-12">
+						<code class="language-autohotkey">#NoEnv ; GB Library v2 Bootstrap Version
+#SingleInstance force
+SetBatchLines, -1
+#include, &lt;AHKhttp&gt;
+#include &lt;AHKsock&gt;
+; Configurables
+global WebEmu := "http://127.0.0.1:81"
+global WebEmuRoot := WebEmu ; Root, same due to the use of index.html
+global PuertoPHP := 81 ; Emulator Port
+global PuertoAHK := 80 ; Auto-generated base Port</code>
+					</pre>
 				</div>
 			</div>
+			
+			<h4>Dynamic generator</h4>
+			<pre class="col-md-12">
+				<code class="language-autohotkey">Loop Files, %A_ScriptDir%\roms\*.*, R  ; Recurse into subfolders.
+{
+    StringReplace , CurrentGame, A_LoopFileName, %A_Space%,,All
+    StringReplace, FileNameNoExt, A_LoopFileName, % "." . A_LoopFileExt
+    if(FileExist("htdocs\romImages\" FileNameNoExt ".jpg"))
+    {
+        RutaImagen := WebEmuRoot "/romImages/" FileNameNoExt ".jpg"
+    }else{
+        RutaImagen := WebEmuRoot "/romImages/notFound.jpg"
+    }
+    Rutilla = <div class="col-lg-3 col-md-4 col-6"><a href="%CurrentGame%" class="d-block mb-4 h-100"><img class="img-fluid img-thumbnail" src="%RutaImagen%" alt="">%A_LoopFileName%</a></div>`n
+	EnlacesRoms := EnlacesRoms Rutilla
+    ListaRoms.Push(A_LoopFileName)
+    paths["/"CurrentGame] := Func("IniciarRom").Bind(A_LoopFileName)
+}</code>
+			</pre>			
+			
+			<h4>PHP & HTTP Server</h4>
+			<pre class="col-md-12">
+				<code class="language-autohotkey">; PHP Server
+SetWorkingDir, %A_ScriptDir%\htdocs
+Run, cmd /c "%A_ScriptDir%\php" -S 0.0.0.0:%PuertoPHP% -t . codex.php,, Hide
+menu, tray, NoStandard
+Menu, Tray, Add, Salir
+
+; HTTP Server
+paths["/"] := Func("index")
+paths["404"] := Func("NotFound")
+
+server := new HttpServer()
+server.LoadMimes(A_ScriptDir . "/lib/mime.types")
+server.SetPaths(paths)
+server.Serve(PuertoAHK)</code>
+			</pre>	
+
+			<h4>Emulator REST Controller</h4>
+			<pre class="col-md-12">
+				<code class="language-autohotkey">IniciarRom(rom, ByRef req, ByRef res) {
+    RunWait, cmd /c del /f "%A_ScriptDir%\htdocs\rom\game.gb",, Hide ; Force delete
+    FileCopy, %A_ScriptDir%\roms\%rom%, %A_ScriptDir%\htdocs\rom\game.gb, 1
+    res.SetBodyText("&lt;html&gt;&lt;header&gt;&lt;title&gt;GB Online Library&lt;/title&gt;&lt;/header&gt;&lt;body&gt;&lt;meta http-equiv='Refresh' content='0; url=" WebEmu "' /&gt;&lt;a href='" WebEmu "'&gt;Iniciar Emulador&lt;/a&gt;&lt;/body&gt;&lt;/html&gt;")
+    res.status := 200
+    FormatTime, FechaActual,,[dd-MM-yyyy HH:mm:ss]
+    FileAppend, %FechaActual% Iniciando Rom`: %rom%`n, ..\Log.txt
+}</code>
+			</pre>
+				
+
 			<br><br>
 			<h4>Web Preview</h4>
 			<a href="personal_projects/gb_library" target="_blank">
