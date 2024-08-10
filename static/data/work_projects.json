@@ -1,342 +1,6 @@
 [
     {
         "badges": [
-            {
-                "color": "badge-dark",
-                "name": "C#"
-            },
-			{
-                "color": "badge-dark",
-                "name": ".Net"
-            },
-			{
-                "color": "badge-dark",
-                "name": "WPF"
-            },
-			{
-                "color": "badge-primary",
-                "name": "SQL Server"
-            },
-			{
-                "color": "badge-secondary",
-                "name": "Desktop"
-            },
-			{
-                "color": "badge-secondary",
-                "name": "FTP"
-            },
-			{
-                "color": "badge-secondary",
-                "name": "MVC"
-            },
-			{
-                "color": "badge-primary",
-                "name": "Windows"
-            }
-        ],
-        "date": "2017/07/14",
-        "description": "Shoe Insoles <i>warehouse production, ticketing, stock & resources management</i><br><b>Automatic updates, PDAs, Multi Application Framework...</b>",
-        "id": 0,
-        "img": "static/img/work_projects/warehouse_production_management.jpg",
-        "ribbon": {
-            "color": "bg-success",
-            "name": "2017"
-        },
-        "tags": [
-            "wpf",
-            "c#",
-            "desktop",
-			"windows",
-			".net",
-			"sql_server",
-			"pda",
-			"ftp",
-			"mvc"
-        ],
-        "title": "Warehouse Production & Management",
-        "url": "",
-		"page": ""
-    },
-	    {
-        "badges": [
-            {
-                "color": "badge-dark",
-                "name": "C#"
-            },
-			{
-                "color": "badge-dark",
-                "name": ".Net"
-            },
-			{
-                "color": "badge-dark",
-                "name": "VB"
-            },
-			{
-                "color": "badge-dark",
-                "name": "WPF"
-            },
-			{
-                "color": "badge-primary",
-                "name": "SQL Server"
-            },
-			{
-                "color": "badge-secondary",
-                "name": "Desktop"
-            },
-			{
-                "color": "badge-primary",
-                "name": "Windows"
-            },
-			{
-                "color": "badge-primary",
-                "name": "Windows CE"
-            },
-			{
-                "color": "badge-secondary",
-                "name": "FTP"
-            }
-        ],
-        "date": "2018/02/07",
-        "description": "Two Apps, one a <b>Desktop package management system</b> and a <b>Windows CE</b> App for <i>scanning and distributing packages</i> via <b>FTP and SQL Server queries</b>",
-        "id": 1,
-        "img": "static/img/work_projects/warehouse_management.jpg",
-        "ribbon": {
-            "color": "bg-success",
-            "name": "2018"
-        },
-        "tags": [
-            "wpf",
-            "c#",
-            "desktop",
-			"windows",
-			".net",
-			"sql_server",
-			"windows_ce",
-			"pda",
-			"vb",
-			"ftp"
-        ],
-        "title": "PDA Warehouse Management",
-        "url": "",
-		"page": ""
-    },
-	    {
-        "badges": [
-            {
-                "color": "badge-dark",
-                "name": "C#"
-            },
-			{
-                "color": "badge-dark",
-                "name": ".Net"
-            },
-			{
-                "color": "badge-dark",
-                "name": "VB"
-            },
-			{
-                "color": "badge-dark",
-                "name": "WPF"
-            },
-			{
-                "color": "badge-primary",
-                "name": "SQL Server"
-            },
-			{
-                "color": "badge-secondary",
-                "name": "Desktop"
-            },
-			{
-                "color": "badge-primary",
-                "name": "Windows"
-            },
-			{
-                "color": "badge-primary",
-                "name": "Windows CE"
-            },
-			{
-                "color": "badge-secondary",
-                "name": "FTP"
-            }
-        ],
-        "date": "2018/07/21",
-        "description": "The company next by from the company I worked with for my last project, wanted a <i>from the ground up</i> <b>clone</b> of my previous warehouse management tool.<br>This time I worked for an <b>airport warehouse</b>",
-        "id": 2,
-        "img": "static/img/work_projects/airport_management.jpg",
-        "ribbon": {
-            "color": "bg-success",
-            "name": "2018"
-        },
-        "tags": [
-            "wpf",
-            "c#",
-            "desktop",
-			"windows",
-			".net",
-			"sql_server",
-			"windows_ce",
-			"pda",
-			"vb",
-			"ftp"
-        ],
-        "title": "PDA Airport Airway Bill Management",
-        "url": "",
-		"page": ""
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-dark",
-                "name": "C#"
-            },
-			{
-                "color": "badge-dark",
-                "name": ".Net"
-            },
-			{
-                "color": "badge-primary",
-                "name": "SQL Server"
-            }
-        ],
-        "date": "2018/01/12",
-        "description": "Asana <-> Navision Dynamics NAV task & status synchronization",
-        "id": 3,
-        "img": "static/img/work_projects/asana.jpg",
-        "ribbon": {
-            "color": "bg-success",
-            "name": "2018"
-        },
-        "tags": [
-            "c#",
-			"windows",
-			".net",
-			"sql_server"
-        ],
-        "title": "Asana - Navision Task Management Sync",
-        "url": "",
-		"page": ""
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-dark",
-                "name": "C#"
-            },
-			{
-                "color": "badge-dark",
-                "name": ".Net"
-            },
-			{
-                "color": "badge-dark",
-                "name": "WPF"
-            },
-			{
-                "color": "badge-primary",
-                "name": "SQL Server"
-            },
-			{
-                "color": "badge-secondary",
-                "name": "Desktop"
-            },
-			{
-                "color": "badge-primary",
-                "name": "Windows"
-            },
-			{
-                "color": "badge-secondary",
-                "name": "MVVM"
-            },
-			{
-                "color": "badge-secondary",
-                "name": "MDI"
-            }
-        ],
-        "date": "2019/01/12",
-        "description": "An accountability management system for an Ironmongery group for their in-house management tools.<br>A port from <b>Visual FoxPro to C# WPF</b> using <i>ActiPRO controls</i>",
-        "id": 4,
-        "img": "static/img/work_projects/mdi_docking_actipro.png",
-        "ribbon": {
-            "color": "bg-success",
-            "name": "2019"
-        },
-        "tags": [
-            "wpf",
-            "c#",
-            "desktop",
-			"windows",
-			".net",
-			"sql_server",
-			"mdi",
-			"mvvm"
-        ],
-        "title": "MDI Accountability Management System",
-        "url": "",
-		"page": ""
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-dark",
-                "name": "C#"
-            },
-			{
-                "color": "badge-dark",
-                "name": ".Net"
-            },
-			{
-                "color": "badge-warning",
-                "name": "Java"
-            },
-			{
-                "color": "badge-dark",
-                "name": "WPF"
-            },
-			{
-                "color": "badge-primary",
-                "name": "SQL Server"
-            },
-			{
-                "color": "badge-secondary",
-                "name": "Desktop"
-            },
-			{
-                "color": "badge-primary",
-                "name": "Windows"
-            },
-			{
-                "color": "badge-success",
-                "name": "Android"
-            },
-			{
-                "color": "badge-secondary",
-                "name": "TCP"
-            }
-        ],
-        "date": "2019/01/12",
-        "description": "<b>AWB concurrent IO</b> scanning and distribution of pallets and packages for storage and plane distribution",
-        "id": 5,
-        "img": "static/img/work_projects/airport_management_2.jpeg",
-        "ribbon": {
-            "color": "bg-success",
-            "name": "2019"
-        },
-        "tags": [
-            "wpf",
-            "c#",
-            "desktop",
-			"windows",
-			".net",
-			"sql_server",
-			"android",
-			"pda",
-			"tcp"
-        ],
-        "title": "PDA Airport Airway Bill Management #2",
-        "url": "",
-		"page": ""
-    },
-	{
-        "badges": [
 			{
                 "color": "badge-warning",
                 "name": "Java"
@@ -764,6 +428,342 @@
 			"voice_to_text"
         ],
         "title": "Call Recording Classification System",
+        "url": "",
+		"page": ""
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-dark",
+                "name": "C#"
+            },
+			{
+                "color": "badge-dark",
+                "name": ".Net"
+            },
+			{
+                "color": "badge-dark",
+                "name": "WPF"
+            },
+			{
+                "color": "badge-primary",
+                "name": "SQL Server"
+            },
+			{
+                "color": "badge-secondary",
+                "name": "Desktop"
+            },
+			{
+                "color": "badge-secondary",
+                "name": "FTP"
+            },
+			{
+                "color": "badge-secondary",
+                "name": "MVC"
+            },
+			{
+                "color": "badge-primary",
+                "name": "Windows"
+            }
+        ],
+        "date": "2017/07/14",
+        "description": "Shoe Insoles <i>warehouse production, ticketing, stock & resources management</i><br><b>Automatic updates, PDAs, Multi Application Framework...</b>",
+        "id": 0,
+        "img": "static/img/work_projects/warehouse_production_management.jpg",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "2017"
+        },
+        "tags": [
+            "wpf",
+            "c#",
+            "desktop",
+			"windows",
+			".net",
+			"sql_server",
+			"pda",
+			"ftp",
+			"mvc"
+        ],
+        "title": "Warehouse Production & Management",
+        "url": "",
+		"page": ""
+    },
+	    {
+        "badges": [
+            {
+                "color": "badge-dark",
+                "name": "C#"
+            },
+			{
+                "color": "badge-dark",
+                "name": ".Net"
+            },
+			{
+                "color": "badge-dark",
+                "name": "VB"
+            },
+			{
+                "color": "badge-dark",
+                "name": "WPF"
+            },
+			{
+                "color": "badge-primary",
+                "name": "SQL Server"
+            },
+			{
+                "color": "badge-secondary",
+                "name": "Desktop"
+            },
+			{
+                "color": "badge-primary",
+                "name": "Windows"
+            },
+			{
+                "color": "badge-primary",
+                "name": "Windows CE"
+            },
+			{
+                "color": "badge-secondary",
+                "name": "FTP"
+            }
+        ],
+        "date": "2018/02/07",
+        "description": "Two Apps, one a <b>Desktop package management system</b> and a <b>Windows CE</b> App for <i>scanning and distributing packages</i> via <b>FTP and SQL Server queries</b>",
+        "id": 1,
+        "img": "static/img/work_projects/warehouse_management.jpg",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "2018"
+        },
+        "tags": [
+            "wpf",
+            "c#",
+            "desktop",
+			"windows",
+			".net",
+			"sql_server",
+			"windows_ce",
+			"pda",
+			"vb",
+			"ftp"
+        ],
+        "title": "PDA Warehouse Management",
+        "url": "",
+		"page": ""
+    },
+	    {
+        "badges": [
+            {
+                "color": "badge-dark",
+                "name": "C#"
+            },
+			{
+                "color": "badge-dark",
+                "name": ".Net"
+            },
+			{
+                "color": "badge-dark",
+                "name": "VB"
+            },
+			{
+                "color": "badge-dark",
+                "name": "WPF"
+            },
+			{
+                "color": "badge-primary",
+                "name": "SQL Server"
+            },
+			{
+                "color": "badge-secondary",
+                "name": "Desktop"
+            },
+			{
+                "color": "badge-primary",
+                "name": "Windows"
+            },
+			{
+                "color": "badge-primary",
+                "name": "Windows CE"
+            },
+			{
+                "color": "badge-secondary",
+                "name": "FTP"
+            }
+        ],
+        "date": "2018/07/21",
+        "description": "The company next by from the company I worked with for my last project, wanted a <i>from the ground up</i> <b>clone</b> of my previous warehouse management tool.<br>This time I worked for an <b>airport warehouse</b>",
+        "id": 2,
+        "img": "static/img/work_projects/airport_management.jpg",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "2018"
+        },
+        "tags": [
+            "wpf",
+            "c#",
+            "desktop",
+			"windows",
+			".net",
+			"sql_server",
+			"windows_ce",
+			"pda",
+			"vb",
+			"ftp"
+        ],
+        "title": "PDA Airport Airway Bill Management",
+        "url": "",
+		"page": ""
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-dark",
+                "name": "C#"
+            },
+			{
+                "color": "badge-dark",
+                "name": ".Net"
+            },
+			{
+                "color": "badge-primary",
+                "name": "SQL Server"
+            }
+        ],
+        "date": "2018/01/12",
+        "description": "Asana <-> Navision Dynamics NAV task & status synchronization",
+        "id": 3,
+        "img": "static/img/work_projects/asana.jpg",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "2018"
+        },
+        "tags": [
+            "c#",
+			"windows",
+			".net",
+			"sql_server"
+        ],
+        "title": "Asana - Navision Task Management Sync",
+        "url": "",
+		"page": ""
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-dark",
+                "name": "C#"
+            },
+			{
+                "color": "badge-dark",
+                "name": ".Net"
+            },
+			{
+                "color": "badge-dark",
+                "name": "WPF"
+            },
+			{
+                "color": "badge-primary",
+                "name": "SQL Server"
+            },
+			{
+                "color": "badge-secondary",
+                "name": "Desktop"
+            },
+			{
+                "color": "badge-primary",
+                "name": "Windows"
+            },
+			{
+                "color": "badge-secondary",
+                "name": "MVVM"
+            },
+			{
+                "color": "badge-secondary",
+                "name": "MDI"
+            }
+        ],
+        "date": "2019/01/12",
+        "description": "An accountability management system for an Ironmongery group for their in-house management tools.<br>A port from <b>Visual FoxPro to C# WPF</b> using <i>ActiPRO controls</i>",
+        "id": 4,
+        "img": "static/img/work_projects/mdi_docking_actipro.png",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "2019"
+        },
+        "tags": [
+            "wpf",
+            "c#",
+            "desktop",
+			"windows",
+			".net",
+			"sql_server",
+			"mdi",
+			"mvvm"
+        ],
+        "title": "MDI Accountability Management System",
+        "url": "",
+		"page": ""
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-dark",
+                "name": "C#"
+            },
+			{
+                "color": "badge-dark",
+                "name": ".Net"
+            },
+			{
+                "color": "badge-warning",
+                "name": "Java"
+            },
+			{
+                "color": "badge-dark",
+                "name": "WPF"
+            },
+			{
+                "color": "badge-primary",
+                "name": "SQL Server"
+            },
+			{
+                "color": "badge-secondary",
+                "name": "Desktop"
+            },
+			{
+                "color": "badge-primary",
+                "name": "Windows"
+            },
+			{
+                "color": "badge-success",
+                "name": "Android"
+            },
+			{
+                "color": "badge-secondary",
+                "name": "TCP"
+            }
+        ],
+        "date": "2019/01/12",
+        "description": "<b>AWB concurrent IO</b> scanning and distribution of pallets and packages for storage and plane distribution",
+        "id": 5,
+        "img": "static/img/work_projects/airport_management_2.jpeg",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "2019"
+        },
+        "tags": [
+            "wpf",
+            "c#",
+            "desktop",
+			"windows",
+			".net",
+			"sql_server",
+			"android",
+			"pda",
+			"tcp"
+        ],
+        "title": "PDA Airport Airway Bill Management #2",
         "url": "",
 		"page": ""
     },
