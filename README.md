@@ -1,4 +1,4 @@
-## Victor's DevLog / Portfolio
+# Victor's DevLog / Portfolio
 Made *from scratch*, Boostrap based **no-database article framework** to showcase my projects.
 Uses **JSON files** to *dynamically generate article pages*.
 
@@ -14,11 +14,12 @@ Basically a *very minified* version of my:
 > <br>All in all it shows how I have been **improving over the years** and this site is a way for having a **_backlog_** or "time machine" for old projects while also serving as **my portfolio**.
 
 
-### Web Preview:
+## Web Preview:
+### About
 ![image](https://github.com/user-attachments/assets/7d47c989-8694-400d-a770-63bf7ccdf07e)
 
-
+### Work Projects
 ![image](https://github.com/user-attachments/assets/1fa263c2-9c9a-4e04-acb1-2fe8e637fc13)
 
-
+### Personal Projects
 ![image](https://github.com/user-attachments/assets/966630b7-8cb6-42ac-aac6-11030341f283)
