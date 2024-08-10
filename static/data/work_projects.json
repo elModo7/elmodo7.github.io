@@ -201,7 +201,7 @@
         "date": "2018/01/12",
         "description": "Asana <-> Navision Dynamics NAV task & status synchronization",
         "id": 3,
-        "img": "static/img/coming_soon.jpg",
+        "img": "static/img/work_projects/asana.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "2018"
@@ -252,9 +252,9 @@
             }
         ],
         "date": "2019/01/12",
-        "description": "An accountability management system for an Ironmongery group for their in-house management tools.<br>A port from <b>Visual FoxPro to C# WPF</b>",
+        "description": "An accountability management system for an Ironmongery group for their in-house management tools.<br>A port from <b>Visual FoxPro to C# WPF</b> using <i>ActiPRO controls</i>",
         "id": 4,
-        "img": "static/img/coming_soon.jpg",
+        "img": "static/img/work_projects/mdi_docking_actipro.png",
         "ribbon": {
             "color": "bg-success",
             "name": "2019"
@@ -389,7 +389,7 @@
         "date": "2020/01/12",
         "description": "<b>Java framework of Apps and Modules</b> for the management of an insurance company, from <i>payment management and bills to accident creation, users, groups, permissions, documentation handling and communication with insureds</i>",
         "id": 7,
-        "img": "static/img/coming_soon.jpg",
+        "img": "static/img/work_projects/java_insurance_company.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "2020"
@@ -471,7 +471,7 @@
         "date": "2021/01/12",
         "description": "<b>3 Layer</b> Spring Boot API, connecting a <b>Xamarin App</b> with a <b>MariaDB</b> backend. Layers 2 and 3 were on a <b>DMZ</b> and <i>only the front API, Web and SSO frontend were public</i>",
         "id": 8,
-        "img": "static/img/coming_soon.jpg",
+        "img": "static/img/work_projects/java_microservices.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "2021"
@@ -533,7 +533,7 @@
         "date": "2022/07/14",
         "description": "Containerize existing application, <b>install wizard, portable deploys, automatic updates system</b>",
         "id": 9,
-        "img": "static/img/coming_soon.jpg",
+        "img": "static/img/work_projects/docker_net.png",
         "ribbon": {
             "color": "bg-success",
             "name": "2022"
@@ -587,7 +587,7 @@
         "date": "2023/07/14",
         "description": "A few document driven conversational bots for different clients using <b>IBM Watson Assistant, Discovery and WatsonX AI models</b>",
         "id": 10,
-        "img": "static/img/coming_soon.jpg",
+        "img": "static/img/work_projects/watsonx_assistant.webp",
         "ribbon": {
             "color": "bg-success",
             "name": "2023"
@@ -642,7 +642,7 @@
         "date": "2023/01/12",
         "description": "Whole infrastructure migration to on-premise system using <b>Docker, Payara application server + war deployment, PostgreSQL server and AWS S3 to local storage file server</b>",
         "id": 6,
-        "img": "static/img/coming_soon.jpg",
+        "img": "static/img/work_projects/java_microservices.webp",
         "ribbon": {
             "color": "bg-success",
             "name": "2023"
@@ -707,7 +707,7 @@
         "date": "2024/07/14",
         "description": "Data exchange between <b>Insurance Company data and Assistance Company work orders</b></b>",
         "id": 11,
-        "img": "static/img/coming_soon.jpg",
+        "img": "static/img/work_projects/assistance_company_api.jpg",
         "ribbon": {
             "color": "bg-success",
             "name": "2024"
@@ -753,7 +753,7 @@
         "date": "2024/07/14",
         "description": "A process to convert previously recorded audio <b>calls to text</b> and then <i>clasify by topic/department</i> each of this calls for later management",
         "id": 12,
-        "img": "static/img/coming_soon.jpg",
+        "img": "static/img/work_projects/azure_openai.webp",
         "ribbon": {
             "color": "bg-success",
             "name": "2024"
