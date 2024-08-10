@@ -130,13 +130,5 @@ function goPills(){
 
 function goContactMe(){
 	event.preventDefault();
-	alert("Not yet implemented");
-	/*removeBreadcrumbClasses();
-	$("#article_breadcrumb_menu").addClass("goAboutMe");
-	$("#article_breadcrumb_menu").html("About me");
-	loadBreadcrumbEvents();
-	$("#divMainContent").load("contact.html", function(){
-		pillsEvents();
-		animateToTop();
-	});*/
+	copyMail();
 }

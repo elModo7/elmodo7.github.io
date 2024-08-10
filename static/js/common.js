@@ -158,6 +158,6 @@ function copyMail(){
 	  "showMethod": "fadeIn",
 	  "hideMethod": "fadeOut"
 	}
-	toastr["success"]("My mail is now ready to paste", "Copied to Clipboard")
+	toastr["success"]("martinez.picardo.victor@gmail.com", "Copied to Clipboard")
 	//toastr.success('Mail copied to the clipboard!', 'Copied');
 }

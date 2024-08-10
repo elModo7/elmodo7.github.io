@@ -53,8 +53,8 @@
 			"json"
         ],
         "title": "<b>SSH Tunnel Manager</b>",
-        "url": "https://github.com/elModo7/SSH_Tunnel_Manager/",
-		"page": ""
+        "url": "",
+		"page": "personal_projects/tunnel_manager/article.html"
     },
 	{
         "badges": [
@@ -190,7 +190,7 @@
         "date": "2020/07/31",
         "description": "An HTTP server that reads a rom folder and <i>dynamically generates a web UI</i> for <b>playing your games on the web or your phone with touch controls!</b>",
         "id": 3,
-        "img": "static/img/personal_projects/web_portfolio.png",
+        "img": "static/img/personal_projects/gb_library/preview.jpg",
         "ribbon": {
             
         },
