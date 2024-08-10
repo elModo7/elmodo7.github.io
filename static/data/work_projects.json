@@ -50,13 +50,13 @@
                 "name": "Websockets"
             }
         ],
-        "date": "2020/01/12",
+        "date": "2019/01/12",
         "description": "<b>Java framework of Apps and Modules</b> for the management of an insurance company, from <i>payment management and bills to accident creation, users, groups, permissions, documentation handling and communication with insureds</i>",
         "id": 7,
         "img": "static/img/work_projects/java_insurance_company.jpg",
         "ribbon": {
             "color": "bg-success",
-            "name": "2020"
+            "name": "2019-24"
         },
         "tags": [
             "java",
@@ -138,7 +138,7 @@
         "img": "static/img/work_projects/java_microservices.jpg",
         "ribbon": {
             "color": "bg-success",
-            "name": "2021"
+            "name": "2021-23"
         },
         "tags": [
             "java",
@@ -254,7 +254,7 @@
         "img": "static/img/work_projects/watsonx_assistant.webp",
         "ribbon": {
             "color": "bg-success",
-            "name": "2023"
+            "name": "2023-24"
         },
         "tags": [
             "ai",
@@ -374,7 +374,7 @@
         "img": "static/img/work_projects/assistance_company_api.jpg",
         "ribbon": {
             "color": "bg-success",
-            "name": "2024"
+            "name": "2023"
         },
         "tags": [
             "asp",
@@ -472,7 +472,7 @@
         "img": "static/img/work_projects/warehouse_production_management.jpg",
         "ribbon": {
             "color": "bg-success",
-            "name": "2017"
+            "name": "2017-20"
         },
         "tags": [
             "wpf",
@@ -689,7 +689,7 @@
         "img": "static/img/work_projects/mdi_docking_actipro.png",
         "ribbon": {
             "color": "bg-success",
-            "name": "2019"
+            "name": "2019-20"
         },
         "tags": [
             "wpf",

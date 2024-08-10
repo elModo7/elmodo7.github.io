@@ -26,10 +26,10 @@
 		<h2>Protecting against it</h2>
 		<p>
 			One way we could be protecting against this kind of attack is by using a <b>VPN</b> or <b>tunneling the connection</b>.
-			<br>In later articles I may update this one, because I have been doing a <i>few tunnels, <u>specifically</u> for VNC</i>, but this time we will be tunneling our connection using my <b><a href="https://github.com/elModo7/SSH_Tunnel_Manager">SSH Tunnel Manager</a></b>.
-			<br><b><a href="https://github.com/elModo7/SSH_Tunnel_Manager">SSH Tunnel Manager</a></b> is a tool that allows us to use our <b>existing SSH Server for securely tunneling connections</b>.
+			<br>In later articles I may update this one, because I have been doing a <i>few tunnels, <u>specifically</u> for VNC</i>, but this time we will be tunneling our connection using my <b><a href="?article=/personal_projects/tunnel_manager/article.html&title=SSH%20Tunnel%20Manager&description=A%20GUI%20wrapper%20for%20plink%20with%20profiling,%20notifications%20and%20more." target="_blank">SSH Tunnel Manager</a></b>.
+			<br><b><a href="?article=/personal_projects/tunnel_manager/article.html&title=SSH%20Tunnel%20Manager&description=A%20GUI%20wrapper%20for%20plink%20with%20profiling,%20notifications%20and%20more." target="_blank">SSH Tunnel Manager</a></b> is a tool that allows us to use our <b>existing SSH Server for securely tunneling connections</b>.
 			<br><br>In this case we are going to configure a tunnel like this:
-			<br><br><a href="https://github.com/elModo7/SSH_Tunnel_Manager"><img class="article-inner-image shadow-lg" src="static/img/pills/wireshark_vnc_capture_filter/tunnel_manager.png"></img></a>
+			<br><br><a href="?article=/personal_projects/tunnel_manager/article.html&title=SSH%20Tunnel%20Manager&description=A%20GUI%20wrapper%20for%20plink%20with%20profiling,%20notifications%20and%20more." target="_blank"><img class="article-inner-image shadow-lg" src="static/img/pills/wireshark_vnc_capture_filter/tunnel_manager.png"></img></a>
 			<br><br>This will allow us to connect to <b>127.0.0.1:51900</b> <i>(localhost)</i> through port <b>51900</b> and that will be <b>securely redirected to our VNC Server endpoint</b> at 192.168.1.128:5900.
 			<br>In this case we are using a <i>local IP address</i> but you get the idea. We can use this to secure our WAN VNC sessions.
 			<br><br>Now if we <i>scan again with Wireshark</i>, we will not only not be able to read the packets, but also this filter is no longer usable, everything goes through the <b>SSH protocol, encrypted and unreadable</b>.
