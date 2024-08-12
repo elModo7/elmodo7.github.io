@@ -80,6 +80,7 @@ function bindArticles(){
 								$("#article_title_description").append('<br>And you can also find me on <a class="text-info" href="https://t.me/victor_smp" target="_blank">Telegram <i class="fab fa-telegram-plane"></i></a>.');
 							});
 						}
+						animateToTop();
 					});
 				});
 			}else{
