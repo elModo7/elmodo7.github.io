@@ -25,6 +25,11 @@ $(document).ready(function () {
 		$("#btn_pills").click(function(){
 			event.preventDefault();
 			goPills();
+		});	
+		
+		$("#btn_upcoming_content").click(function(){
+			event.preventDefault();
+			goUpcomingContent();
 		});
 	});
 	
@@ -53,6 +58,9 @@ $(document).ready(function () {
 			}else if(currentMenuTab == "pills"){
 				$("#article_breadcrumb_menu").addClass("goPills");
 				$("#article_breadcrumb_menu").html("Pills & Code Snippets");
+			}else if(currentMenuTab == "upcoming_content"){
+				$("#article_breadcrumb_menu").addClass("goUpcomingContent");
+				$("#article_breadcrumb_menu").html("Upcoming Content");
 			}
 			
 			loadBreadcrumbEvents();
@@ -125,6 +133,17 @@ function goPills(){
 	$("#divMainContent").load("pills.html", function(){
 		pillsEvents();
 		animateToTop();
+	});
+}
+
+function goUpcomingContent(){
+	event.preventDefault();
+	currentMenuTab = "upcoming_content";
+	$(".nav-link").removeClass("active");
+	$("#btn_upcoming_content").addClass("active");
+	$("#divMainContent").load("upcoming_content.html", function(){
+		animateToTop();
+		loadBreadcrumbEvents();
 	});
 }
 

@@ -65,6 +65,9 @@ function bindArticles(){
 					}else if(currentMenuTab == "pills"){
 						$("#article_breadcrumb_menu").addClass("goPills");
 						$("#article_breadcrumb_menu").html("Pills & Code Snippets");
+					}else if(currentMenuTab == "upcoming_content"){
+						$("#article_breadcrumb_menu").addClass("goUpcomingContent");
+						$("#article_breadcrumb_menu").html("Upcoming Content");
 					}
 					loadBreadcrumbEvents();
 					
@@ -110,6 +113,11 @@ function loadBreadcrumbEvents(){
 	$(".goPills").click(function(){
 		goPills();
 	});
+	
+	$(".goUpcomingContent").unbind();
+	$(".goUpcomingContent").click(function(){
+		goUpcomingContent();
+	});
 }
 
 function removeBreadcrumbClasses(){
@@ -117,6 +125,7 @@ function removeBreadcrumbClasses(){
 	$("#article_breadcrumb_menu").removeClass("goWorkProjects");
 	$("#article_breadcrumb_menu").removeClass("goPersonalProjects");
 	$("#article_breadcrumb_menu").removeClass("goPills");
+	$("#article_breadcrumb_menu").removeClass("goUpcomingContent");
 }
 
 function loadJS(FILE_URL, async = true) {
