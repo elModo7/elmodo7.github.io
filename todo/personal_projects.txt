@@ -1,9 +1,6 @@
-Ontop replica
 AHK Wallpaper Engine
 MCSS Wrapper
 AHK Vsync No Flicker
-Nova Macros
-Tunnel Manager
 Twitch Crowd Control Resident Evil 1
 Twitch Plays bot in AHK
 RE1 DoorSkip
@@ -30,6 +27,7 @@ Resident Evil 1 Real time Map
 Resident Evil 1 Real time inventory
 Resident Evil 1 Health Overlay
 Resident Evil 2 Achievement System
+Resident Evil Minigame Twitch Bot
 AHK Web VNC
 AHK Remote Control (Multimedia Controller)
 AHK Wiimote Remapper
@@ -43,7 +41,6 @@ Japanese Transliterator
 Duckstation Memory Lib
 GBA Memory Lib
 Pokemon Crystal Speedrun Tool
-Pokemon Twitch Bot Pokeballs (not done)
 Wario Land 4 Speedrun Tool
 AutoSplitter from scratch in AHK
 Godot & AHK interaction via Websockets and TCP
@@ -63,3 +60,16 @@ Voice Commands + TTS in AHK
 Thanks API
 Wake on Lan Web
 One Click VNC
+Minecraft Server Desktop Widget
+AutoHotkey Messenger
+RAM Optimizer
+
+**********************************************************************
+Done:
+Nova Macros
+Tunnel Manager
+
+**********************************************************************
+Discarded:
+Ontop replica
+Pokemon Twitch Bot Pokeballs (not done)
