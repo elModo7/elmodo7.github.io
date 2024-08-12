@@ -1,0 +1,71 @@
+<mxfile modified="2024-08-12T17:29:22.438Z" host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36" etag="lS3xfOlBbOySkHzPQRNp" version="24.6.4" type="device">
+  <diagram id="7gcUSTIZ7YSJ5vT40chW" name="Page-1">
+    <mxGraphModel dx="794" dy="724" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="A3Kb_5LYnnvngUKxqPnR-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;flowAnimation=1;shadow=1;" edge="1" parent="1" source="SZY12_XKgGBlkoAp8IEY-8" target="A3Kb_5LYnnvngUKxqPnR-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="221" y="400" />
+              <mxPoint x="345" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SZY12_XKgGBlkoAp8IEY-8" value="Macro Files" style="aspect=fixed;html=1;perimeter=none;align=center;shadow=0;dashed=0;image;fontSize=12;image=img/lib/mscae/Functions.svg;" parent="1" vertex="1">
+          <mxGeometry x="190" y="427.88" width="61.68" height="56.75" as="geometry" />
+        </mxCell>
+        <mxCell id="A3Kb_5LYnnvngUKxqPnR-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;shadow=1;flowAnimation=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="A3Kb_5LYnnvngUKxqPnR-1" target="A3Kb_5LYnnvngUKxqPnR-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="A3Kb_5LYnnvngUKxqPnR-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;shadow=1;flowAnimation=1;" edge="1" parent="1" source="A3Kb_5LYnnvngUKxqPnR-1" target="A3Kb_5LYnnvngUKxqPnR-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="A3Kb_5LYnnvngUKxqPnR-1" value="Nova Macros Server" style="image;html=1;image=img/lib/clip_art/networking/Print_Server_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="305" y="260" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="A3Kb_5LYnnvngUKxqPnR-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;flowAnimation=1;shadow=1;" edge="1" parent="1" source="A3Kb_5LYnnvngUKxqPnR-2" target="A3Kb_5LYnnvngUKxqPnR-20">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="435" y="125" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A3Kb_5LYnnvngUKxqPnR-2" value="Resources Port" style="fontStyle=0;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;spacingLeft=2;" vertex="1" parent="1">
+          <mxGeometry x="420" y="230" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="A3Kb_5LYnnvngUKxqPnR-8" value="Commands Port" style="fontStyle=0;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;spacingLeft=2;" vertex="1" parent="1">
+          <mxGeometry x="240" y="230" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="A3Kb_5LYnnvngUKxqPnR-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;shadow=1;flowAnimation=1;" edge="1" parent="1" source="A3Kb_5LYnnvngUKxqPnR-13" target="A3Kb_5LYnnvngUKxqPnR-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="345" y="400" />
+              <mxPoint x="345" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A3Kb_5LYnnvngUKxqPnR-13" value="Client Resources" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/Alumin/128/Pictures.png" vertex="1" parent="1">
+          <mxGeometry x="310" y="420" width="72.5" height="72.5" as="geometry" />
+        </mxCell>
+        <mxCell id="A3Kb_5LYnnvngUKxqPnR-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;flowAnimation=1;shadow=1;" edge="1" parent="1" source="A3Kb_5LYnnvngUKxqPnR-14" target="A3Kb_5LYnnvngUKxqPnR-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="480" y="400" />
+              <mxPoint x="345" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A3Kb_5LYnnvngUKxqPnR-14" value="Client Config" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#505050;shape=mxgraph.mscae.oms.config_assessment" vertex="1" parent="1">
+          <mxGeometry x="450" y="430" width="70" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="A3Kb_5LYnnvngUKxqPnR-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=1;flowAnimation=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="A3Kb_5LYnnvngUKxqPnR-20" target="A3Kb_5LYnnvngUKxqPnR-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="A3Kb_5LYnnvngUKxqPnR-20" value="Nova Macros&lt;div&gt;Client&lt;/div&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/tablet_pc.svg;" vertex="1" parent="1">
+          <mxGeometry x="328" y="100" width="36.5" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

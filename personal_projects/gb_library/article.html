@@ -9,7 +9,7 @@
 				</blockquote>
 			</div>
 			<div class="row">
-				<div class="col-md-2 col-sm-6 col-12">
+				<div class="col-md-3 col-sm-6 col-12">
 					<a href="personal_projects/gb_library" target="_blank">
 						<div class="info-box bg-gradient-info shadow-lg">
 							<span class="info-box-icon"><i class="fas fa-globe-europe"></i></span>
@@ -28,21 +28,22 @@
 					It does also generate an onClick event for each cover linking it to the emulator.<br>
 					It is based upon the built in emulator in <strong><a href="https://www.gbstudio.dev/">GB Studio</a></strong>.
 				</p>
-			</div>
+			</div>	
 			
-			<div class="row">
-				<div class="col-md-2 col-sm-6 col-12">
-					<h4>Phone Preview</h4>
-					<a href="personal_projects/gb_library" target="_blank">
-						<img class="shadow-lg article-inner-image" src="static/img/personal_projects/gb_library/phone_view.webp"></img>
-					</a>
-				</div>
-				<div class="col-md-10 col-sm-6 col-12">
-					<h4>Project Structure</h4>
-					<img class="shadow-lg article-inner-image" src="static/img/personal_projects/gb_library/folder_structure.png"></img>
-					<h4>Libraries and Configuration</h4>
-					<pre class="col-md-12">
-						<code class="language-autohotkey">#NoEnv ; GB Library v2 Bootstrap Version
+			<img class="article-inner-image" src="static/img/personal_projects/gb_library/project_diagram.svg"></img>
+			
+			<div>
+				<h4>Phone Preview</h4>
+				<a href="personal_projects/gb_library" target="_blank">
+					<img class="shadow-lg article-inner-image" src="static/img/personal_projects/gb_library/phone_view.webp"></img>
+				</a>
+			</div>
+			<div>
+				<h4>Project Structure</h4>
+				<img class="shadow-lg article-inner-image" src="static/img/personal_projects/gb_library/folder_structure.png"></img>
+				<h4>Libraries and Configuration</h4>
+				<pre class="col-md-12">
+					<code class="language-autohotkey">#NoEnv ; GB Library v2 Bootstrap Version
 #SingleInstance force
 SetBatchLines, -1
 #include, &lt;AHKhttp&gt;
@@ -52,8 +53,7 @@ global WebEmu := "http://127.0.0.1:81"
 global WebEmuRoot := WebEmu ; Root, same due to the use of index.html
 global PuertoPHP := 81 ; Emulator Port
 global PuertoAHK := 80 ; Auto-generated base Port</code>
-					</pre>
-				</div>
+				</pre>
 			</div>
 			
 			<h4>Dynamic generator</h4>

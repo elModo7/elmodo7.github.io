@@ -11,8 +11,6 @@ Script Generator
 Mario DS Poker Bot
 Windows Unlock Notify
 Linux Unlock Notify
-HTOP, NTOP, BTOP
-AHK Index
 Tuya4AHK
 Minecraft Server Creator
 Pokemon Shiny Hunting Bot for Gen3
@@ -21,8 +19,7 @@ Animal Crossing Advent Calendar
 Metroid Prime Hunters Online Tool
 Connect two windows together
 System Monitoring Tool Web
-AHK Index Online
-GB Library
+AHK Index + AHK Index Online
 Resident Evil 1 Real time Map
 Resident Evil 1 Real time inventory
 Resident Evil 1 Health Overlay
@@ -54,7 +51,6 @@ Video Export Web Panel in AHK (Magix Video Deluxe)
 Delete Last Recorded Video 1 Button
 Compress Files Older than X Months
 Trace Faces
-OCR
 Pokemon Crystal Shiny Hunting Bot
 Voice Commands + TTS in AHK
 Thanks API
@@ -68,8 +64,11 @@ RAM Optimizer
 Done:
 Nova Macros
 Tunnel Manager
+GB Library
 
 **********************************************************************
 Discarded:
 Ontop replica
 Pokemon Twitch Bot Pokeballs (not done)
+OCR
+HTOP, NTOP, BTOP
