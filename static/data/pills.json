@@ -35,5 +35,38 @@
         "title": "Wireshark <b>VNC capture</b>",
         "url": "",
 		"page": "pills/wireshark_vnc_capture.html"
+    },
+	{
+		"badges": [
+			{
+				"color": "badge-success",
+				"name": "Automation"
+			},
+			{
+				"color": "badge-info",
+				"name": "Windows"
+			},
+			{
+				"color": "badge-dark",
+				"name": "AHK"
+			}
+		],
+		"date": "2024/07/25",
+		"description": "Free up <b>unused cache RAM</b> from Windows's Processes",
+		"id": 1,
+		"img": "static/img/pills/ram_optimizer/article.png",
+		"ribbon": {
+			"color": "",
+			"name": ""
+		},
+		"tags": [
+			"automation",
+			"ahk",
+			"memory",
+			"windows"
+		],
+		"title": "<b>RAM Optimizer</b>",
+		"url": "",
+		"page": "pills/ram_optimizer.html"
     }
 ]

@@ -1,0 +1,91 @@
+<div>
+	<div>
+		<p>
+		This is something I didn't plan to release due to the small complexity of the project, but we use it quite often at our workplace and I find it a very useful and interesting resource.
+		<br>
+		Sometimes <i>Microsoft SQL Server Management Studio</i> hangs due to RAM constraints, this <b>leverages that quite well</b>.
+		<br><br>
+		<div class="row">
+			<div class="col-md-3 col-sm-6 col-12">
+				<a href="https://github.com/elModo7/RAM_Optimizer" target="_blank">
+					<div class="info-box bg-gradient-dark shadow-lg">
+						<span class="info-box-icon"><i class="fab fa-github"></i></span>
+						<div class="info-box-content">
+							<span class="info-box-number">Project's GitHub</span>
+							<span class="progress-description">
+								RAM Optimizer
+							</span>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<br>
+		<img class="shadow-lg article-inner-image" src="static/img/pills/ram_optimizer/ram_optimizer.png"></img>
+		<img class="shadow-lg article-inner-image" src="static/img/pills/ram_optimizer/ram_optimizer.gif"></img>
+		<br><br>
+		<h4>Libraries used:</h4>
+		<br><b>XGraph</b> library by SKAN (Suresh Kumar A N)
+		<br><b>MemoryLoad</b> by <a class="link" href="https://github.com/jNizM" target="_blank">jNizM</a>
+		<br><b>EmptyMem</b> by Heresy
+		<br><b>FreeMemory</b> by SKAN (Suresh Kumar A N)
+		</p>
+		<br>
+		<h3>💻 Explaining the main 3 functions:</h3>
+		<pre class="col-md-12"><code class="language-autohotkey">
+; Function to get the current memory load percentage
+MemoryLoad()
+{
+    ; Define a static variable MEMORYSTATUSEX and initialize it with the size of the structure.
+    ; 'init' is a dummy variable to ensure the NumPut operation executes only once.
+    static MEMORYSTATUSEX, init := NumPut(VarSetCapacity(MEMORYSTATUSEX, 64, 0), MEMORYSTATUSEX, "uint")
+    
+    ; Call the Windows API function 'GlobalMemoryStatusEx' to fill the MEMORYSTATUSEX structure.
+    if !(DllCall("GlobalMemoryStatusEx", "ptr", &MEMORYSTATUSEX))
+        ; If the call fails, throw an exception with the last error code.
+        throw Exception("Call to GlobalMemoryStatusEx failed: " A_LastError, -1)
+    
+    ; Retrieve and return the memory load percentage from the MEMORYSTATUSEX structure.
+    return NumGet(MEMORYSTATUSEX, 4, "UInt")
+}
+
+; Function to free up memory used by a specific process or the current process
+EmptyMem(PID="AHK Rocks"){
+    ; If PID is "AHK Rocks" (default), get the current process ID; otherwise, use the provided PID.
+    pid := (pid="AHK Rocks") ? DllCall("GetCurrentProcessId") : pid
+    
+    ; Open the process with specific access rights and get a handle to it.
+    h := DllCall("OpenProcess", "UInt", 0x001F0FFF, "Int", 0, "Int", pid)
+    
+    ; Set the process's working set size to minimum (-1), effectively asking Windows to trim it.
+    DllCall("SetProcessWorkingSetSize", "UInt", h, "Int", -1, "Int", -1)
+    
+    ; Close the handle to the process to free resources.
+    DllCall("CloseHandle", "Int", h)
+}
+
+; Function to free up memory used by all running processes
+FreeMemory()
+{
+    ; Iterate over all running processes using Windows Management Instrumentation (WMI)
+    for objItem in ComObjGet("winmgmts:").ExecQuery("SELECT * FROM Win32_Process") {
+        try {
+            ; Open each process with specific access rights and get a handle to it.
+            hProcess := DllCall("OpenProcess", "uint", 0x001F0FFF, "int", 0, "uint", objItem.ProcessID, "ptr")
+            
+            ; Set the process's working set size to minimum (-1) to free up memory.
+            DllCall("SetProcessWorkingSetSize", "ptr", hProcess, "uptr", -1, "uptr", -1)
+            
+            ; Call 'EmptyWorkingSet' to further trim the process's memory usage.
+            DllCall("psapi.dll\EmptyWorkingSet", "ptr", hProcess)
+            
+            ; Close the handle to the process.
+            DllCall("CloseHandle", "ptr", hProcess)
+        }
+    }
+    ; Finally, call 'EmptyWorkingSet' on the current process (-1) to clean up its memory.
+    return DllCall("psapi.dll\EmptyWorkingSet", "ptr", -1)
+}
+		</code></pre>
+	</div>
+</div>
