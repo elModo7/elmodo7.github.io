@@ -32,8 +32,7 @@
 		</p>
 		<br>
 		<h3>💻 Explaining the main 3 functions:</h3>
-		<pre class="col-md-12"><code class="language-autohotkey">
-; Function to get the current memory load percentage
+		<pre class="col-md-12"><code class="language-autohotkey">; Function to get the current memory load percentage
 MemoryLoad()
 {
     ; Define a static variable MEMORYSTATUSEX and initialize it with the size of the structure.
@@ -85,7 +84,6 @@ FreeMemory()
     }
     ; Finally, call 'EmptyWorkingSet' on the current process (-1) to clean up its memory.
     return DllCall("psapi.dll\EmptyWorkingSet", "ptr", -1)
-}
-		</code></pre>
+}</code></pre>
 	</div>
 </div>
