@@ -133,7 +133,7 @@
             }
         ],
         "date": "2024/07/31",
-        "description": "<b>Zero database, content-driven GitHub hosted online portfolio</b> for showcasing my projects and life as a developer",
+        "description": "<b>NoSQL, content-driven GitHub hosted online portfolio</b> for showcasing and documenting my projects",
         "id": 2,
         "img": "static/img/personal_projects/web_portfolio.png",
         "ribbon": {

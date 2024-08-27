@@ -11,7 +11,6 @@ function workProjectsEvents(){
 			break;
 		}
 		if(key % itemsPerRow == 0){
-			workProjectsHTML += '<div class="row mt-4">';
 			if(workProjectsHTML == ""){
 				workProjectsHTML += '<div class="row mt-4">';
 			}else{
