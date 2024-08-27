@@ -11,7 +11,11 @@ function personalProjectsEvents(){
 			break;
 		}
 		if(key % itemsPerRow == 0){
-			personalProjectsHTML += '<div class="row mt-4">';
+			if(personalProjectsHTML == ""){
+				personalProjectsHTML += '<div class="row mt-4">';
+			}else{
+				personalProjectsHTML += '</div><div class="row mt-4">';
+			}
 		}
 		personalProjectsHTML += '<div class="col-sm-3">';
 		for (const [keyBadge, valueBadge] of Object.entries(value.badges)) {

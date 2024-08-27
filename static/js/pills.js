@@ -11,7 +11,11 @@ function pillsEvents(){
 			break;
 		}
 		if(key % itemsPerRow == 0){
-			pillsHTML += '<div class="row mt-4">';
+			if(pillsHTML == ""){
+				pillsHTML += '<div class="row mt-4">';
+			}else{
+				pillsHTML += '</div><div class="row mt-4">';
+			}
 		}
 		pillsHTML += '<div class="col-sm-2">';
 		for (const [keyBadge, valueBadge] of Object.entries(value.badges)) {

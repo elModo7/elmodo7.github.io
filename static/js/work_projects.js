@@ -12,6 +12,11 @@ function workProjectsEvents(){
 		}
 		if(key % itemsPerRow == 0){
 			workProjectsHTML += '<div class="row mt-4">';
+			if(workProjectsHTML == ""){
+				workProjectsHTML += '<div class="row mt-4">';
+			}else{
+				workProjectsHTML += '</div><div class="row mt-4">';
+			}
 		}
 		workProjectsHTML += '<div class="col-sm-4">';
 		for (const [keyBadge, valueBadge] of Object.entries(value.badges)) {
