@@ -238,5 +238,58 @@
 		"title": "<b>RAM Optimizer</b>",
 		"url": "",
 		"page": "personal_projects/ram_optimizer.html"
+    },
+	{
+		"badges": [
+			{
+				"color": "badge-info",
+				"name": "API"
+			},
+			{
+                "color": "badge-primary",
+                "name": "Web"
+            },
+            {
+                "color": "badge-dark",
+                "name": "JS"
+            },
+            {
+                "color": "badge-dark",
+                "name": "Bootstrap"
+            },
+			{
+				"color": "badge-dark",
+				"name": "Linux"
+			},
+			{
+				"color": "badge-dark",
+				"name": "Java"
+			},
+			{
+				"color": "badge-dark",
+				"name": "Docker"
+			}
+		],
+		"date": "2024/09/17",
+		"description": "<b>Remotely manage your devices's power status</b> via Wake on LAN with a convenient web panel",
+		"id": 5,
+		"img": "static/img/personal_projects/wol_web_api/article.png",
+		"ribbon": {
+			"color": "bg-success",
+            "name": "Public"
+		},
+		"tags": [
+			"automation",
+			"java",
+			"api",
+			"spring",
+			"springboot",
+			"ssl",
+			"docker",
+			"rest"
+		],
+		"title": "<b>WoL Web Panel + API REST</b>",
+		"url": "https://www.linkedin.com/pulse/wake-lan-steroids-your-homelab-v%C3%ADctor-santiago-mart%C3%ADnez-picardo-s8qje/",
+		"page": ""
     }
 ]
