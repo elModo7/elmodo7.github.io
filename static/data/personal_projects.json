@@ -291,5 +291,37 @@
 		"title": "<b>WoL Web Panel + API REST</b>",
 		"url": "https://github.com/elModo7/WakeOnLAN-Web-API",
 		"page": ""
+    },
+	{
+		"badges": [
+			{
+				"color": "badge-success",
+				"name": "AutoHotkey"
+			},
+			{
+                "color": "badge-primary",
+                "name": "Windows"
+            }
+		],
+		"date": "2024/11/21",
+		"description": "Easier way of <b>managing Node.js versions</b> in your Windows environment",
+		"id": 6,
+		"img": "static/img/personal_projects/nvm_gui/article.jpg",
+		"ribbon": {
+			"color": "bg-success",
+            "name": "Public"
+		},
+		"tags": [
+			"automation",
+			"ahk",
+			"windows",
+			"nodejs",
+			"js",
+			"html",
+			"css"
+		],
+		"title": "<b>NVM GUI</b>",
+		"url": "https://github.com/elModo7/NVM_GUI-win",
+		"page": ""
     }
 ]

@@ -67,7 +67,7 @@ function bindArticles(){
 						$("#article_breadcrumb_menu").html("Pills & Code Snippets");
 					}else if(currentMenuTab == "upcoming_content"){
 						$("#article_breadcrumb_menu").addClass("goUpcomingContent");
-						$("#article_breadcrumb_menu").html("Upcoming Content");
+						$("#article_breadcrumb_menu").html("Content Log");
 					}
 					loadBreadcrumbEvents();
 					

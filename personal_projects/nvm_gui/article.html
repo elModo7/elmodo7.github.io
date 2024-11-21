@@ -1,0 +1,281 @@
+<div>
+	<div>
+		<div>
+			<div class="cl-preview-section">
+				<h1 id="img-srchttpsi.postimg.ccky8q3zpjtopico-trans.png-alttopico-width150-ssh-tunnel-manager"><img src="https://i.postimg.cc/KY8q3ZPJ/topico-trans.png" alt="topico" width="150"> SSH Tunnel Manager</h1>
+			</div>
+			<div class="cl-preview-section">
+				<blockquote>
+					<p><strong>Note:</strong> This is just an article showcase of my tool, hence info here may be outdated, for the latest version and specs please go to <b>Project's Repository</b> or <b>Official Webpage</b> below.</p>
+				</blockquote>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-sm-6 col-12">
+					<a href="https://github.com/elModo7/SSH_Tunnel_Manager" target="_blank">
+						<div class="info-box bg-gradient-dark shadow-lg">
+							<span class="info-box-icon"><i class="fab fa-github"></i></span>
+							<div class="info-box-content">
+								<span class="info-box-number">Project's GitHub</span>
+								<span class="progress-description">
+									SSH Tunnel Manager
+								</span>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3 col-sm-6 col-12">
+					<a href="personal_projects/tunnel_manager" target="_blank">
+						<div class="info-box bg-gradient-info shadow-lg">
+							<span class="info-box-icon"><i class="fas fa-globe-europe"></i></span>
+							<div class="info-box-content">
+								<span class="info-box-number">Web Page</span>
+								<span class="progress-description">
+									Official Web Page
+								</span>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="cl-preview-section">
+				<p>Tunnel Manager is a tool for <strong>proxying, pivoting and securing connections over SSH.</strong><br>
+					It’s basically a GUI wrapper for <strong>plink</strong> but adds <strong>profiling, notifications</strong> and is focused on <strong>automation</strong> and <strong>session persistence</strong>.<br>
+					It is written mainly in <strong><a href="https://www.autohotkey.com/">AutoHotkey</a></strong> and the GUI framework that I used is <a href="https://github.com/G33kDude/Neutron.ahk">Neutron.ahk</a>, so it has a little bit of HTML, CSS (Bootstrap 3), JS and JQuery.
+				</p>
+			</div>
+			<div class="cl-preview-section">
+				<p>I created a thread on the <strong><a href="https://www.autohotkey.com/boards/viewtopic.php?t=125013">AutoHotkey Forums</a></strong> for discussion about Tunnel Manager, but I also read questions and suggestions on the <strong><a href="https://discord.com/invite/Aat7KHmG7v">AutoHotkey Discord</a></strong>.</p>
+			</div>
+			<div class="cl-preview-section">
+				<p><img class="shadow-lg article-inner-image" src="https://i.postimg.cc/j594P2dL/Tunnel-Manager-45ak-L0gkyg.png" alt="Main Window"></p>
+			</div>
+			<div class="cl-preview-section">
+				<blockquote>
+					<p><strong>Pro Tip:</strong> Press <strong>Ctrl</strong> key while Tunnel Manager is active to change <strong>“copy to clipboard”</strong> icon into <strong>“generate QR”</strong> mode.</p>
+				</blockquote>
+			</div>
+			<br>
+			<div class="cl-preview-section">
+				<h2 id="compiled-version--downloads">Compiled Version &amp; Downloads</h2>
+			</div>
+			<div class="cl-preview-section">
+				<p>Go check <strong><a href="https://github.com/elModo7/Tunnel_Manager/releases">releases</a></strong> for compiled binaries if you don’t want to have AutoHotkey installed.<br>
+					You can also <strong>download from this document.</strong>
+				</p>
+			</div>
+			<div class="cl-preview-section">
+				<div class="table-wrapper shadow-lg">
+					<table class="table table-hover table-striped">
+						<thead class="thead-dark">
+							<tr>
+								<th>Version</th>
+								<th>Download</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>Latest</code></td>
+								<td><a href="https://github.com/elModo7/Tunnel_Manager/releases/latest/download/TunnelManager.zip"><code>Download Link</code></a></td>
+							</tr>
+							<tr>
+								<td>1.3.0</td>
+								<td><a href="https://github.com/elModo7/Tunnel_Manager/releases/download/1.3.0/TunnelManager.zip">Download Link</a></td>
+							</tr>
+							<tr>
+								<td>1.2.29</td>
+								<td><a href="https://github.com/elModo7/Tunnel_Manager/releases/download/1.2.29/TunnelManager.zip">Download Link</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<br><br>
+			<div class="cl-preview-section">
+				<h2 id="sample-usage">Sample Usage</h2>
+			</div>
+			<br>
+			<div class="cl-preview-section">
+				<h3 id="secure-vnc-session">Secure VNC Session</h3>
+			</div>
+			<div class="cl-preview-section">
+				<pre class="mermaid"><svg id="mermaid-svg-fmD6JhtVSYh7Hcrb" width="100%" xmlns="http://www.w3.org/2000/svg" height="573" style="max-width: 875px;" viewBox="-50 -10 875 573"><style>#mermaid-svg-fmD6JhtVSYh7Hcrb{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#000000;}#mermaid-svg-fmD6JhtVSYh7Hcrb .error-icon{fill:#552222;}#mermaid-svg-fmD6JhtVSYh7Hcrb .error-text{fill:#552222;stroke:#552222;}#mermaid-svg-fmD6JhtVSYh7Hcrb .edge-thickness-normal{stroke-width:2px;}#mermaid-svg-fmD6JhtVSYh7Hcrb .edge-thickness-thick{stroke-width:3.5px;}#mermaid-svg-fmD6JhtVSYh7Hcrb .edge-pattern-solid{stroke-dasharray:0;}#mermaid-svg-fmD6JhtVSYh7Hcrb .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-svg-fmD6JhtVSYh7Hcrb .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-svg-fmD6JhtVSYh7Hcrb .marker{fill:#666;stroke:#666;}#mermaid-svg-fmD6JhtVSYh7Hcrb .marker.cross{stroke:#666;}#mermaid-svg-fmD6JhtVSYh7Hcrb svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-svg-fmD6JhtVSYh7Hcrb .actor{stroke:hsl(0,0%,83%);fill:#eee;}#mermaid-svg-fmD6JhtVSYh7Hcrb text.actor &gt; tspan{fill:#333;stroke:none;}#mermaid-svg-fmD6JhtVSYh7Hcrb .actor-line{stroke:#666;}#mermaid-svg-fmD6JhtVSYh7Hcrb .messageLine0{stroke-width:1.5;stroke-dasharray:none;stroke:#333;}#mermaid-svg-fmD6JhtVSYh7Hcrb .messageLine1{stroke-width:1.5;stroke-dasharray:2,2;stroke:#333;}#mermaid-svg-fmD6JhtVSYh7Hcrb #arrowhead path{fill:#333;stroke:#333;}#mermaid-svg-fmD6JhtVSYh7Hcrb .sequenceNumber{fill:white;}#mermaid-svg-fmD6JhtVSYh7Hcrb #sequencenumber{fill:#333;}#mermaid-svg-fmD6JhtVSYh7Hcrb #crosshead path{fill:#333;stroke:#333;}#mermaid-svg-fmD6JhtVSYh7Hcrb .messageText{fill:#333;stroke:#333;}#mermaid-svg-fmD6JhtVSYh7Hcrb .labelBox{stroke:hsl(0,0%,83%);fill:#eee;}#mermaid-svg-fmD6JhtVSYh7Hcrb .labelText,#mermaid-svg-fmD6JhtVSYh7Hcrb .labelText &gt; tspan{fill:#333;stroke:none;}#mermaid-svg-fmD6JhtVSYh7Hcrb .loopText,#mermaid-svg-fmD6JhtVSYh7Hcrb .loopText &gt; tspan{fill:#333;stroke:none;}#mermaid-svg-fmD6JhtVSYh7Hcrb .loopLine{stroke-width:2px;stroke-dasharray:2,2;stroke:hsl(0,0%,83%);fill:hsl(0,0%,83%);}#mermaid-svg-fmD6JhtVSYh7Hcrb .note{stroke:hsl(60,100%,23.3333333333%);fill:#ffa;}#mermaid-svg-fmD6JhtVSYh7Hcrb .noteText,#mermaid-svg-fmD6JhtVSYh7Hcrb .noteText &gt; tspan{fill:#333;stroke:none;}#mermaid-svg-fmD6JhtVSYh7Hcrb .activation0{fill:#f4f4f4;stroke:#666;}#mermaid-svg-fmD6JhtVSYh7Hcrb .activation1{fill:#f4f4f4;stroke:#666;}#mermaid-svg-fmD6JhtVSYh7Hcrb .activation2{fill:#f4f4f4;stroke:#666;}#mermaid-svg-fmD6JhtVSYh7Hcrb:root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}#mermaid-svg-fmD6JhtVSYh7Hcrb sequence{fill:apa;}</style><g></g><g><line id="actor0" x1="75" y1="5" x2="75" y2="562" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="0" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="75" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-weight: 400; font-family: Open-Sans, &quot;sans-serif&quot;;"><tspan x="75" dy="0">VNC Server</tspan></text></g><g><line id="actor1" x1="378" y1="5" x2="378" y2="562" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="303" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="378" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-weight: 400; font-family: Open-Sans, &quot;sans-serif&quot;;"><tspan x="378" dy="0">SSH Server</tspan></text></g><g><line id="actor2" x1="600" y1="5" x2="600" y2="562" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="525" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="600" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-weight: 400; font-family: Open-Sans, &quot;sans-serif&quot;;"><tspan x="600" dy="0">Client</tspan></text></g><defs><marker id="arrowhead" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z"></path></marker></defs><defs><marker id="crosshead" markerWidth="15" markerHeight="8" orient="auto" refX="16" refY="4"><path fill="black" stroke="#000000" stroke-width="1px" d="M 9,2 V 6 L16,4 Z" style="stroke-dasharray: 0, 0;"></path><path fill="none" stroke="#000000" stroke-width="1px" d="M 0,1 L 6,7 M 6,1 L 0,7" style="stroke-dasharray: 0, 0;"></path></marker></defs><defs><marker id="filled-head" refX="18" refY="7" markerWidth="20" markerHeight="28" orient="auto"><path d="M 18,7 L9,13 L14,7 L9,1 Z"></path></marker></defs><defs><marker id="sequencenumber" refX="15" refY="15" markerWidth="60" markerHeight="40" orient="auto"><circle cx="15" cy="15" r="6"></circle></marker></defs><text x="227" y="80" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 16px; font-weight: 400;">Forward port 5900 to 8034 (SSH)</text><line x1="75" y1="113" x2="378" y2="113" class="messageLine0" stroke-width="2" stroke="none" marker-end="url(#arrowhead)" style="fill: none;"></line><g><rect x="403" y="123" fill="#EDF2AE" stroke="#666" width="150" height="36" rx="0" ry="0" class="note"></rect><text x="478" y="128" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="noteText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 14px; font-weight: 400;"><tspan x="478">Proxying 5900:8034</tspan></text></g><text x="338" y="174" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 16px; font-weight: 400;">I want to connect securely thorugh VNC 5900</text><line x1="600" y1="207" x2="75" y2="207" class="messageLine1" stroke-width="2" stroke="none" marker-end="url(#crosshead)" style="stroke-dasharray: 3, 3; fill: none;"></line><text x="338" y="222" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 16px; font-weight: 400;">VNC is not encrypted but I can tunnel it through 8034</text><line x1="75" y1="255" x2="600" y2="255" class="messageLine1" stroke-width="2" stroke="none" marker-end="url(#arrowhead)" style="stroke-dasharray: 3, 3; fill: none;"></line><text x="489" y="270" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 16px; font-weight: 400;">Connect to VNC:8034</text><line x1="600" y1="303" x2="378" y2="303" class="messageLine0" stroke-width="2" stroke="none" marker-end="url(#arrowhead)" style="fill: none;"></line><text x="338" y="318" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 16px; font-weight: 400;">I am sharing a secure VNC Session!</text><line x1="75" y1="351" x2="600" y2="351" class="messageLine0" stroke-width="2" stroke="none" marker-end="url(#arrowhead)" style="fill: none;"></line><g><rect x="625" y="361" fill="#EDF2AE" stroke="#666" width="150" height="116" rx="0" ry="0" class="note"></rect><text x="700" y="366" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="noteText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 14px; font-weight: 400;"><tspan x="700">The client has</tspan></text><text x="700" y="382" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="noteText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 14px; font-weight: 400;"><tspan x="700">established a secure</tspan></text><text x="700" y="398" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="noteText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 14px; font-weight: 400;"><tspan x="700">connection with the</tspan></text><text x="700" y="414" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="noteText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 14px; font-weight: 400;"><tspan x="700">server by tunneling</tspan></text><text x="700" y="430" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="noteText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 14px; font-weight: 400;"><tspan x="700">the VNC session</tspan></text><text x="700" y="446" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="noteText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 14px; font-weight: 400;"><tspan x="700">through SSH.</tspan></text></g><g><rect x="0" y="497" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="75" y="529.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-weight: 400; font-family: Open-Sans, &quot;sans-serif&quot;;"><tspan x="75" dy="0">VNC Server</tspan></text></g><g><rect x="303" y="497" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="378" y="529.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-weight: 400; font-family: Open-Sans, &quot;sans-serif&quot;;"><tspan x="378" dy="0">SSH Server</tspan></text></g><g><rect x="525" y="497" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="600" y="529.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-weight: 400; font-family: Open-Sans, &quot;sans-serif&quot;;"><tspan x="600" dy="0">Client</tspan></text></g></svg></pre>
+			</div>
+			<br>
+			<div class="cl-preview-section">
+				<h3 id="firewall-bypass-could-be-reversed">Firewall Bypass (could be reversed)</h3>
+			</div>
+			<div class="cl-preview-section">
+				<pre class="mermaid"><svg id="mermaid-svg-Tc9ajI2RfJ9KalFI" width="100%" xmlns="http://www.w3.org/2000/svg" height="735" style="max-width: 1009px;" viewBox="-50 -10 1009 735"><style>#mermaid-svg-Tc9ajI2RfJ9KalFI{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#000000;}#mermaid-svg-Tc9ajI2RfJ9KalFI .error-icon{fill:#552222;}#mermaid-svg-Tc9ajI2RfJ9KalFI .error-text{fill:#552222;stroke:#552222;}#mermaid-svg-Tc9ajI2RfJ9KalFI .edge-thickness-normal{stroke-width:2px;}#mermaid-svg-Tc9ajI2RfJ9KalFI .edge-thickness-thick{stroke-width:3.5px;}#mermaid-svg-Tc9ajI2RfJ9KalFI .edge-pattern-solid{stroke-dasharray:0;}#mermaid-svg-Tc9ajI2RfJ9KalFI .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-svg-Tc9ajI2RfJ9KalFI .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-svg-Tc9ajI2RfJ9KalFI .marker{fill:#666;stroke:#666;}#mermaid-svg-Tc9ajI2RfJ9KalFI .marker.cross{stroke:#666;}#mermaid-svg-Tc9ajI2RfJ9KalFI svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-svg-Tc9ajI2RfJ9KalFI .actor{stroke:hsl(0,0%,83%);fill:#eee;}#mermaid-svg-Tc9ajI2RfJ9KalFI text.actor &gt; tspan{fill:#333;stroke:none;}#mermaid-svg-Tc9ajI2RfJ9KalFI .actor-line{stroke:#666;}#mermaid-svg-Tc9ajI2RfJ9KalFI .messageLine0{stroke-width:1.5;stroke-dasharray:none;stroke:#333;}#mermaid-svg-Tc9ajI2RfJ9KalFI .messageLine1{stroke-width:1.5;stroke-dasharray:2,2;stroke:#333;}#mermaid-svg-Tc9ajI2RfJ9KalFI #arrowhead path{fill:#333;stroke:#333;}#mermaid-svg-Tc9ajI2RfJ9KalFI .sequenceNumber{fill:white;}#mermaid-svg-Tc9ajI2RfJ9KalFI #sequencenumber{fill:#333;}#mermaid-svg-Tc9ajI2RfJ9KalFI #crosshead path{fill:#333;stroke:#333;}#mermaid-svg-Tc9ajI2RfJ9KalFI .messageText{fill:#333;stroke:#333;}#mermaid-svg-Tc9ajI2RfJ9KalFI .labelBox{stroke:hsl(0,0%,83%);fill:#eee;}#mermaid-svg-Tc9ajI2RfJ9KalFI .labelText,#mermaid-svg-Tc9ajI2RfJ9KalFI .labelText &gt; tspan{fill:#333;stroke:none;}#mermaid-svg-Tc9ajI2RfJ9KalFI .loopText,#mermaid-svg-Tc9ajI2RfJ9KalFI .loopText &gt; tspan{fill:#333;stroke:none;}#mermaid-svg-Tc9ajI2RfJ9KalFI .loopLine{stroke-width:2px;stroke-dasharray:2,2;stroke:hsl(0,0%,83%);fill:hsl(0,0%,83%);}#mermaid-svg-Tc9ajI2RfJ9KalFI .note{stroke:hsl(60,100%,23.3333333333%);fill:#ffa;}#mermaid-svg-Tc9ajI2RfJ9KalFI .noteText,#mermaid-svg-Tc9ajI2RfJ9KalFI .noteText &gt; tspan{fill:#333;stroke:none;}#mermaid-svg-Tc9ajI2RfJ9KalFI .activation0{fill:#f4f4f4;stroke:#666;}#mermaid-svg-Tc9ajI2RfJ9KalFI .activation1{fill:#f4f4f4;stroke:#666;}#mermaid-svg-Tc9ajI2RfJ9KalFI .activation2{fill:#f4f4f4;stroke:#666;}#mermaid-svg-Tc9ajI2RfJ9KalFI:root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}#mermaid-svg-Tc9ajI2RfJ9KalFI sequence{fill:apa;}</style><g></g><g><line id="actor3" x1="75" y1="5" x2="75" y2="724" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="0" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="75" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-weight: 400; font-family: Open-Sans, &quot;sans-serif&quot;;"><tspan x="75" dy="0">Web Server</tspan></text></g><g><line id="actor4" x1="321" y1="5" x2="321" y2="724" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="246" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="321" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-weight: 400; font-family: Open-Sans, &quot;sans-serif&quot;;"><tspan x="321" dy="0">Firewall</tspan></text></g><g><line id="actor5" x1="521" y1="5" x2="521" y2="724" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="446" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="521" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-weight: 400; font-family: Open-Sans, &quot;sans-serif&quot;;"><tspan x="521" dy="0">SSH Proxy</tspan></text></g><g><line id="actor6" x1="730" y1="5" x2="730" y2="724" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="655" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="730" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-weight: 400; font-family: Open-Sans, &quot;sans-serif&quot;;"><tspan x="730" dy="0">Client</tspan></text></g><defs><marker id="arrowhead" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z"></path></marker></defs><defs><marker id="crosshead" markerWidth="15" markerHeight="8" orient="auto" refX="16" refY="4"><path fill="black" stroke="#000000" stroke-width="1px" d="M 9,2 V 6 L16,4 Z" style="stroke-dasharray: 0, 0;"></path><path fill="none" stroke="#000000" stroke-width="1px" d="M 0,1 L 6,7 M 6,1 L 0,7" style="stroke-dasharray: 0, 0;"></path></marker></defs><defs><marker id="filled-head" refX="18" refY="7" markerWidth="20" markerHeight="28" orient="auto"><path d="M 18,7 L9,13 L14,7 L9,1 Z"></path></marker></defs><defs><marker id="sequencenumber" refX="15" refY="15" markerWidth="60" markerHeight="40" orient="auto"><circle cx="15" cy="15" r="6"></circle></marker></defs><text x="198" y="80" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 16px; font-weight: 400;">I want to expose port 80</text><line x1="75" y1="113" x2="321" y2="113" class="messageLine1" stroke-width="2" stroke="none" marker-end="url(#crosshead)" style="stroke-dasharray: 3, 3; fill: none;"></line><text x="198" y="128" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 16px; font-weight: 400;">Nope</text><line x1="321" y1="161" x2="75" y2="161" class="messageLine1" stroke-width="2" stroke="none" marker-end="url(#arrowhead)" style="stroke-dasharray: 3, 3; fill: none;"></line><text x="298" y="176" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 16px; font-weight: 400;">Forward port 80 to port 8080</text><line x1="75" y1="209" x2="521" y2="209" class="messageLine1" stroke-width="2" stroke="none" marker-end="url(#arrowhead)" style="stroke-dasharray: 3, 3; fill: none;"></line><text x="298" y="224" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 16px; font-weight: 400;">OK</text><line x1="521" y1="257" x2="75" y2="257" class="messageLine1" stroke-width="2" stroke="none" marker-end="url(#arrowhead)" style="stroke-dasharray: 3, 3; fill: none;"></line><text x="626" y="272" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 16px; font-weight: 400;">https://proxy:8080</text><line x1="730" y1="305" x2="521" y2="305" class="messageLine0" stroke-width="2" stroke="none" marker-end="url(#arrowhead)" style="fill: none;"></line><text x="298" y="320" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 16px; font-weight: 400;">Client asks for your index.html on port 80</text><line x1="521" y1="353" x2="75" y2="353" class="messageLine0" stroke-width="2" stroke="none" marker-end="url(#arrowhead)" style="fill: none;"></line><text x="298" y="368" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 16px; font-weight: 400;">Here you have index.html</text><line x1="75" y1="401" x2="521" y2="401" class="messageLine0" stroke-width="2" stroke="none" marker-end="url(#arrowhead)" style="fill: none;"></line><text x="626" y="416" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 16px; font-weight: 400;">This is index.html</text><line x1="521" y1="449" x2="730" y2="449" class="messageLine0" stroke-width="2" stroke="none" marker-end="url(#arrowhead)" style="fill: none;"></line><text x="403" y="464" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 16px; font-weight: 400;">Obtained index.html from Web Server proxying through SSH Proxy</text><line x1="730" y1="497" x2="75" y2="497" class="messageLine0" stroke-width="2" stroke="none" marker-end="url(#arrowhead)" style="fill: none;"></line><g><rect x="755" y="507" fill="#EDF2AE" stroke="#666" width="154" height="132" rx="0" ry="0" class="note"></rect><text x="832" y="512" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="noteText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 14px; font-weight: 400;"><tspan x="832">Client got index.html</tspan></text><text x="832" y="528" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="noteText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 14px; font-weight: 400;"><tspan x="832">from the Web Server</tspan></text><text x="832" y="544" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="noteText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 14px; font-weight: 400;"><tspan x="832">that was behind a</tspan></text><text x="832" y="560" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="noteText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 14px; font-weight: 400;"><tspan x="832">restrictive firewall</tspan></text><text x="832" y="576" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="noteText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 14px; font-weight: 400;"><tspan x="832">by proxying the</tspan></text><text x="832" y="592" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="noteText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 14px; font-weight: 400;"><tspan x="832">request through the</tspan></text><text x="832" y="608" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="noteText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 14px; font-weight: 400;"><tspan x="832">SSH Proxy.</tspan></text></g><g><rect x="0" y="659" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="75" y="691.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-weight: 400; font-family: Open-Sans, &quot;sans-serif&quot;;"><tspan x="75" dy="0">Web Server</tspan></text></g><g><rect x="246" y="659" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="321" y="691.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-weight: 400; font-family: Open-Sans, &quot;sans-serif&quot;;"><tspan x="321" dy="0">Firewall</tspan></text></g><g><rect x="446" y="659" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="521" y="691.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-weight: 400; font-family: Open-Sans, &quot;sans-serif&quot;;"><tspan x="521" dy="0">SSH Proxy</tspan></text></g><g><rect x="655" y="659" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="730" y="691.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-weight: 400; font-family: Open-Sans, &quot;sans-serif&quot;;"><tspan x="730" dy="0">Client</tspan></text></g></svg></pre>
+			</div>
+			<br><br>
+			<div class="cl-preview-section">
+				<h3 id="more-use-cases">More Use Cases</h3>
+			</div>
+			<div class="cl-preview-section">
+				<ul>
+					<li>
+						<p>Example of Tunnel Manager Use Cases and Scenarios<br>
+							Sharing Network Access - If you need to work from home and access your company’s internal network, which only allows access from within the network, you can install the Tunnel Manager agent on a computer located within your company’s premises. This will enable you to utilize its internet access<sup class="footnote-ref"><a href="#fn1" id="fnref1">1</a></sup> without depending on the company’s remote access tools.
+						</p>
+					</li>
+					<li>
+						<p>Access to Devices Without VPN Support - Suppose you have a device that does not support VPN, such as an IoT sensor, CCTV camera, or smart TV, and you want to access them from your laptop on a different network that cannot directly reach the device. In this case, you can install the Tunnel Manager agent on a device within the same network as these devices. Then, you can connect using your laptop through Tunnel Manager from anywhere.</p>
+					</li>
+					<li>
+						<p>Using Native Services like RDP/SSH Across Different Networks - You can use Tunnel Manager to access your computer’s native services like RDP (Remote Desktop) or SSH directly, without relying on third-party services. This is especially useful when both machines cannot reach each other directly, and neither has a public IP address. Tunnel Manager allows you to use your SSH or RDP client (e.g., OpenSSH client or Microsoft Remote Desktop) without the need for any modifications or additional software to connect to your computer.</p>
+					</li>
+					<li>
+						<p>Publishing a Local Webserver - Suppose you have a webserver running on your local network that you want to make accessible on the internet. If your ISP doesn’t provide you with a public IP address or you wish to let others publish their webservers on your public IP address from their local networks, Tunnel Manager can help you publish your webserver to the internet.</p>
+					</li>
+				</ul>
+			</div>
+			<br>
+			<div class="cl-preview-section">
+				<h2 id="architecture">Architecture</h2>
+			</div>
+			<div class="cl-preview-section">
+				<p>Tunnel Manager’s architecture consists of three main components: the Gateway, Agents, and Clients. The Gateway serves as the central hub, routing packets between agents, clients, and browsers. Agents act as proxies, forwarding packets to or from targeted hosts within the local network. Clients send and receive packets to and from agents, facilitating communication with the Agent component. The Token Generator is responsible for generating tokens used for authentication and configuration within the Tunnel Manager network.</p>
+			</div>
+			<div class="cl-preview-section">
+				<p align="center"><img class="article-inner-image" src="https://i.postimg.cc/HxdC5hyF/Diagram.png" alt="Tunnel Manager Logo" width="80%"></p>
+			</div>
+			<div class="cl-preview-section">
+				<h4 id="recommended-sshd_config-match-user-config">Recommended sshd_config match user config:</h4>
+				<pre><code>GatewayPorts yes
+AllowTcpForwarding yes
+X11Forwarding no
+AllowAgentForwarding no
+ForceCommand /bin/false
+</code></pre>
+			</div>
+			<div class="cl-preview-section">
+				<h2 id="features">Features</h2>
+			</div>
+			<div class="cl-preview-section">
+				<ul>
+					<li>Support Local, Remote and Dynamic SSH Tunneling</li>
+					<li>Server and Tunnel Profiling</li>
+					<li>Neutron Web UI</li>
+					<li>Console Output</li>
+					<li>Auto Accept SSH Key</li>
+					<li>Silent Mode with Profile Select / Silent/NoGUI (1.2.24+)</li>
+					<li>Hide Tray icon option for Shadow Mode (1.2.16+)</li>
+					<li>DRM Copy Protection included via Online Validation of Serial based on Hardware Fingerprint</li>
+					<li>Temporary Tunnels without Saving</li>
+					<li>Relaunch Tunnel on disconnect</li>
+					<li>No need for a full reload on profile select</li>
+					<li>Online version checker based on GitHub repo (1.3.0+)</li>
+					<li>Allow enabling/disabling per proflie+tunnel configuration</li>
+					<li>Keep track of last used profile (path)</li>
+					<li>Config checks on repeated/incorrect tunnel configurations (Improved in 1.2.11+)</li>
+					<li>DRM Two Way Encryption (1.2.10+)</li>
+					<li>Quick Copy Tunnel (1.2.14+)</li>
+					<li>QR Code Generator (1.2.17+) / Press Ctrl while the app is active and click on Copy Link Button</li>
+					<li>Discord WebHook Notify / Telegram API Notify / PushBullet Notify (1.2.18+)</li>
+					<li>Console Output Toggle (1.2.21+)</li>
+					<li>Reload Tunnel While Running (1.2.23+) / Allows restarting the tunnel in case configuration changed and you are working remotely</li>
+					<li>Quick Hide/Show by Double Clicking Tray Icon (1.2.23+)</li>
+					<li>Increased Command Line Tools and Tray Actions (1.2.24+)</li>
+					<li>Parameter info on cmd (chalk) or msgbox (1.2.24+)</li>
+					<li>Added License (1.2.26+)</li>
+					<li>Auto Update PLink Client to the latest version on first run (1.2.28+)</li>
+					<li>Option to download latest PLink or use built in on first run or proxy deletion (1.2.29+)</li>
+					<li>Fully Open Source (1.2.29+)</li>
+					<li>Remove DRM Protection (No Serial Required) (1.2.29+)</li>
+				</ul>
+			</div>
+			<div class="cl-preview-section">
+				<h4 id="params">PARAMS:</h4>
+			</div>
+			<div class="cl-preview-section">
+				<ul>
+					<li>-nogui (Disables GUI)</li>
+					<li>-silent (Disables Tray Notifications)</li>
+					<li>-notray (Removes Tray Icon)</li>
+					<li>-hidden (Starts Hidden)</li>
+					<li>-autostart (Starts Tunneling on Startup)</li>
+					<li>-profile &lt;profile_path&gt;</li>
+				</ul>
+			</div>
+			<div class="cl-preview-section">
+				<h4 id="todo">TODO:</h4>
+			</div>
+			<div class="cl-preview-section">
+				<ul>
+					<li>TCP / Websocket Interop (Server)</li>
+				</ul>
+			</div>
+			<div class="cl-preview-section">
+				<h4 id="requieres">REQUIERES:</h4>
+			</div>
+			<div class="cl-preview-section">
+				<ul>
+					<li>Windows 7 x64 (Windows 10+ Recommended)</li>
+					<li>AutoHotkey U64 1.1.31+</li>
+				</ul>
+			</div>
+			<div class="cl-preview-section">
+				<h4 id="dropped--discarded">DROPPED / DISCARDED:</h4>
+			</div>
+			<div class="cl-preview-section">
+				<ul>
+					<li>Keep Serial active for 7 days before asking again (DRM Security Risk)</li>
+					<li>Change order of each individual Tunnel</li>
+					<li>IRC Notify</li>
+					<li>IRC Control Plugin</li>
+					<li>Telegram API Control Plugin</li>
+				</ul>
+			</div>
+			<div class="cl-preview-section">
+				<h4 id="bugfixes">BUGFIXES:</h4>
+			</div>
+			<div class="cl-preview-section">
+				<ul>
+					<li>Too Many Hotkeys Triggered (1.2.22)</li>
+					<li>Profile Param had to be last param or else it wouldn’t load (1.2.28)</li>
+				</ul>
+			</div>
+			<br><br>
+			<div class="cl-preview-section">
+				<h2 id="screenshots">Screenshots</h2>
+			</div>
+			<br>
+			<div class="cl-preview-section">
+				<h3 id="server-settings">Server Settings</h3>
+			</div>
+			<div class="cl-preview-section">
+				<p><img class="shadow-lg article-inner-image" src="https://i.postimg.cc/ZqsN7m17/Tunnel-Manager-zgx-IL9-Seq5.png" alt="Server Config"></p>
+			</div>
+			<div class="cl-preview-section">
+				<h3 id="notification-settings">Notification Settings</h3>
+			</div>
+			<div class="cl-preview-section">
+				<p><img class="shadow-lg article-inner-image" src="https://i.postimg.cc/pT73rPwB/Tunnel-Manager-yby9s-RCwd3.png" alt="Notification Settings"></p>
+			</div>
+			<br><br>
+			<div class="cl-preview-section">
+				<h2 id="references">References</h2>
+			</div>
+			<div class="cl-preview-section">
+				<p>Tunnel Manager icon by <a href="https://hotpot.ai/">Hotpot.ai</a></p>
+			</div>
+			<div class="cl-preview-section">
+				<p>“More Use Cases” section and image diagram obtained from <a href="https://narrowlink.com/">Narrowlink</a></p>
+			</div>
+			<div class="cl-preview-section">
+				<p><a href="https://star-history.com/#elmodo7/Tunnel_Manager&amp;Date"><img class="shadow-lg article-inner-image" src="https://api.star-history.com/svg?repos=elmodo7/Tunnel_Manager&amp;Date&amp;type=Date" alt="Star History Chart"></a></p>
+			</div>
+			<div class="cl-preview-section">
+				<p><strong>Víctor Santiago Martínez Picardo (elModo7)</strong> 17/JAN/2024</p>
+				<hr class="footnotes-sep">
+				<section class="footnotes">
+					<ol class="footnotes-list">
+						<li id="fn1" class="footnote-item">
+							<p>Please ensure you have permission from your company and comply with your company’s security policies before sharing internet access using Tunnel Manager. Tunnel Manager is not responsible for any misuse of the software. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+						</li>
+					</ol>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>
