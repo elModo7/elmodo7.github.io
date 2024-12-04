@@ -323,5 +323,48 @@
 		"title": "<b>NVM GUI</b>",
 		"url": "https://github.com/elModo7/NVM_GUI-win",
 		"page": ""
+    },
+	{
+		"badges": [
+			{
+                "color": "badge-primary",
+                "name": "Web"
+            },
+            {
+                "color": "badge-dark",
+                "name": "HTML5"
+            },
+            {
+                "color": "badge-dark",
+                "name": "CSS3"
+            },
+            {
+                "color": "badge-dark",
+                "name": "JS"
+            },
+            {
+                "color": "badge-dark",
+                "name": "JQuery"
+            }
+		],
+		"date": "2024/12/04",
+		"description": "A time efficient and interactive way of learning <b>Japanese Kanjis</b> for the <b>Noken exam</b>. Meaning, pronunciation, text to speech...",
+		"id": 7,
+		"img": "static/img/personal_projects/kanji_trainer.jpg",
+		"ribbon": {
+			"color": "bg-success",
+            "name": "Public"
+		},
+		"tags": [
+			"js",
+			"html",
+			"languages",
+			"tts",
+			"learning",
+			"css"
+		],
+		"title": "<b>Kanji Trainer</b>",
+		"url": "https://elmodo7.github.io/personal_projects/Kanji%20Trainer",
+		"page": ""
     }
 ]
