@@ -363,8 +363,36 @@
 			"learning",
 			"css"
 		],
-		"title": "<b>Kanji Trainer</b>",
+		"title": "<b>Kanji Trainer Web</b>",
 		"url": "https://elmodo7.github.io/personal_projects/Kanji%20Trainer",
+		"page": ""
+    },
+	{
+		"badges": [
+			{
+				"color": "badge-success",
+				"name": "AutoHotkey"
+			},
+			{
+                "color": "badge-primary",
+                "name": "Windows"
+            }
+		],
+		"date": "2024/12/04",
+		"description": "QoL tweaks for <b>Alguimist's Kanji training tool</b>",
+		"id": 8,
+		"img": "static/img/personal_projects/kaizen_improved.jpg",
+		"ribbon": {
+			"color": "bg-success",
+            "name": "Public"
+		},
+		"tags": [
+			"ahk",
+			"windows",
+			"languages"
+		],
+		"title": "<b>Kanji Trainer Desktop</b>",
+		"url": "https://github.com/elModo7/Kaizen-Improved",
 		"page": ""
     }
 ]
