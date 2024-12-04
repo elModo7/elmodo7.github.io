@@ -1,0 +1,152 @@
+<div>
+	<div>
+		<h5>This is a <b>submodule</b> for my <a href="./?article=personal_projects/nova_macros/article.html">Nova Macros app</a> for generating <b>code snippets without writing any single line of code</b>.<h5>
+		<br>
+	</div>
+		<div class="row">
+			<div class="col-md-3 col-sm-6 col-12">
+				<a href="./?article=personal_projects/nova_macros/article.html">
+					<div class="info-box bg-gradient-primary shadow-lg">
+						<span class="info-box-icon"><i class="fas fa-book"></i></span>
+						<div class="info-box-content">
+							<span class="info-box-number">Related Article</span>
+							<span class="progress-description">
+								Nova Macros
+							</span>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-md-3 col-sm-6 col-12">
+				<a href="https://github.com/elModo7/Nova-Macros-Offline" target="_blank">
+					<div class="info-box bg-gradient-dark shadow-lg">
+						<span class="info-box-icon"><i class="fab fa-github"></i></span>
+						<div class="info-box-content">
+							<span class="info-box-number">Project's GitHub</span>
+							<span class="progress-description">
+								Nova Macros
+							</span>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<br>
+		<h3>💻 Some Examples:</h4>
+		<br>
+		<h4>File Executor</h4><hr>
+		<img class="shadow-lg article-inner-image" src="static/img/personal_projects/script_generator/file_executor.png"></img><br><br>
+		<h5>Generates the following code:</h5>
+		<pre class="col-md-12"><code class="language-autohotkey">#NoEnv
+#SingleInstance, Force
+SetBatchLines, -1
+#NoTrayIcon
+SetWorkingDir C:\Users\example\AppData\Local\SourceTree\app-3.4.19
+
+global Ejecutable := "SourceTree.exe"
+
+IfWinExist, ahk_exe %Ejecutable%
+{
+	WinActivate, ahk_exe %Ejecutable%
+}
+else
+{
+	Run, C:\Users\example\AppData\Local\SourceTree\app-3.4.19\SourceTree.exe
+}</code></pre>
+		<br><br>
+		
+		<h4>CMD Runner</h4><hr>
+		<img class="shadow-lg article-inner-image" src="static/img/personal_projects/script_generator/cmd_runner.png"></img><br><br>
+		<h5>Generates the following code:</h5>
+		<pre class="col-md-12"><code class="language-autohotkey">#NoEnv
+#SingleInstance, Force
+SetBatchLines, -1
+#NoTrayIcon
+SetWorkingDir C:\Users\example\Desktop
+Run,  mspaint.exe</code></pre>
+		<br><br>
+
+		<h4>Hotkey Sender</h4><hr>
+		<img class="shadow-lg article-inner-image" src="static/img/personal_projects/script_generator/hotkey_sender.png"></img><br><br>
+		<h5>Generates the following code:</h5>
+		<pre class="col-md-12"><code class="language-autohotkey">#NoEnv
+#SingleInstance, Force
+SetBatchLines, -1
+#NoTrayIcon
+Sleep, 25000 ; Initial delay before firing the button combination
+Send, {Alt Down}{Control Down}{Shift Down}{LWin Down}
+Sleep, 30
+Send, {f}
+Sleep, 30
+Send, {Alt Up}{Control Up}{Shift Up}{LWin Up}
+Sleep, 30</code></pre>
+		<br><br>	
+
+		<h4>Text Sender</h4><hr>
+		<img class="shadow-lg article-inner-image" src="static/img/personal_projects/script_generator/text_sender.png"></img><br><br>
+		<h5>Generates the following code:</h5>
+		<pre class="col-md-12"><code class="language-autohotkey">#NoEnv
+#SingleInstance, Force
+SetBatchLines, -1
+#NoTrayIcon
+SetKeyDelay, 50, 20
+text =
+(
+This is a text that will be sent
+)
+SendRaw, % text</code></pre>
+		<br><br>		
+		
+		<h4><b>OBS Dynamic Generator</b></h4><hr>
+		<h5>This script first does a <b>query to OBS</b> to get its <b>scenes and list them</b>.</h5>
+		<img class="shadow-lg article-inner-image" src="static/img/personal_projects/script_generator/obs_dynamic_generator.png"></img><br><br>
+		<h5>Generates the following code:</h5>
+		<pre class="col-md-12"><code class="language-autohotkey">#NoEnv
+#NoTrayIcon
+#SingleInstance, Force
+SetBatchLines, -1
+#Include, &lt;nm_msg&gt;
+DetectHiddenWindows, On
+IfWinNotExist, ahk_exe obs64.exe
+{
+	nmMsg("OBS Not Detected!",2)
+	ExitApp
+}
+new LlamadaWS("ws://127.0.0.1:4455/scene/recording_scene")
+return
+
+; ************************
+; WEB SOCKET STUFF
+; ************************
+class WebSocket
+{
+	__New(WS_URL)
+	{
+		static wb
+
+		; Create an IE instance
+		Gui, +hWndhOld
+		Gui, New, +hWndhWnd
+		this.hWnd := hWnd
+		Gui, Add, ActiveX, vWB, Shell.Explorer
+		Gui, %hOld%: Default
+
+		; Write an appropriate document
+		WB.Navigate...
+...</code></pre>
+		<br><br>		
+		
+		<h4><b>OBS Sound Pannel</b></h4><hr>
+		<h5>This script first does a query to OBS to get its <b>sound devices</b> and their settings and then allows you to <b>modify their status in real time</b>.</h5>
+		<img class="shadow-lg article-inner-image" src="static/img/personal_projects/script_generator/obs_sound_pannel.png"></img><br><br>
+		<br><br><br><hr>
+		
+	
+	<h3>Menu Preview</h3>
+	<img class="shadow-lg article-inner-image img-fluid" src="static/img/personal_projects/script_generator/preview.gif">
+	<!--<div class="d-flex">
+			<img class="shadow-lg article-inner-image img-fluid me-3" style="width:50%;" src="static/img/personal_projects/script_generator/preview.png">&nbsp;
+			<img class="shadow-lg article-inner-image img-fluid" style="width:50%;" src="static/img/personal_projects/script_generator/preview.gif">
+	</div>-->
+	<br>
+</div>

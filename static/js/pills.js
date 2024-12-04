@@ -36,7 +36,7 @@ function pillsEvents(){
 	}
 	
 	if(pills.length > itemsPerPage){
-		pillsHTML += '<div class="row col-sm-12"><div class="col-sm-12 col-md-12 d-flex justify-content-center"><div class="dataTables_paginate paging_simple_numbers" id="example2_paginate"><ul class="pagination">';
+		pillsHTML += '<br><br><div class="row col-sm-12"><div class="col-sm-12 col-md-12 d-flex justify-content-center"><div class="dataTables_paginate paging_simple_numbers" id="example2_paginate"><ul class="pagination">';
 		pillsHTML += '<li class="paginate_button page-item previous ' + (pillsPage == 0 ? 'disabled' : '') + '" id="example2_previous"><a href="#" aria-controls="example2" data-dt-idx="' + pillsPage + '" tabindex="0" class="page-link">Previous</a></li>';
 		
 		var info = numPagesToShowInPagination(parseInt(pillsPage) + 1, pillsTotalPages);

@@ -36,7 +36,7 @@ function personalProjectsEvents(){
 	}
 
 	if(personalProjects.length > itemsPerPage){
-		personalProjectsHTML += '<div class="row col-sm-12"><div class="col-sm-12 col-md-12 d-flex justify-content-center"><div class="dataTables_paginate paging_simple_numbers" id="example2_paginate"><ul class="pagination">';
+		personalProjectsHTML += '<br><br><div class="row col-sm-12"><div class="col-sm-12 col-md-12 d-flex justify-content-center"><div class="dataTables_paginate paging_simple_numbers" id="example2_paginate"><ul class="pagination">';
 		personalProjectsHTML += '<li class="paginate_button page-item previous ' + (personalProjectsPage == 0 ? 'disabled' : '') + '" id="example2_previous"><a href="#" aria-controls="example2" data-dt-idx="' + personalProjectsPage + '" tabindex="0" class="page-link">Previous</a></li>';
 		
 		var info = numPagesToShowInPagination(parseInt(personalProjectsPage) + 1, personalProjectsTotalPages);
