@@ -2,8 +2,8 @@ var pillsPage = 0;
 
 function pillsEvents(){
 	unbindEvents();
-	var itemsPerRow = 6;
-	itemsPerPage = 18;
+	var itemsPerRow = 4;
+	itemsPerPage = 12;
 	var pillsHTML = '';
 	var cntKeys = 0;
 	for (const [key, value] of Object.entries(pills.slice(pillsPage * itemsPerPage, pillsPage * itemsPerPage + itemsPerPage))) {
@@ -17,7 +17,7 @@ function pillsEvents(){
 				pillsHTML += '</div><div class="row mt-4">';
 			}
 		}
-		pillsHTML += '<div class="col-sm-2">';
+		pillsHTML += '<div class="col-sm-3">';
 		for (const [keyBadge, valueBadge] of Object.entries(value.badges)) {
 			pillsHTML +=	'<span class="badge ' + valueBadge.color + '">' + valueBadge.name + '</span> ';
 		}

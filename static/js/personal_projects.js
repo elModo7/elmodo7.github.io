@@ -2,8 +2,8 @@ var personalProjectsPage = 0;
 
 function personalProjectsEvents(){
 	unbindEvents();
-	var itemsPerRow = 4;
-	itemsPerPage = 12;
+	var itemsPerRow = 3;
+	itemsPerPage = 9;
 	var personalProjectsHTML = '';
 	var cntKeys = 0;
 	for (const [key, value] of Object.entries(personalProjects.slice(personalProjectsPage * itemsPerPage, personalProjectsPage * itemsPerPage + itemsPerPage))) {
@@ -17,7 +17,7 @@ function personalProjectsEvents(){
 				personalProjectsHTML += '</div><div class="row mt-4">';
 			}
 		}
-		personalProjectsHTML += '<div class="col-sm-3">';
+		personalProjectsHTML += '<div class="col-sm-4">';
 		for (const [keyBadge, valueBadge] of Object.entries(value.badges)) {
 			personalProjectsHTML +=	'<span class="badge ' + valueBadge.color + '">' + valueBadge.name + '</span> ';
 		}
@@ -34,7 +34,7 @@ function personalProjectsEvents(){
 		}
 		cntKeys++;
 	}
-	
+
 	if(personalProjects.length > itemsPerPage){
 		personalProjectsHTML += '<div class="row col-sm-12"><div class="col-sm-12 col-md-12 d-flex justify-content-center"><div class="dataTables_paginate paging_simple_numbers" id="example2_paginate"><ul class="pagination">';
 		personalProjectsHTML += '<li class="paginate_button page-item previous ' + (personalProjectsPage == 0 ? 'disabled' : '') + '" id="example2_previous"><a href="#" aria-controls="example2" data-dt-idx="' + personalProjectsPage + '" tabindex="0" class="page-link">Previous</a></li>';

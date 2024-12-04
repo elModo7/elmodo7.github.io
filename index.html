@@ -38,19 +38,19 @@
 			var pillsTotalPages = 0;
 			var currentMenuTab = "about_me";
 			$(function(){
-				fetch('static/data/personal_projects.json').then((response) => response.json()).then((json) => {
-					personalProjects = json;
-					itemsPerPage = 12;
-					personalProjectsTotalPages = Math.ceil(personalProjects.length / itemsPerPage) == 0 ? 1 : Math.ceil(personalProjects.length / itemsPerPage);
-				});
 				fetch('static/data/work_projects.json').then((response) => response.json()).then((json) => {
 					workProjects = json;
 					itemsPerPage = 9;
 					workProjectsTotalPages = Math.ceil(workProjects.length / itemsPerPage) == 0 ? 1 : Math.ceil(workProjects.length / itemsPerPage);
 				});
+				fetch('static/data/personal_projects.json').then((response) => response.json()).then((json) => {
+					personalProjects = json;
+					itemsPerPage = 9;
+					personalProjectsTotalPages = Math.ceil(personalProjects.length / itemsPerPage) == 0 ? 1 : Math.ceil(personalProjects.length / itemsPerPage);
+				});
 				fetch('static/data/pills.json').then((response) => response.json()).then((json) => {
 					pills = json;
-					itemsPerPage = 18;
+					itemsPerPage = 12;
 					pillsTotalPages = Math.ceil(pills.length / itemsPerPage) == 0 ? 1 : Math.ceil(pills.length / itemsPerPage);
 				});
 			});
@@ -66,7 +66,7 @@
 			<!-- Footer -->
 			<footer class="main-footer"> <!--style="position: fixed; left: 0; right: 0; bottom: 0; height: 50px;"-->
 				<div class="float-right d-none d-sm-block">
-					<b>Version</b> 0.0.9
+					<b>Version</b> 0.1.0
 				</div>
 				<strong>Copyright © <span id="year_footer">2024</span> <a href="https://github.com/elModo7" target="_blank">Víctor Santiago Martínez Picardo</a>.</strong> All rights reserved.
 			</footer>

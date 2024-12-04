@@ -394,5 +394,42 @@
 		"title": "<b>Kanji Trainer Desktop</b>",
 		"url": "https://github.com/elModo7/Kaizen-Improved",
 		"page": ""
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Automation"
+            },
+            {
+                "color": "badge-dark",
+                "name": "AHK"
+            },
+            {
+                "color": "badge-primary",
+                "name": "Windows"
+            },
+            {
+                "color": "badge-primary",
+                "name": "Desktop"
+            }
+        ],
+        "date": "2024/12/04",
+        "description": "Set of <b>graphical modules</b> for <i>generating code scripts</i> from <b>predefined templates</b>",
+        "id": 9,
+        "img": "static/img/personal_projects/script_generator.jpg",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "Public"
+        },
+        "tags": [
+            "automation",
+            "autohotkey",
+			"windows",
+			"desktop"
+        ],
+        "title": "<b>AHK Code Generator</b>",
+        "url": "",
+		"page": "personal_projects/script_generator/article.html"
     }
 ]
