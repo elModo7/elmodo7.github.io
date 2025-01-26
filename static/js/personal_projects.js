@@ -24,7 +24,7 @@ function personalProjectsEvents(){
 		personalProjectsHTML += '<span class="badge"> </span>'; // Needed for frame possition
 		personalProjectsHTML += '<a ' + (value.url == '' ? '' : ('href="' + value.url + '" target="_blank"')) + ' class="link article-link" article="' + value.page + '" title="' + value.title + '" description="' + value.description + '"><div class="position-relative">';
 		personalProjectsHTML +=	'<div class="article-image column"><div><figure><img src="' + value.img + '" alt="Photo 1" class="img-fluid article-image"></figure></div></div>';
-		if(value.ribbon.color && value.ribbon.name){
+		if(value.ribbon && value.ribbon.color && value.ribbon.name){
 			personalProjectsHTML +=	'<div class="ribbon-wrapper ribbon-lg">';
 			personalProjectsHTML +=	'<div class="ribbon ' + value.ribbon.color + ' text-lg">' + value.ribbon.name + '</div></div>';
 		}

@@ -31,7 +31,7 @@
             }
         ],
         "date": "2024/01/07",
-        "description": "A GUI wrapper for plink with profiling, notifications and more.",
+        "description": "A GUI wrapper for plink with profiling, notifications and more",
         "id": 0,
         "img": "static/img/personal_projects/tunnel_manager/preview.png",
         "ribbon": {
