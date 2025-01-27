@@ -119,10 +119,6 @@
             {
                 "color": "badge-info",
                 "name": "BadUSB"
-            },
-            {
-                "color": "badge-info",
-                "name": "Malduino"
             }
         ],
         "date": "2024/07/28",

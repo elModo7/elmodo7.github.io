@@ -84,7 +84,7 @@
             }
         ],
         "date": "2024/01/07",
-        "description": "An easily configurable Macro Panel designed for <b>touchscreen</b> input in mind with <b>remote command</b> support via <i>TCP sockets</i>.<br><b>Folder support, auto-generated code snippets and more</b>",
+        "description": "Macro Panel designed for <b>touchscreen, network</b> support.<br><b>Auto-generated code snippets and more</b>",
         "id": 1,
         "img": "static/img/personal_projects/nova_macros/preview.gif",
         "ribbon": {
