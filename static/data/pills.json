@@ -66,45 +66,6 @@
 	{
         "badges": [
             {
-                "color": "badge-primary",
-                "name": "Windows"
-            },
-            {
-                "color": "badge-dark",
-                "name": "AHK"
-            },
-            {
-                "color": "badge-dark",
-                "name": "HTML"
-            },
-            {
-                "color": "badge-dark",
-                "name": "CSS"
-            },
-            {
-                "color": "badge-dark",
-                "name": "JS"
-            }
-        ],
-        "date": "2024/07/27",
-        "description": "Control your PC from your phone or another PC",
-        "id": 2,
-        "img": "static/img/pills/multimedia_web_remote.png",
-        "tags": [
-            "ahk",
-			"windows",
-			"web",
-			"html",
-			"css",
-			"js"
-        ],
-        "title": "Multimedia <b>Web Controller</b>",
-        "url": "https://www.youtube.com/shorts/DvuWoBrmtik",
-		"page": ""
-    },
-	{
-        "badges": [
-            {
                 "color": "badge-success",
                 "name": "Networking"
             },
@@ -123,7 +84,7 @@
         ],
         "date": "2024/07/28",
         "description": "Reverse VNC + FTP from poisoned autoinstall USB drivers",
-        "id": 3,
+        "id": 2,
         "img": "static/img/pills/badusb_rubberducky.jpg",
 		"ribbon": {
             "color": "bg-danger",
@@ -138,5 +99,36 @@
         "title": "Malduino <b>BadUSB</b>",
         "url": "https://www.youtube.com/watch?v=EZBDRhWpYvM",
 		"page": ""
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-dark",
+                "name": "SSH"
+            },
+            {
+                "color": "badge-dark",
+                "name": "Linux"
+            }
+        ],
+        "date": "2025/01/27",
+        "description": "Get a <i>filtered log</i> of all <b>successful logins</b> on your Unix devices.",
+        "id": 3,
+        "img": "static/img/pills/ssh_successful_login_log.jpg",
+		"ribbon": {
+            "color": "bg-info",
+            "name": "SYSADMIN"
+        },
+        "tags": [
+            "sys",
+            "sysadmin",
+            "networking",
+            "cybersecurity",
+            "linux",
+			"ssh"
+        ],
+        "title": "Monitor <b>SSH Logins</b>",
+        "url": "",
+		"page": "pills/ssh_successful_login_log.html"
     }
 ]

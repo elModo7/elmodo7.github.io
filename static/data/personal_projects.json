@@ -262,7 +262,7 @@
 				"name": "Linux"
 			},
 			{
-				"color": "badge-dark",
+				"color": "badge-danger",
 				"name": "Java"
 			},
 			{
@@ -320,8 +320,8 @@
 			"html",
 			"css"
 		],
-		"title": "<b>NVM GUI</b>",
-		"url": "https://github.com/elModo7/NVM_GUI-win",
+		"title": "<b>NVM Graphical</b>",
+		"url": "https://github.com/elModo7/nvm-windows-graphical",
 		"page": ""
     },
 	{
@@ -431,5 +431,44 @@
         "title": "<b>AHK Code Generator</b>",
         "url": "",
 		"page": "personal_projects/script_generator/article.html"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-primary",
+                "name": "Windows"
+            },
+            {
+                "color": "badge-dark",
+                "name": "AHK"
+            },
+            {
+                "color": "badge-dark",
+                "name": "HTML"
+            },
+            {
+                "color": "badge-dark",
+                "name": "CSS"
+            },
+            {
+                "color": "badge-dark",
+                "name": "JS"
+            }
+        ],
+        "date": "2024/12/12",
+        "description": "Control your PC from your phone or another PC",
+        "id": 10,
+        "img": "static/img/pills/multimedia_web_remote.png",
+        "tags": [
+            "ahk",
+			"windows",
+			"web",
+			"html",
+			"css",
+			"js"
+        ],
+        "title": "Multimedia <b>Web Controller</b>",
+        "url": "https://www.youtube.com/shorts/DvuWoBrmtik",
+		"page": ""
     }
 ]

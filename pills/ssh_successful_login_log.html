@@ -1,0 +1,135 @@
+<!-- https://elmodo7.github.io/?article=pills/ssh_successful_login_log.html&title=Monitor%3Cb%3ESSH%20Logins%3C/b%3E&description=Get%20a%20%3Ci%3Efiltered%20log%20of%20all%20%3Cb%3Esuccessful%20logins%3C/b%3E%20on%20your%20Unix%20devices. -->
+<div>
+	<div>
+		<br>
+		<h2>A bit of context</h2>
+		<p>
+			In this small pill we will be <b>monitoring both successful logins and failed attempts</b> towards our Linux server.<br>
+			Generally speaking we want to monitor <b>exposed servers</b> that offer some sort of remote shell, like SSH.<br>
+			I will be basing this article on <b>Debian</b> and <b>OpenSSH Server</b>, but it should be pretty similar to most distros like Ubuntu, Linux Mint...
+			<br><br>
+			Our logs are placed under <i>"/var/log"</i>, specifically:
+			<pre class="col-md-12"><code class="language-clike">/var/log/auth.log</code></pre>
+			<br>
+			<h3><b>Monitoring Successful Logins</b></h3>
+			<pre class="col-md-12"><code class="language-clike">zgrep sshd /var/log/auth.log* -h | grep -F 'Accepted'</code></pre>
+		</p>
+		<p>This command is used to search through system log files to display logs of accepted SSH session logins. Let’s break it down step by step:</p>
+
+		<ol>
+		  <li>
+			<strong><code>zgrep</code></strong>
+			<ul>
+			  <li><code>zgrep</code> is a command-line utility that works like <code>grep</code>, but it can search through both compressed (e.g., <code>.gz</code>) and uncompressed files.</li>
+			  <li>In this case, it looks for occurrences of the term <strong><code>sshd</code></strong> (the SSH daemon) in the specified log files.</li>
+			</ul>
+		  </li>
+		  <li>
+			<strong><code>/var/log/auth.log*</code></strong>
+			<ul>
+			  <li>This specifies the log files to search.</li>
+			  <li><code>auth.log</code> is a common log file that stores authentication-related logs (like SSH login attempts).</li>
+			  <li>The <code>*</code> allows the command to search through all files that match the pattern, including older or compressed versions (e.g., <code>auth.log.1</code>, <code>auth.log.2.gz</code>, etc.).</li>
+			</ul>
+		  </li>
+		  <li>
+			<strong><code>-h</code></strong>
+			<ul>
+			  <li>The <code>-h</code> option suppresses the printing of file names in the output. This is useful when multiple files are searched, and you only care about the log content, not which file it came from.</li>
+			</ul>
+		  </li>
+		  <li>
+			<strong><code>|</code> (Pipe)</strong>
+			<ul>
+			  <li>The pipe sends the output of the first command (<code>zgrep sshd</code>) as input to the next command (<code>grep -F 'Accepted'</code>).</li>
+			</ul>
+		  </li>
+		  <li>
+			<strong><code>grep -F 'Accepted'</code></strong>
+			<ul>
+			  <li><code>grep</code> searches for lines containing the literal string <strong><code>Accepted</code></strong>.</li>
+			  <li>The <code>-F</code> option tells <code>grep</code> to interpret the search string literally (not as a regular expression).</li>
+			</ul>
+		  </li>
+		</ol>
+
+		<p><strong>Purpose:</strong><br>
+		The full command filters logs to show entries where the SSH daemon (<code>sshd</code>) indicates an <strong>accepted login attempt</strong>, i.e., successful SSH authentications.</p>
+
+		<p><strong>Example Output:</strong><br>
+		You might see output like this:</p>
+
+		<pre class="col-md-12"><code class="language-clike">Jan 27 12:45:23 server-name sshd[12345]: Accepted password for user1 from 192.168.1.100 port 54321 ssh2
+Jan 27 14:12:34 server-name sshd[12346]: Accepted publickey for user2 from 10.0.0.200 port 59876 ssh2</code></pre>
+
+		<p>This output tells you:</p>
+		<ul>
+		  <li>The date and time of the login.</li>
+		  <li>The user who logged in.</li>
+		  <li>The IP address from which they connected.</li>
+		  <li>The authentication method (e.g., <code>password</code> or <code>publickey</code>).</li>
+		</ul>
+		
+		Here is an real example from my ODROID-XU4:
+		<br><img class="shadow-lg article-inner-image" src="static/img/pills/ssh_successful_login_log/ssh_successful_attempts.jpg"></img><br>
+		<br><br>
+		<h3><b>Monitoring Failed Login Attempts</b></h3>
+		*While the previous section was mainly my own usage, I found a <b>great source</b> for monitoring failed attempts and <i>this part of the article takes a lot of references</i> from it:<br>
+		<a href="https://www.tecmint.com/find-failed-ssh-login-attempts-in-linux/">Tecmint Article: Find failed ssh login attepts in linux</a><br><br>
+		<h4>Listing All Failed SSH Login Attempts</h4>
+		The simplest way of listing all failed login attempts:
+		<pre class="col-md-12"><code class="language-clike"># grep "Failed password" /var/log/auth.log</code></pre>
+		The same result could be achieved by using cat command:
+		<pre class="col-md-12"><code class="language-clike"># cat /var/log/auth.log | grep "Failed password"</code></pre>
+		<br><img class="shadow-lg article-inner-image" src="static/img/pills/ssh_successful_login_log/List-All-Failed-SSH-Login-Attempts.png"></img><br>
+		<br><br>
+		<h4>Capturing extra information</h4>
+		In order to display extra information about the failed SSH logins, issue the command as shown in the below example.
+		<pre class="col-md-12"><code class="language-clike"># egrep "Failed|Failure" /var/log/auth.log</code></pre>
+		<br><img class="shadow-lg article-inner-image" src="static/img/pills/ssh_successful_login_log/Find-Failed-SSH-Logins.png"></img><br>
+		<br><br>
+		<h4>Capturing the IP Address of the issuer</h4>
+		To display a list of all IP addresses that tried and failed to log in to the SSH server alongside the number of failed attempts of each IP address, issue the below command.
+		<pre class="col-md-12"><code class="language-clike"># grep "Failed password" /var/log/auth.log | awk ‘{print $11}’ | uniq -c | sort -nr</code></pre>
+		<br><img class="shadow-lg article-inner-image" src="static/img/pills/ssh_successful_login_log/Find-IP-Addresses-SSH-Failed-Logins.png"></img><br>
+		<br><h5>Command Breakdown</h5>
+		<ul>
+		  <li>
+			<strong>grep "Failed password" /var/log/auth.log</strong>: 
+			Searches the <code>/var/log/auth.log</code> file for lines containing the phrase <em>"Failed password"</em>. These lines typically indicate failed SSH login attempts.
+		  </li>
+		  <li>
+			<strong>awk '{print $11}'</strong>: 
+			Extracts the 11th field from each line. In failed login log entries, the 11th field usually contains the IP address of the machine attempting to log in.
+		  </li>
+		  <li>
+			<strong>uniq -c</strong>: 
+			Counts the number of occurrences of each unique IP address.
+		  </li>
+		  <li>
+			<strong>sort -nr</strong>: 
+			Sorts the output in numeric, reverse order so that IPs with the highest number of failed attempts appear first.
+		  </li>
+		</ul>
+		<br><br>
+		<h4>Using journalctl to retrieve real time attempts</h4>
+		<pre class="col-md-12"><code class="language-clike"># journalctl _SYSTEMD_UNIT=ssh.service | egrep "Failed|Failure"</code></pre>
+		<br><img class="shadow-lg article-inner-image" src="static/img/pills/ssh_successful_login_log/Find-Real-Time-Failed-SSH-Logins-768x402.png"></img><br>
+		<br>
+		<h5>Command Breakdown</h5>
+		<ul>
+		  <li>
+			<strong>journalctl _SYSTEMD_UNIT=ssh.service</strong>: 
+			Queries the system logs for entries specifically related to the <code>ssh.service</code>. The <code>_SYSTEMD_UNIT</code> filter ensures that only logs generated by the SSH service are included.
+		  </li>
+		  <li>
+			<strong>|</strong> (pipe): 
+			Passes the output of the <code>journalctl</code> command as input to the next command.
+		  </li>
+		  <li>
+			<strong>egrep "Failed|Failure"</strong>: 
+			Searches the logs for lines containing the words <em>"Failed"</em> or <em>"Failure"</em>. This extended regular expression (<code>egrep</code>) helps pinpoint entries related to failed login attempts or failures in SSH connections.
+		  </li>
+		</ul>
+	</div>
+</div>
