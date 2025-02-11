@@ -1,0 +1,43 @@
+<div>
+	<div class="cl-preview-section">
+		<h1 id="nova-macros-a-stream-deck-clone"><strong>Notification System Demo (<em>Godot Engine</em>)</strong></h1>
+	</div>
+	<iframe src="https://elmodo7.github.io/notification-system-demo/" style="width:640px;height:360px"></iframe>
+	<div class="cl-preview-section">
+		<blockquote>
+			<p><strong>Note:</strong> In order to hear <b>sound</b> you have <strong>click</strong> or <i>interact</i> in some way with the iframe.</p>
+		</blockquote>
+	</div>
+	<div class="row">
+		<div class="col-md-3 col-sm-6 col-12">
+			<a href="https://github.com/elModo7/notification-system-demo" target="_blank">
+				<div class="info-box bg-gradient-dark shadow-lg">
+					<span class="info-box-icon"><i class="fab fa-github"></i></span>
+					<div class="info-box-content">
+						<span class="info-box-number">GitHub Repo</span>
+						<span class="progress-description">
+							Godot Notification System Demo
+						</span>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="cl-preview-section">
+		<p>This project can act as a <b>client</b> or <b>server</b> depending on requirements. It works either via <b>raw TCP sockets</b> or <b>websockets</b> so it can also be deployed for the web, like in this example.<br>
+		It basically serves as a way of <b>showing animated notifications on streaming platforms, with particle effects, sound, glowing and using custom animations</b> for juicing up the stream.<br>
+		You just have to send a <b>JSON</b> object and the alert will be displayed.<br>
+		<pre class="col-md-12"><code class="language-javascript">{
+    "imageScale": "Vector2(0.25, 0.25)",
+    "img": "C:\\Users\\victo\\Desktop\\800px-Clefairy.png",
+    "message": "Who's that Pok\u00e9mon?!",
+    "particlesModulation": "Color(1, 0, 0, 0)",
+    "soundPath": "C:\\Users\\victo\\Documents\\Tweener Remote Alerts Notification System\\sound\\who-is-that-pokemon-its-pikachu-vine.mp3",
+    "type": "whoIsThatPokemon",
+    "volumeDB": "-10"
+}</code></pre>
+		I have also implemented a <b>queue system</b> so that a <b>stream of alerts</b> can be received and displayed <b>sequentially</b>.<br>
+		I also use it personally on a <b>mini screen</b> that I have <i>attached to a micro server</i> for <b>custom notifications</b>.
+		</p>
+	</div>
+</div>

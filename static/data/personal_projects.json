@@ -458,7 +458,11 @@
         "date": "2024/12/12",
         "description": "Control your PC from your phone or another PC",
         "id": 10,
-        "img": "static/img/pills/multimedia_web_remote.png",
+        "img": "static/img/personal_projects/multimedia_web_remote.png",
+		"ribbon": {
+            "color": "bg-danger",
+            "name": "Only video"
+        },
         "tags": [
             "ahk",
 			"windows",
@@ -470,5 +474,66 @@
         "title": "Multimedia <b>Web Controller</b>",
         "url": "https://www.youtube.com/shorts/DvuWoBrmtik",
 		"page": ""
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-primary",
+                "name": "Windows"
+            },
+            {
+                "color": "badge-dark",
+                "name": "AHK"
+            }
+        ],
+        "date": "2020/09/17",
+        "description": "<b>Match + player data parser</b> from unoficial Nintendo™ servers",
+        "id": 11,
+        "img": "static/img/personal_projects/metroid_wiimmfi_player_list_viewer.jpg",
+		"ribbon": {
+            "color": "bg-success",
+            "name": "Public"
+        },
+        "tags": [
+            "ahk",
+			"windows"
+        ],
+        "title": "Metroid DS <b>Wi-Fi Matcher</b>",
+        "url": "",
+		"page": "personal_projects/metroid_wiimmfi_player_list_viewer.html"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-primary",
+                "name": "Windows"
+            },
+            {
+                "color": "badge-dark",
+                "name": "AHK"
+            },
+            {
+                "color": "badge-primary",
+                "name": "Godot"
+            }
+        ],
+        "date": "2024/12/17",
+        "description": "Generate <b>animated alerts</b> and notifications via <b>TCP/Websocket</b>",
+        "id": 12,
+        "img": "static/img/personal_projects/godot_notification_system.jpg",
+		"ribbon": {
+            "color": "bg-primary",
+            "name": "Live Demo"
+        },
+        "tags": [
+            "ahk",
+			"windows",
+			"godot",
+			"gdscript",
+			"web"
+        ],
+        "title": "Godot <b>Notification System</b>",
+        "url": "",
+		"page": "personal_projects/godot_notification_system.html"
     }
 ]
