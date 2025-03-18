@@ -58,6 +58,53 @@
     },
 	{
         "badges": [
+			{
+                "color": "badge-danger",
+                "name": "Java"
+            },
+            {
+                "color": "badge-primary",
+                "name": "Docker"
+            },
+			{
+                "color": "badge-success",
+                "name": "Spring"
+            },
+            {
+                "color": "badge-dark",
+                "name": "AHK"
+            },
+            {
+                "color": "badge-primary",
+                "name": "Microservices"
+            }
+        ],
+        "date": "2025/02/17",
+        "description": "A <b><i>real-time</i> Pokémon Home</b> replica using DMA exchange.",
+        "id": 13,
+        "img": "static/img/personal_projects/pokemon_home/thumbnail.gif",
+		"ribbon": {
+            "color": "bg-danger",
+            "name": "Video"
+        },
+        "tags": [
+            "ahk",
+			"windows",
+			"java",
+			"spring boot",
+			"spring",
+			"docker",
+			"prometheus",
+			"skipper",
+			"docker",
+			"web"
+        ],
+        "title": "<b>Pokémon Cloud Storage</b> Service",
+        "url": "",
+		"page": "personal_projects/pokemon_home/index.html"
+    },
+	{
+        "badges": [
             {
                 "color": "badge-success",
                 "name": "Automation"
@@ -191,8 +238,9 @@
         "description": "An HTTP server that reads a rom folder and <i>dynamically generates a web UI</i> for <b>playing your games on the web or your phone with touch controls!</b>",
         "id": 3,
         "img": "static/img/personal_projects/gb_library/preview.jpg",
-        "ribbon": {
-            
+		"ribbon": {
+            "color": "bg-primary",
+            "name": "Live Demo"
         },
         "tags": [
             "web",
@@ -519,7 +567,7 @@
         ],
         "date": "2024/12/17",
         "description": "Generate <b>animated alerts</b> and notifications via <b>TCP/Websocket</b>",
-        "id": 12,
+        "id": 13,
         "img": "static/img/personal_projects/godot_notification_system.jpg",
 		"ribbon": {
             "color": "bg-primary",
