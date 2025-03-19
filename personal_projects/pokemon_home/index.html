@@ -1,4 +1,5 @@
 <h1 class="code-line" data-line-start="0" data-line-end="1"><a id="cloud_based_pokemon_storage_system"></a>Cloud-Based Pokémon Storage System</h1>
+<br>
 <div class="row">
 	<div class="col-md-3 col-sm-6 col-12">
 		<a href="https://youtu.be/xZXUb8GOvZw" target="_blank">
@@ -87,12 +88,6 @@
 </ul>
 <br>
 
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-	<img class="article-inner-image" src="static/img/personal_projects/pokemon_home/thumbnail_hd.jpg" alt="Image 1" style="width: 48%; margin: 1%;">
-	<img class="article-inner-image" src="static/img/personal_projects/pokemon_home/thumbnail2_hd.jpg" alt="Image 2" style="width: 48%; margin: 1%;">
-</div>
-<br>
-
 <h2 class="code-line" data-line-start="94" data-line-end="95"><a id="frontend_backend_development"></a>Frontend &amp; Backend Development</h2>
 <p class="has-line-data" data-line-start="96" data-line-end="97">
     For the frontend, I used a custom-built library, <strong>GBAMEM</strong>, which tracks the running emulator, retrieves base pointers, and maps them to the game’s memory address. The library interacts with a cut-down version of my <strong>pokecrystal</strong> wrapper to extract game data in a more user-friendly format, allowing me to convert memory data into JSON objects for seamless Pokémon uploads and downloads.
@@ -104,6 +99,91 @@
     On the backend, the system uses <strong>Spring Boot</strong> with <strong>JWT</strong> authentication, <strong>Spring Data</strong> (JPA &amp; Hibernate), and <strong>Spring AOP</strong> for logging and monitoring. The API is connected to a <strong>MySQL</strong> database for persistent storage, and I containerized the backend using Docker to improve scalability and maintainability. For load balancing and routing, I used <strong>Zalando’s Skipper</strong>, ensuring a robust, distributed architecture.
 </p>
 <p class="has-line-data" data-line-start="102" data-line-end="103">I also experimented with shadow traffic techniques to monitor mirrored traffic behavior across different versions of the backend services.</p>
+<br>
+
+<h3 class="code-line" data-line-start="64" data-line-end="65"><a id="api_pokemon_data_exchange"></a>API Pokémon Data Exchange:</h3>
+<pre class="col-md-12"><code class="language-java">curl --location 'https://odroid.pc:443/pokehome/pokemon/add' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <bearer_placeholder>' \
+--data '{
+    "id": 0,
+    "nickname": "PORYGON2",
+    "specieId": 233,
+    "specie": "Porygon2",
+    "gender": 0,
+    "shiny": 0,
+    "game": 1,
+    "user": 1,
+    "rawdata": "AC,69,B0,A1,79,C6,E4,02,89,E7,00,00,00,00,00,00,00,00,00,00,69,50,14,1E,0A,0A,46,00,C2,82,37,00,00,00,A5,00,A5,00,63,00,71,00,4C,00,78,00,6D,C7",
+    "attack1Id": 105,
+    "attack2Id": 176,
+    "attack3Id": 161,
+    "attack4Id": 121,
+    "attack1": "Recover",
+    "attack2": "Conversion2",
+    "attack3": "Tri Attack",
+    "attack4": "Egg Bomb",
+    "hpIv": 0,
+    "hpEv": 0,
+    "attackIv": 6,
+    "attackEv": 0,
+    "defenseIv": 9,
+    "defenseEv": 0,
+    "specialAttackIv": 0,
+    "specialAttackEv": 0,
+    "specialDefenseIv": 0,
+    "specialDefenseEv": 0,
+    "speedIv": 5,
+    "speedEv": 0,
+    "ppUpAttack1": 0,
+    "ppUpAttack2": 0,
+    "ppUpAttack3": 0,
+    "ppUpAttack4": 0,
+    "itemId": 172,
+    "item": "Up-Grade",
+    "pokerus": 0,
+    "hp": 165,
+    "attack": 99,
+    "defense": 113,
+    "specialAttack": 120,
+    "specialDefense": 109,
+    "speed": 76,
+    "trainerId": 50916,
+    "trainerSid": 0,
+    "trainerName": "PKHOME",
+    "friendship": 70,
+    "level": 55,
+    "experience": 166375
+}'</code></pre>
+<br>
+
+<h3 class="code-line" data-line-start="64" data-line-end="65"><a id="pokemon_db_insert"></a>RAW SQL Pokémon Insert:</h3>
+<pre class="col-md-12"><code class="language-sql">INSERT INTO pokehome.pokemon (
+  id, nickname, specie_id, gender, shiny, 
+  game, `user`, rawdata, attack1_id, 
+  attack2_id, attack3_id, attack4_id, 
+  hp_iv, hp_ev, attack_iv, attack_ev, 
+  defense_iv, defense_ev, special_attack_iv, 
+  special_attack_ev, special_defense_iv, 
+  special_defense_ev, speed_iv, speed_ev, 
+  pp_up_attack1, pp_up_attack2, pp_up_attack3, 
+  pp_up_attack4, item_id, pokerus, 
+  hp, attack, defense, special_attack, 
+  special_defense, speed, trainer_id, 
+  trainer_sid, trainer_name, friendship, 
+  `level`, experience, specie, item, 
+  attack1, attack2, attack3, attack4
+) 
+VALUES 
+  (
+    719, 'HOUNDOOM', 229, 0, 0, 1, 1, 'E5,00,69,F2,5E,35,C6,E4,06,8A,CE,00,00,00,00,00,00,00,00,00,00,29,D9,14,0F,0A,0F,4B,00,C2,82,46,00,00,00,C2,00,C2,00,85,00,57,00,9C,00,AB,00,81', 
+    105, 242, 94, 53, 0, 0, 2, 0, 9, 0, 9, 0, 
+    9, 0, 13, 0, 0, 0, 0, 0, 0, 0, 194, 133, 87, 
+    171, 129, 156, 50916, 0, 'PKHOME', 75, 
+    70, 428750, 'Houndoom', '0', 'Recover', 
+    'Crunch', 'Psychic', 'Flamethrower'
+  );
+</code></pre>
 <br>
 
 <h2 class="code-line" data-line-start="24" data-line-end="25"><a id="project_backstory"></a>Backstory of the project</h2>
@@ -134,7 +214,7 @@
             <li class="has-line-data" data-line-start="68" data-line-end="69">ARM Cortex A15 (Exynos 5422)</li>
             <li class="has-line-data" data-line-start="69" data-line-end="70">2GB RAM</li>
             <li class="has-line-data" data-line-start="70" data-line-end="71">Public Network 1</li>
-            <li class="has-line-data" data-line-start="71" data-line-end="73">Purpose: Skipper (load balancing)</li>
+            <li class="has-line-data" data-line-start="71" data-line-end="73">Purpose: Skipper (load balancing, routing, rate limiting...)</li>
         </ul>
     </li>
 	<br>
@@ -190,6 +270,17 @@
 </ul>
 <br>
 
+<h2 class="code-line" data-line-start="56" data-line-end="57"><a id="project_media"></a>Project Media</h2>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+	<img class="article-inner-image" src="static/img/personal_projects/pokemon_home/home.jpg" alt="Image 1" style="width: 48%; margin: 1%;">
+	<img class="article-inner-image" src="static/img/personal_projects/pokemon_home/box.jpg" alt="Image 2" style="width: 48%; margin: 1%;">
+	<img class="article-inner-image" src="static/img/personal_projects/pokemon_home/team.jpg" alt="Image 3" style="width: 48%; margin: 1%;">
+	<img class="article-inner-image" src="static/img/personal_projects/pokemon_home/gbamem_pokecrystal.png" alt="Image 4" style="width: 48%; margin: 1%;">
+	<img class="article-inner-image" src="static/img/personal_projects/pokemon_home/thumbnail_hd.jpg" alt="Image 1" style="width: 48%; margin: 1%;">
+	<img class="article-inner-image" src="static/img/personal_projects/pokemon_home/thumbnail2_hd.jpg" alt="Image 2" style="width: 48%; margin: 1%;">
+</div>
+<br>
+
 <h2 class="code-line" data-line-start="104" data-line-end="105"><a id="challentes_future_enhancements"></a>Challenges and Future Enhancements</h2>
 <p class="has-line-data" data-line-start="106" data-line-end="107">
     I initially considered integrating <strong>Jenkins</strong> for CI/CD, but my current self-managed in-micro cron jobs and scheduled routines proved more than enough for this project’s scope. In the future, I would like to explore integrating <strong>Jenkins</strong>, <strong>Ansible</strong>, or <strong>Puppet</strong> to streamline deployment on some other larger scale hobby projects.
@@ -201,11 +292,3 @@
     This project, while rooted in nostalgia and personal interest, turned into an excellent opportunity to explore new technologies and practice each and every deployment step.
 </p>
 <br><br>
-
-<h2 class="code-line" data-line-start="56" data-line-end="57"><a id="project_media"></a>Project Media</h2>
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-	<img class="article-inner-image" src="static/img/personal_projects/pokemon_home/home.jpg" alt="Image 1" style="width: 48%; margin: 1%;">
-	<img class="article-inner-image" src="static/img/personal_projects/pokemon_home/box.jpg" alt="Image 2" style="width: 48%; margin: 1%;">
-	<img class="article-inner-image" src="static/img/personal_projects/pokemon_home/team.jpg" alt="Image 3" style="width: 48%; margin: 1%;">
-	<img class="article-inner-image" src="static/img/personal_projects/pokemon_home/gbamem_pokecrystal.png" alt="Image 4" style="width: 48%; margin: 1%;">
-</div>
