@@ -26,37 +26,8 @@
 		<script type="text/JavaScript" src="static/js/jquery.flot.resize.js"></script>
 		<script type="text/JavaScript" src="static/js/jquery.flot.pie.js"></script>
 		<script type="text/JavaScript" src="static/js/toastr.min.js"></script>
+		<script type="text/JavaScript" src="static/js/mobile_intercept.js"></script>
 		<script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"></script>
-		<!-- <lite-youtube videoid="f9exy3Xyr_8"></lite-youtube> -->
-
-		<script>
-			const isMobile = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-			var personalProjects = null;
-			var workProjects = null;
-			var pills = null;
-			var itemsPerPage = 0;
-			var personalProjectsTotalPages = 0;
-			var workProjectsTotalPages = 0;
-			var pillsTotalPages = 0;
-			var currentMenuTab = "about_me";
-			$(function(){
-				fetch('static/data/work_projects.json').then((response) => response.json()).then((json) => {
-					workProjects = json;
-					itemsPerPage = 9;
-					workProjectsTotalPages = Math.ceil(workProjects.length / itemsPerPage) == 0 ? 1 : Math.ceil(workProjects.length / itemsPerPage);
-				});
-				fetch('static/data/personal_projects.json').then((response) => response.json()).then((json) => {
-					personalProjects = json;
-					itemsPerPage = 9;
-					personalProjectsTotalPages = Math.ceil(personalProjects.length / itemsPerPage) == 0 ? 1 : Math.ceil(personalProjects.length / itemsPerPage);
-				});
-				fetch('static/data/pills.json').then((response) => response.json()).then((json) => {
-					pills = json;
-					itemsPerPage = 12;
-					pillsTotalPages = Math.ceil(pills.length / itemsPerPage) == 0 ? 1 : Math.ceil(pills.length / itemsPerPage);
-				});
-			});
-		</script>
     </head>
     <body class="sidebar-mini layout-fixed" style="height: auto;">
         <div class="wrapper">
@@ -65,8 +36,7 @@
 			
             <div class="content-wrapper" id="divMainContent"></div>
 			
-			<!-- Footer -->
-			<footer class="main-footer"> <!--style="position: fixed; left: 0; right: 0; bottom: 0; height: 50px;"-->
+			<footer class="main-footer">
 				<div class="float-right d-none d-sm-block">
 					<b>Version</b> 0.1.1
 				</div>

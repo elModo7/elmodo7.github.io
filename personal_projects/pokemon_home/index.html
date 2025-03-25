@@ -1,3 +1,26 @@
+<script>
+	function copyShareLink(){
+		navigator.clipboard.writeText("https://tinyurl.com/pokemonHomeArticle");
+		toastr.options = {
+		  "closeButton": false,
+		  "debug": false,
+		  "newestOnTop": false,
+		  "progressBar": false,
+		  "positionClass": "toast-top-center",
+		  "preventDuplicates": false,
+		  "onclick": null,
+		  "showDuration": "300",
+		  "hideDuration": "1000",
+		  "timeOut": "5000",
+		  "extendedTimeOut": "1000",
+		  "showEasing": "swing",
+		  "hideEasing": "linear",
+		  "showMethod": "fadeIn",
+		  "hideMethod": "fadeOut"
+		}
+		toastr["success"]("This Article's direct link", "Copied to Clipboard")
+	}
+</script>
 <h1 class="code-line" data-line-start="0" data-line-end="1"><a id="cloud_based_pokemon_storage_system"></a>Cloud-Based Pokémon Storage System</h1>
 <br>
 <div class="row">
@@ -8,7 +31,46 @@
 				<div class="info-box-content">
 					<span class="info-box-number">YouTube Video</span>
 					<span class="progress-description">
-						A multimedia version of this article
+						Full Video about this article
+					</span>
+				</div>
+			</div>
+		</a>
+	</div>
+	<div class="col-md-3 col-sm-6 col-12">
+		<a href="https://youtu.be/xZXUb8GOvZw" target="_blank">
+			<div class="info-box bg-gradient-warning shadow-lg">
+				<span class="info-box-icon"><i class="fas fa-mobile"></i></span>
+				<div class="info-box-content">
+					<span class="info-box-number">YouTube Short</span>
+					<span class="progress-description">
+						Short PokeHome Promo Video
+					</span>
+				</div>
+			</div>
+		</a>
+	</div>
+	<div class="col-md-3 col-sm-6 col-12">
+		<a href="#" onClick="copyShareLink()">
+			<div class="info-box bg-gradient-success shadow-lg">
+				<span class="info-box-icon"><i class="fas fa-qrcode"></i></span>
+				<div class="info-box-content">
+					<span class="info-box-number">Share</span>
+					<span class="progress-description">
+						Direct Link to this article
+					</span>
+				</div>
+			</div>
+		</a>
+	</div>
+	<div class="col-md-3 col-sm-6 col-12">
+		<a href="https://youtu.be/RcGNuH9mLmw" target="_blank">
+			<div class="info-box bg-gradient-dark shadow-lg">
+				<span class="info-box-icon"><i class="fab fa-youtube"></i></span>
+				<div class="info-box-content">
+					<span class="info-box-number">Child Project</span>
+					<span class="progress-description">
+						Project Followup Preview Video
 					</span>
 				</div>
 			</div>
