@@ -104,6 +104,55 @@
 		"page": "personal_projects/pokemon_home/index.html"
     },
 	{
+        "badges": [
+            {
+                "color": "badge-success",
+                "name": "Automation"
+            },
+            {
+                "color": "badge-dark",
+                "name": "AHK"
+            },
+            {
+                "color": "badge-primary",
+                "name": "Windows"
+            },
+            {
+                "color": "badge-primary",
+                "name": "Desktop"
+            },
+            {
+                "color": "badge-secondary",
+                "name": "TCP"
+            },
+            {
+                "color": "badge-secondary",
+                "name": "Websockets"
+            }
+        ],
+        "date": "2024/01/07",
+        "description": "Macro Panel designed for <b>touchscreen, network</b> support.<br><b>Auto-generated code snippets and more</b>",
+        "id": 1,
+        "img": "static/img/personal_projects/nova_macros/preview.gif",
+        "ribbon": {
+            "color": "bg-success",
+            "name": "Public"
+        },
+        "tags": [
+            "automation",
+            "networking",
+            "autohotkey",
+			"windows",
+			"desktop",
+			"tcp",
+			"websockets",
+			"json"
+        ],
+        "title": "<b>Nova Macros</b>: A <i>Stream Deck</i> clone",
+        "url": "",
+		"page": "personal_projects/nova_macros/article.html"
+    },
+	{
 		"badges": [
 			{
 				"color": "badge-success",
@@ -188,55 +237,6 @@
 		"title": "<b>WoL Web Panel + API REST</b>",
 		"url": "https://github.com/elModo7/WakeOnLAN-Web-API",
 		"page": ""
-    },
-	{
-        "badges": [
-            {
-                "color": "badge-success",
-                "name": "Automation"
-            },
-            {
-                "color": "badge-dark",
-                "name": "AHK"
-            },
-            {
-                "color": "badge-primary",
-                "name": "Windows"
-            },
-            {
-                "color": "badge-primary",
-                "name": "Desktop"
-            },
-            {
-                "color": "badge-secondary",
-                "name": "TCP"
-            },
-            {
-                "color": "badge-secondary",
-                "name": "Websockets"
-            }
-        ],
-        "date": "2024/01/07",
-        "description": "Macro Panel designed for <b>touchscreen, network</b> support.<br><b>Auto-generated code snippets and more</b>",
-        "id": 1,
-        "img": "static/img/personal_projects/nova_macros/preview.gif",
-        "ribbon": {
-            "color": "bg-success",
-            "name": "Public"
-        },
-        "tags": [
-            "automation",
-            "networking",
-            "autohotkey",
-			"windows",
-			"desktop",
-			"tcp",
-			"websockets",
-			"json"
-        ],
-        "title": "<b>Nova Macros</b>: A <i>Stream Deck</i> clone",
-        "url": "",
-		"page": "personal_projects/nova_macros/article.html"
     },
 	{
         "badges": [
