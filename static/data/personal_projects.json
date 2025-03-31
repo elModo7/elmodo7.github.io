@@ -80,7 +80,7 @@
             }
         ],
         "date": "2025/02/17",
-        "description": "A <b><i>real-time</i> Pokémon Home</b> replica using DMA exchange.",
+        "description": "<b>On-premise, <i>real-time</i> Pokémon Cloud Storage System</b> using DMA exchange.",
         "id": 13,
         "img": "static/img/personal_projects/pokemon_home/thumbnail.jpg",
 		"ribbon": {
@@ -99,7 +99,7 @@
 			"docker",
 			"web"
         ],
-        "title": "<b>Pokémon Cloud Storage</b> Service",
+        "title": "<b>Personal Pokémon Home</b> Service",
         "url": "",
 		"page": "personal_projects/pokemon_home/index.html"
     },
