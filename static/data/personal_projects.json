@@ -80,7 +80,7 @@
             }
         ],
         "date": "2025/02/17",
-        "description": "A <b><i>real-time</i> Pokémon Home</b> replica using DMA exchange.",
+        "description": "A <b><i>real-time</i> Pokémon Home</b> replica using raw memory exchange.",
         "id": 13,
         "img": "static/img/personal_projects/pokemon_home/thumbnail.jpg",
 		"ribbon": {
