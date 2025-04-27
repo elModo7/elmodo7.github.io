@@ -80,7 +80,7 @@
             }
         ],
         "date": "2025/02/17",
-        "description": "A <b><i>real-time</i> Pokémon Home</b> replica using raw memory exchange.",
+        "description": "<b>On-premise, <i>real-time</i> Pokémon Cloud Storage System</b> using raw memory exchange.",
         "id": 13,
         "img": "static/img/personal_projects/pokemon_home/thumbnail.jpg",
 		"ribbon": {
@@ -99,7 +99,7 @@
 			"docker",
 			"web"
         ],
-        "title": "<b>Pokémon Cloud Storage</b> Service",
+        "title": "<b>Personal Pokémon Home</b> Service",
         "url": "",
 		"page": "personal_projects/pokemon_home/index.html"
     },
@@ -151,6 +151,92 @@
         "title": "<b>Nova Macros</b>: A <i>Stream Deck</i> clone",
         "url": "",
 		"page": "personal_projects/nova_macros/article.html"
+    },
+	{
+		"badges": [
+			{
+				"color": "badge-success",
+				"name": "Automation"
+			},
+			{
+				"color": "badge-info",
+				"name": "Windows"
+			},
+			{
+				"color": "badge-dark",
+				"name": "AHK"
+			}
+		],
+		"date": "2024/07/25",
+		"description": "Free up <b>unused cache RAM</b> from Windows's Processes",
+		"id": 4,
+		"img": "static/img/personal_projects/ram_optimizer/article.png",
+		"ribbon": {
+			"color": "bg-success",
+            "name": "Public"
+		},
+		"tags": [
+			"automation",
+			"ahk",
+			"memory",
+			"windows"
+		],
+		"title": "<b>RAM Optimizer</b>",
+		"url": "",
+		"page": "personal_projects/ram_optimizer.html"
+    },
+	{
+		"badges": [
+			{
+				"color": "badge-info",
+				"name": "API"
+			},
+			{
+                "color": "badge-primary",
+                "name": "Web"
+            },
+            {
+                "color": "badge-dark",
+                "name": "JS"
+            },
+            {
+                "color": "badge-dark",
+                "name": "Bootstrap"
+            },
+			{
+				"color": "badge-dark",
+				"name": "Linux"
+			},
+			{
+				"color": "badge-danger",
+				"name": "Java"
+			},
+			{
+				"color": "badge-dark",
+				"name": "Docker"
+			}
+		],
+		"date": "2024/09/17",
+		"description": "<b>Remotely manage your devices's power status</b> via Wake on LAN with a convenient web panel",
+		"id": 5,
+		"img": "static/img/personal_projects/wol_web_api/article.png",
+		"ribbon": {
+			"color": "bg-success",
+            "name": "Public"
+		},
+		"tags": [
+			"automation",
+			"java",
+			"api",
+			"spring",
+			"springboot",
+			"ssl",
+			"docker",
+			"rest"
+		],
+		"title": "<b>WoL Web Panel + API REST</b>",
+		"url": "https://github.com/elModo7/WakeOnLAN-Web-API",
+		"page": ""
     },
 	{
         "badges": [
@@ -253,92 +339,6 @@
         "title": "<b>GameBoy</b> <i>online</i> Library",
         "url": "",
 		"page": "personal_projects/gb_library/article.html"
-    },
-	{
-		"badges": [
-			{
-				"color": "badge-success",
-				"name": "Automation"
-			},
-			{
-				"color": "badge-info",
-				"name": "Windows"
-			},
-			{
-				"color": "badge-dark",
-				"name": "AHK"
-			}
-		],
-		"date": "2024/07/25",
-		"description": "Free up <b>unused cache RAM</b> from Windows's Processes",
-		"id": 4,
-		"img": "static/img/personal_projects/ram_optimizer/article.png",
-		"ribbon": {
-			"color": "bg-success",
-            "name": "Public"
-		},
-		"tags": [
-			"automation",
-			"ahk",
-			"memory",
-			"windows"
-		],
-		"title": "<b>RAM Optimizer</b>",
-		"url": "",
-		"page": "personal_projects/ram_optimizer.html"
-    },
-	{
-		"badges": [
-			{
-				"color": "badge-info",
-				"name": "API"
-			},
-			{
-                "color": "badge-primary",
-                "name": "Web"
-            },
-            {
-                "color": "badge-dark",
-                "name": "JS"
-            },
-            {
-                "color": "badge-dark",
-                "name": "Bootstrap"
-            },
-			{
-				"color": "badge-dark",
-				"name": "Linux"
-			},
-			{
-				"color": "badge-danger",
-				"name": "Java"
-			},
-			{
-				"color": "badge-dark",
-				"name": "Docker"
-			}
-		],
-		"date": "2024/09/17",
-		"description": "<b>Remotely manage your devices's power status</b> via Wake on LAN with a convenient web panel",
-		"id": 5,
-		"img": "static/img/personal_projects/wol_web_api/article.png",
-		"ribbon": {
-			"color": "bg-success",
-            "name": "Public"
-		},
-		"tags": [
-			"automation",
-			"java",
-			"api",
-			"spring",
-			"springboot",
-			"ssl",
-			"docker",
-			"rest"
-		],
-		"title": "<b>WoL Web Panel + API REST</b>",
-		"url": "https://github.com/elModo7/WakeOnLAN-Web-API",
-		"page": ""
     },
 	{
 		"badges": [
