@@ -85,7 +85,7 @@
         "img": "static/img/personal_projects/pokemon_home/thumbnail.jpg",
 		"ribbon": {
             "color": "bg-danger",
-            "name": "Video"
+            "name": "YouTube"
         },
         "tags": [
             "ahk",
@@ -604,7 +604,7 @@
             }
         ],
         "date": "2025/09/01",
-        "description": "Watch <b>RAM Memory Remotely</b> on your Arduino UNO R4 via <b>TCP/Websockets/HTTP</b>",
+        "description": "Watch <b>RAM Memory Remotely</b> on your Arduino UNO R4 Wi-Fi via <b>TCP/Websockets/HTTP</b>",
         "id": 14,
         "img": "static/img/personal_projects/arduino_memory_viewer/thumbnail.jpg",
 		"ribbon": {
@@ -622,5 +622,60 @@
         "title": "Arduino <b>Memory Viewer</b>",
         "url": "",
 		"page": "personal_projects/arduino_memory_viewer/article.html"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-primary",
+                "name": "Arduino"
+            },
+            {
+                "color": "badge-dark",
+                "name": "C++"
+            }
+        ],
+        "date": "2025/09/02",
+        "description": "<b>Turn On your PC Remotely</b> with your Arduino UNO R4 Wi-Fi and a <b>432 mhz remote</b>",
+        "id": 15,
+        "img": "static/img/coming_soon.jpg",
+		"ribbon": {
+            "color": "bg-danger",
+            "name": "YouTube"
+        },
+        "tags": [
+			"c++",
+			"arduino"
+        ],
+        "title": "Arduino <b>Wake on LAN</b> with a Car Key",
+        "url": "",
+		"page": "personal_projects/arduino_wake_on_lan/article.html"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-primary",
+                "name": "Windows"
+            },
+            {
+                "color": "badge-dark",
+                "name": "AHK"
+            }
+        ],
+        "date": "2025/09/01",
+        "description": "A <b>RAM Search & Edit Memory Tool</b> built from scratch in AutoHotkey.",
+        "id": 16,
+        "img": "static/img/personal_projects/ahk_cheat_engine_clone/thumbnail.gif",
+		"ribbon": {
+            "color": "bg-success",
+            "name": "Public"
+        },
+        "tags": [
+            "ahk",
+			"windows",
+			"memory"
+        ],
+        "title": "AutoHotkey <b>Cheat Engine</b> clone",
+        "url": "",
+		"page": "personal_projects/ahk_cheat_engine_clone/article.html"
     }
 ]
