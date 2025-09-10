@@ -566,7 +566,7 @@
             }
         ],
         "date": "2024/12/17",
-        "description": "Generate <b>animated alerts</b> and notifications via <b>TCP/Websocket</b>",
+        "description": "Generate <b>animated alerts</b> and notifications via <b>TCP/Websockets</b>",
         "id": 13,
         "img": "static/img/personal_projects/godot_notification_system.jpg",
 		"ribbon": {
@@ -583,5 +583,44 @@
         "title": "Godot <b>Notification System</b>",
         "url": "",
 		"page": "personal_projects/godot_notification_system.html"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-primary",
+                "name": "Arduino"
+            },
+            {
+                "color": "badge-dark",
+                "name": "C++"
+            },
+            {
+                "color": "badge-dark",
+                "name": "AHK"
+            },
+            {
+                "color": "badge-danger",
+                "name": "Java"
+            }
+        ],
+        "date": "2025/09/01",
+        "description": "Watch <b>RAM Memory Remotely</b> on your Arduino UNO R4 via <b>TCP/Websockets/HTTP</b>",
+        "id": 14,
+        "img": "static/img/personal_projects/arduino_memory_viewer/thumbnail.jpg",
+		"ribbon": {
+            "color": "bg-danger",
+            "name": "YouTube"
+        },
+        "tags": [
+            "ahk",
+			"c++",
+			"arduino",
+			"java",
+			"tcp",
+			"sockets"
+        ],
+        "title": "Arduino <b>Memory Viewer</b>",
+        "url": "",
+		"page": "personal_projects/arduino_memory_viewer/article.html"
     }
 ]
