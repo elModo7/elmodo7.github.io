@@ -133,7 +133,7 @@
         "date": "2024/01/07",
         "description": "Macro Panel designed for <b>touchscreen, network</b> support.<br><b>Auto-generated code snippets and more</b>",
         "id": 1,
-        "img": "static/img/personal_projects/nova_macros/preview.gif",
+        "img": "static/img/personal_projects/libredeck/preview.gif",
         "ribbon": {
             "color": "bg-success",
             "name": "Public"
@@ -148,9 +148,9 @@
 			"websockets",
 			"json"
         ],
-        "title": "<b>Nova Macros</b>: A <i>Stream Deck</i> clone",
+        "title": "<b>LibreDeck</b>: A <i>Stream Deck</i> clone",
         "url": "",
-		"page": "personal_projects/nova_macros/article.html"
+		"page": "personal_projects/libredeck/article.html"
     },
 	{
 		"badges": [
@@ -343,8 +343,8 @@
 	{
 		"badges": [
 			{
-				"color": "badge-success",
-				"name": "AutoHotkey"
+				"color": "badge-dark",
+				"name": "AHK"
 			},
 			{
                 "color": "badge-primary",
@@ -418,8 +418,8 @@
 	{
 		"badges": [
 			{
-				"color": "badge-success",
-				"name": "AutoHotkey"
+				"color": "badge-dark",
+				"name": "AHK"
 			},
 			{
                 "color": "badge-primary",
@@ -677,5 +677,38 @@
         "title": "AutoHotkey <b>Cheat Engine</b> clone",
         "url": "",
 		"page": "personal_projects/ahk_cheat_engine_clone/article.html"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-primary",
+                "name": "Windows"
+            },
+            {
+                "color": "badge-dark",
+                "name": "AHK"
+            },
+            {
+                "color": "badge-dark",
+                "name": "Reverse"
+            }
+        ],
+        "date": "2025/09/20",
+        "description": "A tool for managing <b>one-chip gbc/gba cartridges's save data</b>. v2's NootNoot by BennVenn.",
+        "id": 17,
+        "img": "static/img/personal_projects/batteryless_save_injector_extractor.jpg",
+		"ribbon": {
+            "color": "bg-success",
+            "name": "Public"
+        },
+        "tags": [
+            "ahk",
+			"windows",
+			"memory",
+			"reverse"
+        ],
+        "title": "BatteryLess cart <b>Save Injector & Extractor</b>",
+        "url": "https://github.com/elModo7/GBC-Batteryless-Save-Tool-V2",
+		"page": ""
     }
 ]

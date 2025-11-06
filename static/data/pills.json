@@ -130,5 +130,35 @@
         "title": "Monitor <b>SSH Logins</b>",
         "url": "",
 		"page": "pills/ssh_successful_login_log.html"
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-dark",
+                "name": "Reverse"
+            },
+            {
+                "color": "badge-dark",
+                "name": "TCP"
+            }
+        ],
+        "date": "2025/05/27",
+        "description": "Sync <b>up to 8 players</b> in-game via TCP memory share.",
+        "id": 4,
+        "img": "static/img/pills/pokecrystal_multiplayer/pokecrystal_mp.jpg",
+		"ribbon": {
+            "color": "bg-danger",
+            "name": "VIDEO"
+        },
+        "tags": [
+            "reverse",
+            "networking",
+            "game",
+            "tcp",
+			"sockets"
+        ],
+        "title": "Pokémon Crystal <b>Multiplayer PoC</b>",
+        "url": "https://youtu.be/CU6lkQsZhMY",
+		"page": ""
     }
 ]
