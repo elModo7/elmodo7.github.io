@@ -160,5 +160,33 @@
         "title": "Pokémon Crystal <b>Multiplayer PoC</b>",
         "url": "https://youtu.be/CU6lkQsZhMY",
 		"page": ""
+    },
+	{
+        "badges": [
+            {
+                "color": "badge-dark",
+                "name": "Academic"
+            }
+        ],
+        "date": "2026/04/13",
+        "description": "Spanish paper about various ISAs, architectures and RISC vs CISC.",
+        "id": 5,
+        "img": "static/img/pills/comparación_tecnica_arquitecturas_x86_arm_mips.jpg",
+		"ribbon": {
+            "color": "bg-warning",
+            "name": "PAPER"
+        },
+        "tags": [
+            "paper",
+            "academic",
+            "architecture",
+            "x86",
+            "mips",
+			"arm",
+			"spanish"
+        ],
+        "title": "Comparación Arquitecturas <b>x86, MIPS, ARM</b>",
+        "url": "",
+		"page": "pills/comparación_tecnica_arquitecturas_x86_arm_mips.html"
     }
 ]
