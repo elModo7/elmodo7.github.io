@@ -92,8 +92,19 @@ $(document).ready(function () {
 	document.getElementById("year_footer").innerHTML = new Date().getFullYear();
 });
 
+window.addEventListener("popstate", function(e) {
+	if(window.location.hash !== "#article" && $("#article_body").length > 0) {
+		if(currentMenuTab == "about_me") goAboutMe();
+		else if(currentMenuTab == "work_projects") goWorkProjects();
+		else if(currentMenuTab == "personal_projects") goPersonalProjects();
+		else if(currentMenuTab == "pills") goPills();
+		else if(currentMenuTab == "upcoming_content") goUpcomingContent();
+	}
+});
+
 function goAboutMe(){
-	event.preventDefault();
+	if(typeof event !== 'undefined' && event) event.preventDefault();
+	if(window.location.hash === "#article") history.replaceState(null, "", window.location.pathname + window.location.search);
 	currentMenuTab = "about_me";
 	$(".nav-link").removeClass("active");
 	$("#btn_about").addClass("active");
@@ -104,7 +115,8 @@ function goAboutMe(){
 }
 
 function goWorkProjects(){
-	event.preventDefault();
+	if(typeof event !== 'undefined' && event) event.preventDefault();
+	if(window.location.hash === "#article") history.replaceState(null, "", window.location.pathname + window.location.search);
 	currentMenuTab = "work_projects";
 	$(".nav-link").removeClass("active");
 	$("#btn_work_projects").addClass("active");
@@ -115,7 +127,8 @@ function goWorkProjects(){
 }
 
 function goPersonalProjects(){
-	event.preventDefault();
+	if(typeof event !== 'undefined' && event) event.preventDefault();
+	if(window.location.hash === "#article") history.replaceState(null, "", window.location.pathname + window.location.search);
 	currentMenuTab = "personal_projects";
 	$(".nav-link").removeClass("active");
 	$("#btn_personal_projects").addClass("active");
@@ -126,7 +139,8 @@ function goPersonalProjects(){
 }
 
 function goPills(){
-	event.preventDefault();
+	if(typeof event !== 'undefined' && event) event.preventDefault();
+	if(window.location.hash === "#article") history.replaceState(null, "", window.location.pathname + window.location.search);
 	currentMenuTab = "pills";
 	$(".nav-link").removeClass("active");
 	$("#btn_pills").addClass("active");
@@ -137,7 +151,8 @@ function goPills(){
 }
 
 function goUpcomingContent(){
-	event.preventDefault();
+	if(typeof event !== 'undefined' && event) event.preventDefault();
+	if(window.location.hash === "#article") history.replaceState(null, "", window.location.pathname + window.location.search);
 	currentMenuTab = "upcoming_content";
 	$(".nav-link").removeClass("active");
 	$("#btn_upcoming_content").addClass("active");
@@ -148,6 +163,7 @@ function goUpcomingContent(){
 }
 
 function goContactMe(){
-	event.preventDefault();
+	if(typeof event !== 'undefined' && event) event.preventDefault();
+	if(window.location.hash === "#article") history.replaceState(null, "", window.location.pathname + window.location.search);
 	copyMail();
 }

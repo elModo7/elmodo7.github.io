@@ -49,6 +49,7 @@ function bindArticles(){
 			var articleTitle = $(this).attr("title");
 			var articleDescription = $(this).attr("description");
 			if(articlePath != "undefined" && articlePath != ""){
+				history.pushState(null, "", "#article");
 				$("#divMainContent").load("common/article.html", function(){
 					$("#article_title").html(articleTitle);
 					$("#article_title_description").html(articleDescription);
@@ -149,6 +150,9 @@ function loadJS(FILE_URL, async = true) {
 
 function animateToTop(){
 	$("html, body").animate({ scrollTop: 0 }, "slow");
+	$("#divMainContent").removeClass("page-transition");
+	void document.getElementById("divMainContent").offsetWidth; // trigger reflow
+	$("#divMainContent").addClass("page-transition");
 }
 
 function copyMail(){

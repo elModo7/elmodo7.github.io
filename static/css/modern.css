@@ -1,0 +1,269 @@
+/* ==========================================================================
+   Modern Portfolio Theme (Overrides AdminLTE & Bootstrap Defaults)
+   ========================================================================== */
+
+/* 1. Root Variables (Dark Mode with Neon Accents) */
+:root {
+  --app-bg: #0f172a;           /* Slate 900 */
+  --card-bg: rgba(30, 41, 59, 0.6); /* Slate 800 with opacity */
+  --card-border: rgba(255, 255, 255, 0.1);
+  --text-primary: #f8fafc;     /* Slate 50 */
+  --text-secondary: #cbd5e1;   /* Slate 300 */
+  --accent-cyan: #06b6d4;      /* Vibrant Cyan */
+  --accent-purple: #8b5cf6;    /* Vibrant Purple */
+  --accent-pink: #ec4899;      /* Vibrant Pink */
+  
+  --font-family-modern: 'Outfit', -apple-system, blinkmacsystemfont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --transition-speed: 0.3s;
+}
+
+/* 2. Global Resets & Body Styling */
+body {
+  font-family: var(--font-family-modern) !important;
+  color: var(--text-primary) !important;
+  background: var(--app-bg) !important;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(6, 182, 212, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.15) 0px, transparent 50%) !important;
+  background-attachment: fixed !important;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* AdminLTE wrapper overrides */
+.wrapper, .content-wrapper, .main-header, .main-footer {
+  background: transparent !important;
+  border: none !important;
+  color: var(--text-primary) !important;
+}
+
+.main-header .nav-link {
+  color: var(--text-primary) !important;
+}
+
+.main-header .nav-link:hover {
+  color: var(--accent-cyan) !important;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6, .card-title, .info-box-number {
+  font-family: var(--font-family-modern) !important;
+  font-weight: 600 !important;
+  color: var(--text-primary) !important;
+}
+
+p, span, div {
+  color: var(--text-secondary);
+}
+
+blockquote, blockquote p, blockquote span, blockquote div {
+  color: #000 !important;
+}
+
+/* 3. Glassmorphism Utilities */
+.glass-card, .card, .info-box {
+  background: var(--card-bg) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid var(--card-border) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3) !important;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease, border-color var(--transition-speed) ease;
+}
+
+.glass-card:hover, .info-box:hover, .card:not(.card-widget):hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* AdminLTE Card Headers */
+.card-header, .card-footer {
+  background-color: transparent !important;
+  border-bottom: 1px solid var(--card-border) !important;
+  border-top: 1px solid var(--card-border) !important;
+}
+
+/* 4. Badges & Ribbons Overrides */
+.badge {
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  padding: 0.4em 0.7em !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  font-size: 0.75rem !important;
+}
+
+.badge-primary, .bg-primary { background: linear-gradient(135deg, #3b82f6, #2563eb) !important; border: none !important; color: white !important; }
+.badge-secondary, .bg-secondary { background: linear-gradient(135deg, #64748b, #475569) !important; border: none !important; color: white !important; }
+.badge-success, .bg-success { background: linear-gradient(135deg, #10b981, #059669) !important; border: none !important; color: white !important; }
+.badge-danger, .bg-danger { background: linear-gradient(135deg, #ef4444, #dc2626) !important; border: none !important; color: white !important; }
+.badge-warning, .bg-warning { background: linear-gradient(135deg, #f59e0b, #d97706) !important; border: none !important; color: white !important; }
+.badge-info, .bg-info { background: linear-gradient(135deg, #06b6d4, #0891b2) !important; border: none !important; color: white !important; }
+.badge-dark, .bg-dark { background: linear-gradient(135deg, #334155, #1e293b) !important; border: 1px solid rgba(255,255,255,0.1) !important; color: white !important;}
+
+/* Info Boxes (About me page) */
+.info-box-icon {
+  background: transparent !important;
+}
+
+/* 5. Smooth SPAs Transitions */
+@keyframes fadeInScale {
+  0% { opacity: 0; transform: scale(0.98); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.page-transition {
+  animation: fadeInScale 0.4s ease-out forwards;
+}
+
+/* 6. Sidebar & Header */
+.main-sidebar {
+  background: rgba(15, 23, 42, 0.85) !important;
+  backdrop-filter: blur(10px) !important;
+  border-right: 1px solid var(--card-border) !important;
+}
+
+.nav-sidebar .nav-link {
+  color: var(--text-secondary);
+  font-weight: 500 !important;
+  transition: all 0.2s ease;
+}
+
+.nav-sidebar .nav-link p {
+  color: inherit;
+}
+
+.nav-sidebar .nav-link:hover, .nav-sidebar .nav-link.active {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: var(--text-primary);
+  transform: translateX(4px);
+}
+
+.brand-link {
+  border-bottom: 1px solid var(--card-border) !important;
+  color: var(--text-primary) !important;
+}
+
+/* 7. Timeline specific tweaks */
+.timeline::before {
+  background: var(--card-border) !important;
+}
+
+.timeline > div > .timeline-item {
+  background: var(--card-bg) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid var(--card-border) !important;
+  color: var(--text-secondary) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2) !important;
+}
+
+.timeline-header {
+  border-bottom: 1px solid var(--card-border) !important;
+  color: var(--text-primary) !important;
+}
+
+.time-label span {
+  border-radius: 8px !important;
+  padding: 0.4em 1em !important;
+  font-weight: 600 !important;
+}
+
+/* 8. Modern Project Cards Details */
+.article-image img {
+  border-radius: 12px !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4) !important;
+  transition: transform 0.4s ease !important;
+}
+
+.article-link:hover .article-image img {
+  transform: scale(1.05) !important;
+}
+
+.ribbon-wrapper {
+  z-index: 10;
+}
+
+/* Fixes for dark elements */
+.description-text { color: var(--text-secondary) !important; }
+.description-header { color: var(--text-primary) !important; }
+.username a { color: var(--accent-cyan) !important; font-weight: 600; }
+a { color: var(--accent-cyan); transition: color 0.2s ease; }
+a:hover { color: var(--accent-purple); }
+
+/* Progress bars */
+.progress {
+  background-color: rgba(255,255,255,0.1) !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+}
+
+.progress-bar {
+  border-radius: 10px !important;
+}
+
+/* Tables */
+table, .table {
+  color: var(--text-secondary) !important;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+th {
+  color: var(--text-primary) !important;
+  border-top: none !important;
+  border-bottom: 1px solid var(--card-border) !important;
+}
+
+td {
+  border-top: 1px solid var(--card-border) !important;
+}
+
+/* Widget overrides */
+.widget-user-header { background-color: transparent !important; border-bottom: 1px solid var(--card-border) !important; border-radius: 16px 16px 0 0 !important; }
+.widget-user-image img { border: 3px solid var(--card-bg) !important; box-shadow: 0 4px 12px rgba(0,0,0,0.5) !important;}
+
+/* 9. Mermaid SVG Dark Mode Overrides */
+.mermaid svg text, 
+.mermaid svg tspan {
+  fill: var(--text-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+.mermaid svg .actor {
+  fill: rgba(255, 255, 255, 0.05) !important;
+  stroke: var(--accent-cyan) !important;
+}
+
+.mermaid svg .actor-line {
+  stroke: rgba(255, 255, 255, 0.2) !important;
+}
+
+.mermaid svg path, 
+.mermaid svg line {
+  stroke: var(--text-secondary) !important;
+}
+
+/* Arrowheads */
+.mermaid svg marker path {
+  fill: var(--text-secondary) !important;
+  stroke: none !important;
+}
+
+.mermaid svg .note {
+  fill: rgba(139, 92, 246, 0.2) !important;
+  stroke: var(--accent-purple) !important;
+}
+
+.mermaid svg .labelBox {
+  fill: var(--app-bg) !important;
+  stroke: var(--card-border) !important;
+}

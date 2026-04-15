@@ -17,18 +17,20 @@ function personalProjectsEvents(){
 				personalProjectsHTML += '</div><div class="row mt-4">';
 			}
 		}
-		personalProjectsHTML += '<div class="col-sm-4">';
+		personalProjectsHTML += '<div class="col-sm-4 mb-4 d-flex align-items-stretch">';
+		personalProjectsHTML += '<div class="glass-card p-3 w-100 position-relative d-flex flex-column">';
+		personalProjectsHTML += '<div class="mb-2">';
 		for (const [keyBadge, valueBadge] of Object.entries(value.badges)) {
 			personalProjectsHTML +=	'<span class="badge ' + valueBadge.color + '">' + valueBadge.name + '</span> ';
 		}
-		personalProjectsHTML += '<span class="badge"> </span>'; // Needed for frame possition
-		personalProjectsHTML += '<a ' + (value.url == '' ? '' : ('href="' + value.url + '" target="_blank"')) + ' class="link article-link" article="' + value.page + '" title="' + value.title + '" description="' + value.description + '"><div class="position-relative">';
-		personalProjectsHTML +=	'<div class="article-image column"><div><figure><img src="' + value.img + '" alt="Photo 1" class="img-fluid article-image"></figure></div></div>';
+		personalProjectsHTML += '</div>';
+		personalProjectsHTML += '<a ' + (value.url == '' ? '' : ('href="' + value.url + '" target="_blank"')) + ' class="link article-link flex-grow-1 d-flex flex-column" article="' + value.page + '" title="' + value.title + '" description="' + value.description + '">';
+		personalProjectsHTML +=	'<div class="article-image column mb-3 mt-2"><div><figure><img src="' + value.img + '" alt="' + value.title + '" class="img-fluid article-image w-100"></figure></div></div>';
 		if(value.ribbon && value.ribbon.color && value.ribbon.name){
 			personalProjectsHTML +=	'<div class="ribbon-wrapper ribbon-lg">';
 			personalProjectsHTML +=	'<div class="ribbon ' + value.ribbon.color + ' text-lg">' + value.ribbon.name + '</div></div>';
 		}
-		personalProjectsHTML += '<h3 style="text-align:center">' + value.title + '</h3><p style="text-align:center">' + value.description + '</p></div></a></div>';
+		personalProjectsHTML += '<h4 class="text-center mt-auto font-weight-bold">' + value.title + '</h4><p class="text-center text-secondary">' + value.description + '</p></a></div></div>';
 		if((key + 1) % itemsPerRow == 0 || cntKeys + 1 == itemsPerPage || cntKeys + 1 == personalProjects.length){
 			personalProjectsHTML += '</div>';
 		}
