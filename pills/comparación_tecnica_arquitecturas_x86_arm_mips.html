@@ -1,650 +1,572 @@
 <!-- https://elmodo7.github.io/?article=pills/comparación_tecnica_arquitecturas_x86_arm_mips.html&title=Comparativa%20Arquitecturas&description=Comparaci%C3%B3n%20T%C3%A9cnica%20de%20Arquitecturas%20x86%2C%20ARM%20y%20MIPS. -->
 <div>
 	<div class="m-1">
-		<br>
+		 
 		<h2 class="mt-4 mb-3"><b>1. Introducción</b></h2>
 		<p>
-			En los últimos años, la arquitectura de los procesadores ha adquirido una importancia cada vez<br>
-			mayor dentro de la informática, no solo por su impacto directo en el rendimiento de los equipos,<br>
-			sino también por su influencia en aspectos como el consumo energético, la compatibilidad del<br>
-			software y el diseño de sistemas completos. Aunque para el usuario final muchas veces un<br>
-			procesador se reduce a una marca o a una cifra de velocidad, lo cierto es que detrás de su<br>
-			funcionamiento existe un conjunto de decisiones de diseño que condicionan cómo se<br>
-			ejecutan los programas y en qué entornos resulta más adecuada una determinada solución.<br>
-			El estudio de las distintas arquitecturas de procesadores permite comprender mejor por qué no<br>
-			todos los sistemas informáticos responden de la misma manera ante las mismas tareas. No es<br>
-			lo mismo un procesador orientado a dispositivos móviles, donde la eficiencia energética es<br>
-			prioritaria, que uno pensado para servidores, estaciones de trabajo o sistemas embebidos. En<br>
-			este contexto, analizar arquitecturas como ARM, MIPS y x86 resulta especialmente útil, ya<br>
-			que representan enfoques distintos tanto desde el punto de vista histórico como técnico, y<br>
-			siguen teniendo presencia real en numerosos ámbitos de aplicación.<br>
-			A lo largo de este trabajo se presenta, en primer lugar, una visión general sobre el concepto de<br>
-			arquitectura de procesador y sobre las diferencias entre modelos clásicos como CISC y RISC,<br>
-			así como su evolución en arquitecturas actuales. Posteriormente, se describen varias<br>
-			arquitecturas existentes y se profundiza en tres de ellas —ARM, MIPS y x86— con el fin de<br>
-			comparar su forma de ejecutar instrucciones, sus características internas más relevantes, los<br>
-			entornos en los que se utilizan y sus posibilidades de compatibilidad entre plataformas.<br>
-			Finalmente, también se revisan los requisitos de hardware y software asociados a cada una,<br>
-			junto con ejemplos reales de uso, con la intención de ofrecer una visión técnica, crítica y<br>
-			aplicada del tema.<br>
+			En los últimos años, la arquitectura de los procesadores ha adquirido una importancia cada vez 
+			mayor dentro de la informática, no solo por su impacto directo en el rendimiento de los equipos, 
+			sino también por su influencia en aspectos como el consumo energético, la compatibilidad del 
+			software y el diseño de sistemas completos. Aunque para el usuario final muchas veces un 
+			procesador se reduce a una marca o a una cifra de velocidad, lo cierto es que detrás de su 
+			funcionamiento existe un conjunto de decisiones de diseño que condicionan cómo se 
+			ejecutan los programas y en qué entornos resulta más adecuada una determinada solución. 
+			El estudio de las distintas arquitecturas de procesadores permite comprender mejor por qué no 
+			todos los sistemas informáticos responden de la misma manera ante las mismas tareas. No es 
+			lo mismo un procesador orientado a dispositivos móviles, donde la eficiencia energética es 
+			prioritaria, que uno pensado para servidores, estaciones de trabajo o sistemas embebidos. En 
+			este contexto, analizar arquitecturas como ARM, MIPS y x86 resulta especialmente útil, ya 
+			que representan enfoques distintos tanto desde el punto de vista histórico como técnico, y 
+			siguen teniendo presencia real en numerosos ámbitos de aplicación. 
+			A lo largo de este trabajo se presenta, en primer lugar, una visión general sobre el concepto de 
+			arquitectura de procesador y sobre las diferencias entre modelos clásicos como CISC y RISC, 
+			así como su evolución en arquitecturas actuales. Posteriormente, se describen varias 
+			arquitecturas existentes y se profundiza en tres de ellas —ARM, MIPS y x86— con el fin de 
+			comparar su forma de ejecutar instrucciones, sus características internas más relevantes, los 
+			entornos en los que se utilizan y sus posibilidades de compatibilidad entre plataformas. 
+			Finalmente, también se revisan los requisitos de hardware y software asociados a cada una, 
+			junto con ejemplos reales de uso, con la intención de ofrecer una visión técnica, crítica y 
+			aplicada del tema. 
 		</p>
 		<h4 class="mt-4"><b>1.1 Breve repaso de algunas arquitecturas de procesadores relevantes</b></h4>
 		<p>
-			Antes de centrar la comparación en ARM, MIPS y x86, conviene mencionar que el panorama de<br>
-			arquitecturas de procesadores es bastante más amplio. No todas tienen hoy la misma presencia<br>
-			en el mercado, pero sí ayudan a entender cómo han ido evolucionando los procesadores en<br>
-			función de necesidades muy distintas.<br>
-			RISC-V ha ganado mucha atención en los últimos años por su carácter abierto y por la<br>
-			posibilidad de adaptar su conjunto de instrucciones mediante extensiones. Esto la ha convertido<br>
-			en una opción muy interesante para investigación, docencia, sistemas embebidos y desarrollos<br>
-			donde la flexibilidad del diseño es un factor importante.<br>
-			Power ISA, sucesora de PowerPC, ha estado más ligada a sistemas de alto rendimiento. Su<br>
-			trayectoria ha sido especialmente relevante en servidores y supercomputación, donde durante<br>
-			años ha destacado por ofrecer procesadores muy potentes y preparados para cargas exigentes.<br>
-			En un ámbito mucho más pequeño, pero también muy extendido, se encuentra AVR, una<br>
-			arquitectura muy conocida en el mundo de los microcontroladores. Su sencillez, su bajo<br>
-			consumo y su facilidad de integración explican que siga siendo habitual en electrónica embebida<br>
-			y plataformas de desarrollo como Arduino.<br>
-			Por su parte, SPARC ocupa un lugar importante desde el punto de vista histórico, sobre todo en<br>
-			estaciones de trabajo y servidores Unix. Aunque hoy su presencia es menor, sigue siendo una<br>
-			arquitectura interesante para comprender algunas decisiones de diseño características del<br>
-			enfoque RISC.<br>
-			Mencionar estas arquitecturas permite situar mejor el análisis posterior. Aun así, para el<br>
-			desarrollo principal del trabajo se han elegido ARM, MIPS y x86, ya que permiten comparar<br>
-			tres modelos muy representativos y con aplicaciones reales en ámbitos tan distintos como los<br>
-			dispositivos móviles, los sistemas embebidos, las redes, los ordenadores personales y los<br>
-			servidores.<br>
+			Antes de centrar la comparación en ARM, MIPS y x86, conviene mencionar que el panorama de 
+			arquitecturas de procesadores es bastante más amplio. No todas tienen hoy la misma presencia 
+			en el mercado, pero sí ayudan a entender cómo han ido evolucionando los procesadores en 
+			función de necesidades muy distintas. 
+			RISC-V ha ganado mucha atención en los últimos años por su carácter abierto y por la 
+			posibilidad de adaptar su conjunto de instrucciones mediante extensiones. Esto la ha convertido 
+			en una opción muy interesante para investigación, docencia, sistemas embebidos y desarrollos 
+			donde la flexibilidad del diseño es un factor importante. 
+			Power ISA, sucesora de PowerPC, ha estado más ligada a sistemas de alto rendimiento. Su 
+			trayectoria ha sido especialmente relevante en servidores y supercomputación, donde durante 
+			años ha destacado por ofrecer procesadores muy potentes y preparados para cargas exigentes. 
+			En un ámbito mucho más pequeño, pero también muy extendido, se encuentra AVR, una 
+			arquitectura muy conocida en el mundo de los microcontroladores. Su sencillez, su bajo 
+			consumo y su facilidad de integración explican que siga siendo habitual en electrónica embebida 
+			y plataformas de desarrollo como Arduino. 
+			Por su parte, SPARC ocupa un lugar importante desde el punto de vista histórico, sobre todo en 
+			estaciones de trabajo y servidores Unix. Aunque hoy su presencia es menor, sigue siendo una 
+			arquitectura interesante para comprender algunas decisiones de diseño características del 
+			enfoque RISC. 
+			Mencionar estas arquitecturas permite situar mejor el análisis posterior. Aun así, para el 
+			desarrollo principal del trabajo se han elegido ARM, MIPS y x86, ya que permiten comparar 
+			tres modelos muy representativos y con aplicaciones reales en ámbitos tan distintos como los 
+			dispositivos móviles, los sistemas embebidos, las redes, los ordenadores personales y los 
+			servidores. 
 		</p>
 		<h2 class="mt-4 mb-3"><b>2. Arquitectura de procesador</b></h2>
 		<p>
-			En informática, “arquitectura de procesador” se usa a menudo para referirse, sobre todo, a la<br>
-			arquitectura del conjunto de instrucciones (ISA, Instruction Set Architecture): el “contrato”<br>
-			que ve el software (registros disponibles, formato de instrucciones, modos de direccionamiento,<br>
-			modelo de memoria, niveles de privilegio, excepciones, etc.)<br>
-			ISA se entiende, por lo general, como la interfaz más baja entre programador y CPU. [1]<br>
-			Para representar esta comparativa conviene separar tres capas, porque muchas confusiones<br>
-			provienen de mezclar estos conceptos:<br>
+			En informática, “arquitectura de procesador” se usa a menudo para referirse, sobre todo, a la 
+			arquitectura del conjunto de instrucciones (ISA, Instruction Set Architecture): el “contrato” 
+			que ve el software (registros disponibles, formato de instrucciones, modos de direccionamiento, 
+			modelo de memoria, niveles de privilegio, excepciones, etc.) 
+			ISA se entiende, por lo general, como la interfaz más baja entre programador y CPU. [1] 
+			Para representar esta comparativa conviene separar tres capas, porque muchas confusiones 
+			provienen de mezclar estos conceptos: 
 		</p>
 		<ul>
-			<li>ISA (arquitectura): lo que define el “lenguaje máquina” y el entorno de programación</li>
-			<li>(por ejemplo: x86-64/AMD64, AArch64, MIPS32/MIPS64). [2]</li>
-			<li>Microarquitectura (implementación): cómo se construye físicamente un procesador</li>
-			<li>que ejecute esa ISA (pipeline real, ejecución fuera de orden, tamaños de caché,</li>
-			<li>predictor de saltos, unidades vectoriales, etc.). En la práctica, hay CPUs muy distintas</li>
-			<li>que comparten ISA, y su rendimiento/consumo puede variar enormemente. [3]</li>
-			<li>Plataforma o sistema: SoC, buses, controladores, firmware y soporte de sistema</li>
-			<li>operativo/herramientas. En dispositivos modernos (móvil, IoT, routers, servidores), la</li>
-			<li>“arquitectura” que al usuario le preocupa suele ser el conjunto completo (CPU + SoC +</li>
-			<li>software). [4]</li>
-			<li>Esta distinción es útil para justificar algo importante: una comparación ARM vs MIPS vs x86 no</li>
-			<li>se puede hacer solo mirando la ISA si el objetivo incluye consumo o rendimiento; hay que</li>
-			<li>explicar qué parte depende de la ISA y qué parte depende de la microarquitectura y del</li>
-			<li>ecosistema software. [5]</li>
+			<li>ISA (arquitectura): lo que define el “lenguaje máquina” y el entorno de programación (por ejemplo: x86-64/AMD64, AArch64, MIPS32/MIPS64). [2]</li>
+			<li>Microarquitectura (implementación): cómo se construye físicamente un procesador que ejecute esa ISA (pipeline real, ejecución fuera de orden, tamaños de caché, predictor de saltos, unidades vectoriales, etc.). En la práctica, hay CPUs muy distintas que comparten ISA, y su rendimiento/consumo puede variar enormemente. [3]</li>
+			<li>Plataforma o sistema: SoC, buses, controladores, firmware y soporte de sistema operativo/herramientas. En dispositivos modernos (móvil, IoT, routers, servidores), la “arquitectura” que al usuario le preocupa suele ser el conjunto completo (CPU + SoC + software). [4]</li>
 		</ul>
+		<p>
+			Esta distinción es útil para justificar algo importante: una comparación ARM vs MIPS vs x86 no se puede hacer solo mirando la ISA si el objetivo incluye consumo o rendimiento; hay que explicar qué parte depende de la ISA y qué parte depende de la microarquitectura y del ecosistema software. [5]
+		</p>
 		<h4 class="mt-4"><b>2.1 CISC, RISC y por qué en 2026 la frontera es menos nítida</b></h4>
 		<p>
-			La clasificación clásica RISC vs CISC nació como una discusión sobre cómo diseñar ISAs y<br>
-			cómo implementarlas eficientemente en silicio. En el planteamiento RISC original se defendía,<br>
-			de forma resumida, un conjunto de instrucciones relativamente simple, orientado a facilitar<br>
-			pipelines y compiladores, frente a ISAs más complejas (CISC) con instrucciones “más potentes”<br>
-			o de comportamiento más elaborado. [6]<br>
-			En ese marco, x86 suele ponerse como ejemplo de CISC por su herencia histórica y, sobre todo,<br>
-			por aspectos como su codificación de longitud variable (con un límite máximo de 15 bytes<br>
-			por instrucción, lo que complica decodificación y alineamiento). [7]<br>
-			ARM y MIPS suelen presentarse como RISC por rasgos como codificaciones más regulares (p.<br>
-			ej., en A64 todas las instrucciones son de 32 bits) y una filosofía muy típica en el diseño RISC,<br>
-			comúnmente denominada “load/store”.<br>
-			¿Por qué esta división resulta insuficiente?<br>
+			La clasificación clásica RISC vs CISC nació como una discusión sobre cómo diseñar ISAs y 
+			cómo implementarlas eficientemente en silicio. En el planteamiento RISC original se defendía, 
+			de forma resumida, un conjunto de instrucciones relativamente simple, orientado a facilitar 
+			pipelines y compiladores, frente a ISAs más complejas (CISC) con instrucciones “más potentes” 
+			o de comportamiento más elaborado. [6] 
+			En ese marco, x86 suele ponerse como ejemplo de CISC por su herencia histórica y, sobre todo, 
+			por aspectos como su codificación de longitud variable (con un límite máximo de 15 bytes 
+			por instrucción, lo que complica decodificación y alineamiento). [7] 
+			ARM y MIPS suelen presentarse como RISC por rasgos como codificaciones más regulares (p. 
+			ej., en A64 todas las instrucciones son de 32 bits) y una filosofía muy típica en el diseño RISC, 
+			comúnmente denominada “load/store”. 
+			¿Por qué esta división resulta insuficiente? 
 		</p>
 		<ul>
-			<li>En procesadores actuales, incluso con ISAs complejas, es habitual decodificar</li>
-			<li>instrucciones “macro” a micro-operaciones internas (µops), y ejecutar esas µops con</li>
-			<li>un núcleo interno que se parece bastante a un motor RISC moderno (planificación,</li>
-			<li>renombrado, ejecución especulativa, etc.). Esto se explica explícitamente en literatura</li>
-			<li>académica que revisita el debate RISC/CISC y también en trabajos recientes que</li>
-			<li>caracterizan estructuras como las micro-op caches. [9]</li>
-			<li>La conclusión práctica es que muchas diferencias de rendimiento/energía se desplazan</li>
-			<li>de la ISA hacia la microarquitectura, el subsistema de memoria y la tecnología de</li>
-			<li>fabricación. En otras palabras: hoy es fácil encontrar implementaciones “RISC” muy</li>
-			<li>complejas y “CISC” cuyo back-end interno se comporta como un RISC altamente</li>
-			<li>optimizado. [10]</li>
-			<li>Un matiz útil para esta comparación es tratar RISC/CISC como tendencias históricas de</li>
-			<li>diseño, no como etiquetas absolutas: sirven para explicar por qué ARM y MIPS tienden a</li>
-			<li>codificaciones regulares y por qué x86 acumula compatibilidad, pero no predicen por sí solas ni</li>
-			<li>el pipeline real ni el consumo de un chip concreto. [11]</li>
+			<li>En procesadores actuales, incluso con ISAs complejas, es habitual decodificar instrucciones “macro” a micro-operaciones internas (µops), y ejecutar esas µops con un núcleo interno que se parece bastante a un motor RISC moderno (planificación, renombrado, ejecución especulativa, etc.). Esto se explica explícitamente en literatura académica que revisita el debate RISC/CISC y también en trabajos recientes que caracterizan estructuras como las micro-op caches. [9]</li>
+			<li>La conclusión práctica es que muchas diferencias de rendimiento/energía se desplazan de la ISA hacia la microarquitectura, el subsistema de memoria y la tecnología de fabricación. En otras palabras: hoy es fácil encontrar implementaciones “RISC” muy complejas y “CISC” cuyo back-end interno se comporta como un RISC altamente optimizado. [10]</li>
 		</ul>
+		<p>
+			Un matiz útil para esta comparación es tratar RISC/CISC como tendencias históricas de diseño, no como etiquetas absolutas: sirven para explicar por qué ARM y MIPS tienden a codificaciones regulares y por qué x86 acumula compatibilidad, pero no predicen por sí solas ni el pipeline real ni el consumo de un chip concreto. [11]
+		</p>
 		<h4 class="mt-4"><b>2.2 Descripción técnica breve de las arquitecturas comparadas</b></h4>
 		<p>
-			Entre las arquitecturas de procesadores más conocidas en la informática actual destacan ARM,<br>
-			MIPS y x86, cada una con una filosofía de diseño distinta y con ámbitos de aplicación muy<br>
-			concretos.<br>
-			ARM se asocia tradicionalmente con la filosofía RISC, basada en instrucciones más regulares y<br>
-			simples, lo que facilita una decodificación eficiente y diseños muy escalables. En su versión de<br>
-			64 bits, AArch64, mantiene instrucciones de longitud fija y un modelo bastante ordenado desde<br>
-			el punto de vista del compilador y del diseño interno del procesador.<br>
-			En cuanto a eficiencia energética, ARM suele considerarse una arquitectura especialmente<br>
-			competitiva, pero conviene matizar que el consumo real no depende solo de la ISA, sino<br>
-			también de la microarquitectura concreta, del proceso de fabricación y del tipo de sistema<br>
-			donde se integra. Aun así, su implantación masiva en dispositivos móviles y sistemas en chip<br>
-			confirma que ha sido una opción muy sólida cuando se busca buen equilibrio entre rendimiento<br>
-			y consumo.<br>
-			Sus ámbitos de uso habituales son los teléfonos móviles, las tabletas, los sistemas<br>
-			embebidos, el IoT y, cada vez más, los servidores y plataformas de computación en la nube.<br>
-			En el trabajo “Estudio de caso UD1 Estructura y Tecnología de Computadores” del alumno Víctor<br>
-			Santiago Martínez Picardo, titulado “El auge de la arquitectura ARM: eficiencia energética desde<br>
-			el consumo hasta la nube” de esta misma Universidad, se realiza un exhaustivo estudio del<br>
-			auge de este tipo de arquitectura con respecto a x86 en entornos cloud. [8]<br>
+			Entre las arquitecturas de procesadores más conocidas en la informática actual destacan ARM, 
+			MIPS y x86, cada una con una filosofía de diseño distinta y con ámbitos de aplicación muy 
+			concretos. 
+			ARM se asocia tradicionalmente con la filosofía RISC, basada en instrucciones más regulares y 
+			simples, lo que facilita una decodificación eficiente y diseños muy escalables. En su versión de 
+			64 bits, AArch64, mantiene instrucciones de longitud fija y un modelo bastante ordenado desde 
+			el punto de vista del compilador y del diseño interno del procesador. 
+			En cuanto a eficiencia energética, ARM suele considerarse una arquitectura especialmente 
+			competitiva, pero conviene matizar que el consumo real no depende solo de la ISA, sino 
+			también de la microarquitectura concreta, del proceso de fabricación y del tipo de sistema 
+			donde se integra. Aun así, su implantación masiva en dispositivos móviles y sistemas en chip 
+			confirma que ha sido una opción muy sólida cuando se busca buen equilibrio entre rendimiento 
+			y consumo. 
+			Sus ámbitos de uso habituales son los teléfonos móviles, las tabletas, los sistemas 
+			embebidos, el IoT y, cada vez más, los servidores y plataformas de computación en la nube. 
+			En el trabajo “Estudio de caso UD1 Estructura y Tecnología de Computadores” del alumno Víctor 
+			Santiago Martínez Picardo, titulado “El auge de la arquitectura ARM: eficiencia energética desde 
+			el consumo hasta la nube” de esta misma Universidad, se realiza un exhaustivo estudio del 
+			auge de este tipo de arquitectura con respecto a x86 en entornos cloud. [8] 
 		</p>
 		<p>
-			<br><b>Nota del autor:</b> <i>ARM es una de las arquitecturas que más me han fascinado en los<br>
-			últimos 15 años. A partir de la adquisición de una GP2X Wiz con su ARM926EJ en el SoC<br>
-			POLLUX [72] y el primer modelo de Raspberry Pi (ARM 1176JZF-S) [71], ambas muy<br>
-			centradas en la comunidad open source, he empezado a estudiar el ecosistema acerca<br>
-			de esta arquitectura, desde consolas como la Game Boy Advance y, principalmente<br>
-			centrándose en el mercado portátil e híbrido, podemos ver cómo marcas como Nintendo<br>
-			han apostado por el uso de esta arquitectura en cuanto a dispositivos de entretenimiento<br>
-			(Nintendo DS, Nintendo 3DS, Nintendo Switch, Nintendo Switch 2).<br>
-			Una nota aparte respecto a esta última marca es que durante tres generaciones de<br>
-			consolas de sobre mesa (GameCube, Wii y WiiU) se ha utilizado una arquitectura que no<br>
-			comentamos en esta comparativa como es PowerPC.<br>
-			En el mundo de la telefonía podemos ver claramente como los SoCs ARM predominan en<br>
-			el mercado.<br>
-			Incluso en setups de tipo “home lab” también se está impulsando mucho el uso de los<br>
-			denominados “Single Board Computers” ARM. Una de las placas con esta arquitectura<br>
-			a la que más horas he dedicado es a la Odroid XU4 [68] de Hardkernel, que es la<br>
-			primera placa ARM a la que, en 2015 denominaría como un digno reemplazo de un<br>
-			ordenador de sobremesa usando este tipo de arquitectura, ofreciendo un sistema<br>
-			completo Linux con aceleración 3D y alto rendimiento basado en Exynos 5422, variante<br>
-			también utilizada en los Samsung Galaxy S5.<br>
-			De hecho, a día de hoy estoy aprendiendo el lenguaje de programación Go y pese a ser<br>
-			una placa obsoleta ARMv7 de 32 bits, me ha sorprendido incluso la última versión de<br>
-			Go 1.26.2 está completamente soportada.<br>
-			A día de hoy siguen saliendo versiones basadas en los RK3588 [69], e incluso ARMv9<br>
-			como Orion O6.<br>
-			En el paper “OPENCCA: An Open Framework to Enable Arm CCA Research” se puede ver<br>
-			una comparativa entre estos dos últimos SoC (además de muchos otros) corriendo<br>
-			OpenCCA en ARMv9 y ARMv8.2 (no compatible con CCA) [70].</i><br><br>
-			MIPS representa una de las expresiones más clásicas del enfoque RISC. Se caracteriza por una<br>
-			gran regularidad en el formato de instrucciones, por el uso de instrucciones normalmente<br>
-			alineadas y por un diseño que históricamente ha resultado muy útil tanto en docencia como en<br>
-			sistemas embebidos. Esa simplicidad ha hecho que durante años se tomara como referencia<br>
-			para explicar pipelines, ejecución segmentada y organización interna del procesador.<br>
-			Respecto a la eficiencia energética, no sería correcto afirmar de manera absoluta que MIPS<br>
-			consume poco por el mero hecho de ser RISC; en realidad, el resultado final depende de la<br>
-			implementación concreta. Sin embargo, sí puede decirse que su simplicidad estructural y su<br>
-			presencia en dispositivos especializados favorecieron su uso en entornos donde el coste, la<br>
-			integración y el consumo debían mantenerse contenidos.<br>
-			La arquitectura MIPS tiene presencia importante en routers, electrónica de red, sistemas<br>
-			embebidos y algunas familias de microcontroladores, como ciertos PIC32 basados en núcleo<br>
-			MIPS32.<br>
+			<br><b>Nota del autor:</b> <i>ARM es una de las arquitecturas que más me han fascinado en los 
+			últimos 15 años. A partir de la adquisición de una GP2X Wiz con su ARM926EJ en el SoC 
+			POLLUX [72] y el primer modelo de Raspberry Pi (ARM 1176JZF-S) [71], ambas muy 
+			centradas en la comunidad open source, he empezado a estudiar el ecosistema acerca 
+			de esta arquitectura, desde consolas como la Game Boy Advance y, principalmente 
+			centrándose en el mercado portátil e híbrido, podemos ver cómo marcas como Nintendo 
+			han apostado por el uso de esta arquitectura en cuanto a dispositivos de entretenimiento 
+			(Nintendo DS, Nintendo 3DS, Nintendo Switch, Nintendo Switch 2). 
+			Una nota aparte respecto a esta última marca es que durante tres generaciones de 
+			consolas de sobre mesa (GameCube, Wii y WiiU) se ha utilizado una arquitectura que no 
+			comentamos en esta comparativa como es PowerPC. 
+			En el mundo de la telefonía podemos ver claramente como los SoCs ARM predominan en 
+			el mercado. 
+			Incluso en setups de tipo “home lab” también se está impulsando mucho el uso de los 
+			denominados “Single Board Computers” ARM. Una de las placas con esta arquitectura 
+			a la que más horas he dedicado es a la Odroid XU4 [68] de Hardkernel, que es la 
+			primera placa ARM a la que, en 2015 denominaría como un digno reemplazo de un 
+			ordenador de sobremesa usando este tipo de arquitectura, ofreciendo un sistema 
+			completo Linux con aceleración 3D y alto rendimiento basado en Exynos 5422, variante 
+			también utilizada en los Samsung Galaxy S5. 
+			De hecho, a día de hoy estoy aprendiendo el lenguaje de programación Go y pese a ser 
+			una placa obsoleta ARMv7 de 32 bits, me ha sorprendido incluso la última versión de 
+			Go 1.26.2 está completamente soportada. 
+			A día de hoy siguen saliendo versiones basadas en los RK3588 [69], e incluso ARMv9 
+			como Orion O6. 
+			En el paper “OPENCCA: An Open Framework to Enable Arm CCA Research” se puede ver 
+			una comparativa entre estos dos últimos SoC (además de muchos otros) corriendo 
+			OpenCCA en ARMv9 y ARMv8.2 (no compatible con CCA) [70].</i><br> 
+			MIPS representa una de las expresiones más clásicas del enfoque RISC. Se caracteriza por una 
+			gran regularidad en el formato de instrucciones, por el uso de instrucciones normalmente 
+			alineadas y por un diseño que históricamente ha resultado muy útil tanto en docencia como en 
+			sistemas embebidos. Esa simplicidad ha hecho que durante años se tomara como referencia 
+			para explicar pipelines, ejecución segmentada y organización interna del procesador. 
+			Respecto a la eficiencia energética, no sería correcto afirmar de manera absoluta que MIPS 
+			consume poco por el mero hecho de ser RISC; en realidad, el resultado final depende de la 
+			implementación concreta. Sin embargo, sí puede decirse que su simplicidad estructural y su 
+			presencia en dispositivos especializados favorecieron su uso en entornos donde el coste, la 
+			integración y el consumo debían mantenerse contenidos. 
+			La arquitectura MIPS tiene presencia importante en routers, electrónica de red, sistemas 
+			embebidos y algunas familias de microcontroladores, como ciertos PIC32 basados en núcleo 
+			MIPS32. 
 		</p>
 		<p>
-			<br><b>Nota del autor:</b> <i>Algunos de los sistemas MIPS que he tenido en propiedad se han<br>
-			centrado sobre todo en dispositivos de entretenimiento como la Dingoo A320 (MIPS<br>
-			JZ4732), la GCW Zero (Ingenic JZ4770) [67] y varias consolas de Sony como la PSX y<br>
-			PSP. [66]</i><br><br>
-			x86 responde a una tradición más vinculada al enfoque CISC, con un conjunto de instrucciones<br>
-			muy amplio, codificación de longitud variable y una fuerte orientación histórica a la<br>
-			compatibilidad hacia atrás. Esa continuidad ha sido una de sus grandes fortalezas, ya que ha<br>
-			permitido mantener durante décadas una enorme base de software compatible. Técnicamente,<br>
-			su mayor complejidad en la codificación de instrucciones obliga a usar mecanismos internos<br>
-			avanzados de decodificación y traducción a microoperaciones en los procesadores modernos.<br>
-			Sobre la eficiencia energética, también aquí conviene ser prudente: no se puede concluir que<br>
-			x86 sea ineficiente solo por pertenecer al grupo CISC. El consumo y el rendimiento dependen<br>
-			sobre todo de la microarquitectura concreta, del nodo tecnológico y del tipo de procesador. Su<br>
-			gran ventaja práctica ha estado más relacionada con el rendimiento general, la madurez del<br>
-			ecosistema y la compatibilidad software que con una supuesta superioridad energética.<br>
-			Sus ámbitos de uso habituales son los ordenadores personales, estaciones de trabajo,<br>
-			servidores generales y buena parte de la infraestructura clásica de centros de datos y<br>
-			virtualización.<br>
-			Como valoración comparativa, puede decirse que ARM ha destacado especialmente en<br>
-			escenarios donde el consumo es una variable crítica, MIPS ha tenido una trayectoria muy<br>
-			relevante en sistemas embebidos y de red, y x86 ha dominado tradicionalmente los entornos<br>
-			de escritorio y servidor gracias a su compatibilidad y a la fortaleza de su ecosistema. Esa<br>
-			diferencia de implantación no significa que una arquitectura sea “mejor” en términos absolutos,<br>
-			sino que cada una ha evolucionado para responder a prioridades técnicas y comerciales<br>
-			distintas.<br>
+			<br><b>Nota del autor:</b> <i>Algunos de los sistemas MIPS que he tenido en propiedad se han 
+			centrado sobre todo en dispositivos de entretenimiento como la Dingoo A320 (MIPS 
+			JZ4732), la GCW Zero (Ingenic JZ4770) [67] y varias consolas de Sony como la PSX y 
+			PSP. [66]</i><br> 
+			x86 responde a una tradición más vinculada al enfoque CISC, con un conjunto de instrucciones 
+			muy amplio, codificación de longitud variable y una fuerte orientación histórica a la 
+			compatibilidad hacia atrás. Esa continuidad ha sido una de sus grandes fortalezas, ya que ha 
+			permitido mantener durante décadas una enorme base de software compatible. Técnicamente, 
+			su mayor complejidad en la codificación de instrucciones obliga a usar mecanismos internos 
+			avanzados de decodificación y traducción a microoperaciones en los procesadores modernos. 
+			Sobre la eficiencia energética, también aquí conviene ser prudente: no se puede concluir que 
+			x86 sea ineficiente solo por pertenecer al grupo CISC. El consumo y el rendimiento dependen 
+			sobre todo de la microarquitectura concreta, del nodo tecnológico y del tipo de procesador. Su 
+			gran ventaja práctica ha estado más relacionada con el rendimiento general, la madurez del 
+			ecosistema y la compatibilidad software que con una supuesta superioridad energética. 
+			Sus ámbitos de uso habituales son los ordenadores personales, estaciones de trabajo, 
+			servidores generales y buena parte de la infraestructura clásica de centros de datos y 
+			virtualización. 
+			Como valoración comparativa, puede decirse que ARM ha destacado especialmente en 
+			escenarios donde el consumo es una variable crítica, MIPS ha tenido una trayectoria muy 
+			relevante en sistemas embebidos y de red, y x86 ha dominado tradicionalmente los entornos 
+			de escritorio y servidor gracias a su compatibilidad y a la fortaleza de su ecosistema. Esa 
+			diferencia de implantación no significa que una arquitectura sea “mejor” en términos absolutos, 
+			sino que cada una ha evolucionado para responder a prioridades técnicas y comerciales 
+			distintas. 
 		</p>
 		<h2 class="mt-4 mb-3"><b>3. ARM, MIPS y x86: ejecución de instrucciones, rasgos internos y entornos de uso</b></h2>
 		<p>
-			Para comparar “cómo ejecutan instrucciones”, es razonable partir de un modelo general de<br>
-			pipeline: búsqueda (fetch), decodificación, lectura de operandos, ejecución, acceso a<br>
-			memoria si aplica y escritura/retirada del resultado. Esta descomposición sirve como<br>
-			base común para luego aplicar matices por ISA e implementación. [26]<br>
+			Para comparar “cómo ejecutan instrucciones”, es razonable partir de un modelo general de 
+			pipeline: búsqueda (fetch), decodificación, lectura de operandos, ejecución, acceso a 
+			memoria si aplica y escritura/retirada del resultado. Esta descomposición sirve como 
+			base común para luego aplicar matices por ISA e implementación. [26] 
 		</p>
 		<h4 class="mt-4"><b>3.1 ARM: ejecución y características internas relevantes</b></h4>
 		<p>
-			Modelo de ejecución (ISA y privilegios): En ARMv8-A/AArch64, el sistema se organiza en<br>
-			niveles de excepción EL0–EL3, separando usuario, kernel/OS, hipervisor y<br>
-			firmware/seguridad. Esta jerarquía es especialmente útil para explicar “dónde corre qué” en<br>
-			móviles/servidores con virtualización: es un puente claro entre arquitectura y sistemas<br>
-			operativos. [27]<br>
-			Registros e instrucciones: En A64 (AArch64), un punto muy citado por documentación<br>
-			técnica es la regularidad: instrucciones de longitud fija (32 bits) y un banco amplio de registros<br>
-			generales (31 registros “unbanked”), con el registro 31 actuando como cero o como puntero de<br>
-			pila según el contexto. Esto simplifica decodificación y ofrece más margen a compiladores para<br>
-			mantener variables en registros. [28]<br>
-			Pipeline y paralelismo (microarquitectura típica): ARM no implica “pipeline simple”: en la<br>
-			práctica hay núcleos de clase móvil/servidor que implementan ejecución superscalar y fuera<br>
-			de orden, con predicción de saltos avanzada. En documentación técnica de núcleos Cortex se<br>
-			describe explícitamente pipelines fuera de orden y superscalar (una forma de justificar que ARM<br>
-			puede competir en rendimiento y no solo en consumo). [29]<br>
-			Entornos de uso habituales: ARM domina por presencia en SoC (móvil/embebido), pero<br>
-			también aparece en servidores en nube: un ejemplo habitual son instancias basadas en<br>
-			Graviton, orientadas a cargas de servidor y HPC, con un enfoque en coste y energía. [30]<br>
+			Modelo de ejecución (ISA y privilegios): En ARMv8-A/AArch64, el sistema se organiza en 
+			niveles de excepción EL0–EL3, separando usuario, kernel/OS, hipervisor y 
+			firmware/seguridad. Esta jerarquía es especialmente útil para explicar “dónde corre qué” en 
+			móviles/servidores con virtualización: es un puente claro entre arquitectura y sistemas 
+			operativos. [27] 
+			Registros e instrucciones: En A64 (AArch64), un punto muy citado por documentación 
+			técnica es la regularidad: instrucciones de longitud fija (32 bits) y un banco amplio de registros 
+			generales (31 registros “unbanked”), con el registro 31 actuando como cero o como puntero de 
+			pila según el contexto. Esto simplifica decodificación y ofrece más margen a compiladores para 
+			mantener variables en registros. [28] 
+			Pipeline y paralelismo (microarquitectura típica): ARM no implica “pipeline simple”: en la 
+			práctica hay núcleos de clase móvil/servidor que implementan ejecución superscalar y fuera 
+			de orden, con predicción de saltos avanzada. En documentación técnica de núcleos Cortex se 
+			describe explícitamente pipelines fuera de orden y superscalar (una forma de justificar que ARM 
+			puede competir en rendimiento y no solo en consumo). [29] 
+			Entornos de uso habituales: ARM domina por presencia en SoC (móvil/embebido), pero 
+			también aparece en servidores en nube: un ejemplo habitual son instancias basadas en 
+			Graviton, orientadas a cargas de servidor y HPC, con un enfoque en coste y energía. [30] 
 		</p>
 		<h4 class="mt-4"><b>3.2 MIPS: ejecución y características internas relevantes</b></h4>
 		<p>
-			Modelo de ejecución: MIPS tiene una pipeline bastante clara porque, en su forma más<br>
-			conocida, se presenta un flujo de cinco etapas (IF, ID, EX, MEM, WB), donde cada etapa<br>
-			puede solaparse entre instrucciones consecutivas. Su forma de ejecución es casi un estándar de<br>
-			enseñanza para ilustrar paralelismo temporal y peligros (de ahí que como se comentaba en las<br>
-			notas del autor en el apartado anterior, hay muchas SBCs que utilizan MIPS como arquitectura<br>
-			principal de SoC como la MIPS Creator Ci 20). [31]<br>
-			Registros y codificación: En MIPS32 se suele trabajar con 32 registros de propósito<br>
-			general y con una codificación muy regular; además, hay documentación formativa y manuales<br>
-			MIPS que recalcan el carácter de instrucciones de longitud fija y alineadas en MIPS32, lo que<br>
-			facilita el razonamiento sobre decodificación y fetch. [32]<br>
-			MIPS en productos: más allá del MIPS académico. Para dar valor añadido, merece la pena<br>
-			remarcar que el ecosistema MIPS en productos incluye variantes/cores con prestaciones<br>
-			avanzadas. Por ejemplo, documentación técnica usada en el entorno OpenWrt describe un core<br>
-			MIPS (74Kc) como superscalar y con ejecución fuera de orden, lo que desmonta la idea de que<br>
-			MIPS sea siempre “simple”. [33]<br>
-			Entornos informáticos habituales: Dos ejemplos con fuentes sólidas son:<br>
+			Modelo de ejecución: MIPS tiene una pipeline bastante clara porque, en su forma más 
+			conocida, se presenta un flujo de cinco etapas (IF, ID, EX, MEM, WB), donde cada etapa 
+			puede solaparse entre instrucciones consecutivas. Su forma de ejecución es casi un estándar de 
+			enseñanza para ilustrar paralelismo temporal y peligros (de ahí que como se comentaba en las 
+			notas del autor en el apartado anterior, hay muchas SBCs que utilizan MIPS como arquitectura 
+			principal de SoC como la MIPS Creator Ci 20). [31] 
+			Registros y codificación: En MIPS32 se suele trabajar con 32 registros de propósito 
+			general y con una codificación muy regular; además, hay documentación formativa y manuales 
+			MIPS que recalcan el carácter de instrucciones de longitud fija y alineadas en MIPS32, lo que 
+			facilita el razonamiento sobre decodificación y fetch. [32] 
+			MIPS en productos: más allá del MIPS académico. Para dar valor añadido, merece la pena 
+			remarcar que el ecosistema MIPS en productos incluye variantes/cores con prestaciones 
+			avanzadas. Por ejemplo, documentación técnica usada en el entorno OpenWrt describe un core 
+			MIPS (74Kc) como superscalar y con ejecución fuera de orden, lo que desmonta la idea de que 
+			MIPS sea siempre “simple”. [33] 
+			Entornos informáticos habituales: Dos ejemplos con fuentes sólidas son: 
 		</p>
 		<ul>
-			<li>Routers y firmwares: documentación de OpenWrt describe familias de SoC MIPS</li>
-			<li>ampliamente usadas en routers domésticos (ath79, ramips), incluso citando</li>
-			<li>microarquitecturas MIPS concretas. [34]</li>
-			<li>Microcontroladores: la familia PIC32M se documenta explícitamente como basada en</li>
-			<li>núcleo MIPS32 y, en manuales de referencia, se indica el uso de una versión concreta de</li>
-			<li>arquitectura MIPS32 en estos MCUs. [35]</li>
+			<li>Routers y firmwares: documentación de OpenWrt describe familias de SoC MIPS ampliamente usadas en routers domésticos (ath79, ramips), incluso citando microarquitecturas MIPS concretas. [34] Microcontroladores: la familia PIC32M se documenta explícitamente como basada en núcleo MIPS32 y, en manuales de referencia, se indica el uso de una versión concreta de arquitectura MIPS32 en estos MCUs. [35]</li>
 		</ul>
 		<h4 class="mt-4"><b>3.3 x86: ejecución y características internas relevantes</b></h4>
 		<p>
-			ISA, compatibilidad y codificación: x86-64 (AMD64/Intel 64) se diseñó como evolución<br>
-			compatible con el legado x86. Manuales de AMD describen explícitamente la convivencia de<br>
-			recursos “legacy” con el modo de 64 bits, y justifican, por ejemplo, la ampliación del banco de<br>
-			registros (añadir GPRs y ampliar anchura) como una vía para que compiladores reduzcan tráfico<br>
-			a memoria. [36]<br>
-			La codificación de instrucciones en x86 es de longitud variable, con un límite máximo de 15<br>
-			bytes. Este detalle, aunque parezca menor, es relevante para explicar por qué la decodificación<br>
-			de x86 tiene más complejidad que la de ISAs de longitud fija: la CPU necesita identificar<br>
-			prefijos, opcode, ModR/M, SIB, desplazamientos e inmediatos, y todo ello sin una alineación<br>
-			“natural” de 32 bits. [37]<br>
-			Ejecución moderna: µops y back-end tipo RISC: En procesadores x86 actuales, es común<br>
-			traducir instrucciones x86 a micro-operaciones internas, para alimentarlas a un motor de<br>
-			ejecución que se beneficia de técnicas como ejecución fuera de orden, especulación y<br>
-			planificación dinámica. Esto se explica de manera directa en revisiones académicas del debate<br>
-			RISC/CISC (donde se menciona la traducción de macroinstrucciones a µops) y también en<br>
-			trabajos recientes que estudian micro-op caches en procesadores Intel/AMD. [9]<br>
-			Entornos informáticos donde se usa: x86 es central en PCs y, en HPC, sigue siendo clave<br>
-			como CPU de nodos (a menudo acompañado por aceleradores). Por ejemplo, en listados<br>
-			TOP500 recientes se describen supercomputadores con CPUs AMD EPYC en arquitecturas HPE<br>
-			Cray EX para alcanzar rangos exaescala. [38]<br>
+			ISA, compatibilidad y codificación: x86-64 (AMD64/Intel 64) se diseñó como evolución 
+			compatible con el legado x86. Manuales de AMD describen explícitamente la convivencia de 
+			recursos “legacy” con el modo de 64 bits, y justifican, por ejemplo, la ampliación del banco de 
+			registros (añadir GPRs y ampliar anchura) como una vía para que compiladores reduzcan tráfico 
+			a memoria. [36] 
+			La codificación de instrucciones en x86 es de longitud variable, con un límite máximo de 15 
+			bytes. Este detalle, aunque parezca menor, es relevante para explicar por qué la decodificación 
+			de x86 tiene más complejidad que la de ISAs de longitud fija: la CPU necesita identificar 
+			prefijos, opcode, ModR/M, SIB, desplazamientos e inmediatos, y todo ello sin una alineación 
+			“natural” de 32 bits. [37] 
+			Ejecución moderna: µops y back-end tipo RISC: En procesadores x86 actuales, es común 
+			traducir instrucciones x86 a micro-operaciones internas, para alimentarlas a un motor de 
+			ejecución que se beneficia de técnicas como ejecución fuera de orden, especulación y 
+			planificación dinámica. Esto se explica de manera directa en revisiones académicas del debate 
+			RISC/CISC (donde se menciona la traducción de macroinstrucciones a µops) y también en 
+			trabajos recientes que estudian micro-op caches en procesadores Intel/AMD. [9] 
+			Entornos informáticos donde se usa: x86 es central en PCs y, en HPC, sigue siendo clave 
+			como CPU de nodos (a menudo acompañado por aceleradores). Por ejemplo, en listados 
+			TOP500 recientes se describen supercomputadores con CPUs AMD EPYC en arquitecturas HPE 
+			Cray EX para alcanzar rangos exaescala. [38] 
 		</p>
 		<h2 class="mt-4 mb-3"><b>4. Compatibilidades y diferencias: virtualización, emulación y compilación cruzada</b></h2>
 		<p>
 		</p>
 		<h4 class="mt-4"><b>4.1 Virtualización: mismo ISA, aislamiento con ayuda hardware</b></h4>
 		<p>
-			La virtualización clásica (máquinas virtuales con un hipervisor) funciona mejor cuando el<br>
-			invitado y el anfitrión comparten ISA, porque el núcleo del código se ejecuta directamente en<br>
-			CPU y solo se interceptan eventos privilegiados.<br>
+			La virtualización clásica (máquinas virtuales con un hipervisor) funciona mejor cuando el 
+			invitado y el anfitrión comparten ISA, porque el núcleo del código se ejecuta directamente en 
+			CPU y solo se interceptan eventos privilegiados. 
 		</p>
 		<ul>
-			<li>En x86, Intel[39] documenta VMX (VT-x) como un conjunto de extensiones para</li>
-			<li>soportar virtualización de hardware para múltiples entornos software, y lo hace dentro</li>
-			<li>del propio manual de programación de sistema. [40]</li>
-			<li>En x86-64, AMD[41] dispone de documentación específica de SVM (la base de AMD-V)</li>
-			<li>describiendo arquitectura, requisitos software y extensiones del conjunto de</li>
-			<li>instrucciones para operar estructuras de virtualización. [42]</li>
-			<li>En ARMv8-A, la virtualización se encaja en el modelo de privilegios mediante EL2:</li>
-			<li>documentación técnica explica el papel del hipervisor en EL2 y las VMs ejecutándose en</li>
-			<li>EL0/EL1. [43]</li>
-			<li>En MIPS, hay documentación técnica que describe un “Virtualization Module” que</li>
-			<li>extiende MIPS32 para permitir hipervisores (incluyendo la introducción de modos de</li>
-			<li>ejecución orientados a invitado y raíz/root). [44]</li>
-			<li>La virtualización es “compatibilidad fuerte”, pero dentro de la misma ISA. Cuando cambias</li>
-			<li>ISA (por ejemplo, x86 en un host ARM), ya no hablamos de virtualización pura: hace falta</li>
-			<li>traducción o emulación. [45]</li>
+			<li>En x86, Intel[39] documenta VMX (VT-x) como un conjunto de extensiones para soportar virtualización de hardware para múltiples entornos software, y lo hace dentro del propio manual de programación de sistema. [40]</li>
+			<li>En x86-64, AMD[41] dispone de documentación específica de SVM (la base de AMD-V) describiendo arquitectura, requisitos software y extensiones del conjunto de instrucciones para operar estructuras de virtualización. [42]</li>
+			<li>En ARMv8-A, la virtualización se encaja en el modelo de privilegios mediante EL2: documentación técnica explica el papel del hipervisor en EL2 y las VMs ejecutándose en EL0/EL1. [43]</li>
+			<li>En MIPS, hay documentación técnica que describe un “Virtualization Module” que extiende MIPS32 para permitir hipervisores (incluyendo la introducción de modos de ejecución orientados a invitado y raíz/root). [44]</li>
 		</ul>
+		<p>
+			La virtualización es “compatibilidad fuerte”, pero dentro de la misma ISA. Cuando cambias ISA (por ejemplo, x86 en un host ARM), ya no hablamos de virtualización pura: hace falta traducción o emulación. [45]
+		</p>
 		<h4 class="mt-4"><b>4.2 Emulación/traducción binaria: ejecutar software de otra ISA</b></h4>
 		<p>
-			La emulación permite ejecutar binarios de una ISA sobre otra, traduciendo instrucciones. Aquí<br>
-			el rendimiento suele ser menor que nativo, y aparecen limitaciones por diferencias de modelo<br>
-			vectorial, instrucciones privilegiadas, etc.<br>
+			La emulación permite ejecutar binarios de una ISA sobre otra, traduciendo instrucciones. Aquí 
+			el rendimiento suele ser menor que nativo, y aparecen limitaciones por diferencias de modelo 
+			vectorial, instrucciones privilegiadas, etc. 
 		</p>
 		<ul>
-			<li>QEMU lo describe claramente: es un traductor dinámico (TCG) que convierte código del</li>
-			<li>invitado al conjunto del host, y soporta emulación de múltiples arquitecturas tanto en</li>
-			<li>“system emulation” como en “user mode emulation”. [46]</li>
-			<li>En el ecosistema Apple, Apple[47] documenta Rosetta 2 como un mecanismo para</li>
-			<li>ejecutar código x86_64 mediante traducción, incluyendo detalles de que traduce</li>
-			<li>instrucciones x86_64 (AVX/AVX2) pero no soporta AVX-512, lo cual es un ejemplo</li>
-			<li>concreto de compatibilidad aunque con límites técnicos. [48]</li>
-			<li>En Windows on Arm, Microsoft[49] explica la emulación como compilación JIT de bloques</li>
-			<li>de instrucciones x86 a Arm64, con cachés de traducción para reducir sobrecarga, y</li>
-			<li>también mantiene documentación de alto nivel sobre la capacidad de ejecutar apps</li>
-			<li>x86/x64 en Windows 11 sobre Arm. [50]</li>
+			<li>QEMU lo describe claramente: es un traductor dinámico (TCG) que convierte código del invitado al conjunto del host, y soporta emulación de múltiples arquitecturas tanto en “system emulation” como en “user mode emulation”. [46]</li>
+			<li>En el ecosistema Apple, Apple[47] documenta Rosetta 2 como un mecanismo para ejecutar código x86_64 mediante traducción, incluyendo detalles de que traduce instrucciones x86_64 (AVX/AVX2) pero no soporta AVX-512, lo cual es un ejemplo concreto de compatibilidad aunque con límites técnicos. [48]</li>
+			<li>En Windows on Arm, Microsoft[49] explica la emulación como compilación JIT de bloques de instrucciones x86 a Arm64, con cachés de traducción para reducir sobrecarga, y también mantiene documentación de alto nivel sobre la capacidad de ejecutar apps x86/x64 en Windows 11 sobre Arm. [50]</li>
 		</ul>
 		<h4 class="mt-4"><b>4.3 Compilación cruzada: la vía “limpia” para portar software</b></h4>
 		<p>
-			La compilación cruzada es distinta: no ejecuta binarios de otra ISA, sino que compila el<br>
-			mismo código fuente para generar binarios nativos del objetivo (ARM, MIPS o x86). Es el<br>
-			mecanismo preferible cuando se controla el software.<br>
-			En la práctica, se usan toolchains que incluyen compilador, ensamblador, enlazador y librerías<br>
-			para el objetivo. Existen guías para instalar GCC como cross-compiler para ARM, y también<br>
-			documentación en distribuciones (como Debian) que explica cómo empaquetan toolchains<br>
-			cruzadas y sus dependencias. [51]<br>
-			A nivel de ingeniería, una observación importante es que el principal dolor de la compilación<br>
-			cruzada no suele ser el compilador, sino las dependencias nativas (librerías del sistema, ABI,<br>
-			uso de instrucciones SIMD específicas). Por eso en documentación técnica de proyectos grandes<br>
-			se suelen detallar prerequisitos (toolchain aarch64, sysroot, etc.). [52]<br>
-			Algunos lenguajes como Go, permiten generar binarios nativos para diferentes ISAs con<br>
-			reducida complejidad, siempre y cuando estas no hagan uso de dependencias nativas.<br>
+			La compilación cruzada es distinta: no ejecuta binarios de otra ISA, sino que compila el 
+			mismo código fuente para generar binarios nativos del objetivo (ARM, MIPS o x86). Es el 
+			mecanismo preferible cuando se controla el software. 
+			En la práctica, se usan toolchains que incluyen compilador, ensamblador, enlazador y librerías 
+			para el objetivo. Existen guías para instalar GCC como cross-compiler para ARM, y también 
+			documentación en distribuciones (como Debian) que explica cómo empaquetan toolchains 
+			cruzadas y sus dependencias. [51] 
+			A nivel de ingeniería, una observación importante es que el principal dolor de la compilación 
+			cruzada no suele ser el compilador, sino las dependencias nativas (librerías del sistema, ABI, 
+			uso de instrucciones SIMD específicas). Por eso en documentación técnica de proyectos grandes 
+			se suelen detallar prerequisitos (toolchain aarch64, sysroot, etc.). [52] 
+			Algunos lenguajes como Go, permiten generar binarios nativos para diferentes ISAs con 
+			reducida complejidad, siempre y cuando estas no hagan uso de dependencias nativas. 
 		</p>
 		<h2 class="mt-4 mb-3"><b>5. Requisitos hardware y software para trabajar con ARM, MIPS y x86, con casos reales de uso</b></h2>
 		<p>
 		</p>
 		<h4 class="mt-4"><b>5.1 Sistemas operativos compatibles y soporte general</b></h4>
 		<ul>
-			<li>Linux es relevante para las tres: la documentación oficial del kernel lista arquitecturas</li>
-			<li>CPU soportadas (incluyendo ARM64 y MIPS, además de x86 y otras), lo que justifica que</li>
+			<li>Linux es relevante para las tres: la documentación oficial del kernel lista arquitecturas CPU soportadas (incluyendo ARM64 y MIPS, además de x86 y otras), lo que justifica que</li>
 			<li>Linux sea un terreno común para comparar y experimentar. [53]</li>
-			<li>OpenWrt (firmware para routers) expone de forma práctica la diversidad de targets por</li>
-			<li>arquitectura/SoC, con targets MIPS muy comunes en routers domésticos y también</li>
-			<li>targets ARM en modelos más recientes. Esto es un ejemplo excelente para MIPS/ARM en</li>
-			<li>networking. [34]</li>
-			<li>En el mundo Apple, hay documentación oficial sobre desarrollo en arm64 y sobre</li>
-			<li>binarios universales, lo que refuerza que ARM (AArch64) es una plataforma de escritorio</li>
-			<li>real, no solo móvil, aunque con mecanismos de transición para software x86_64. [54]</li>
-			<li>En Windows, la documentación de Windows on Arm y su emulación describe</li>
-			<li>explícitamente el escenario híbrido (apps Arm64 nativas + emulación x86/x64), lo cual</li>
-			<li>conecta arquitectura con compatibilidad de aplicaciones. [55]</li>
+			<li>OpenWrt (firmware para routers) expone de forma práctica la diversidad de targets por arquitectura/SoC, con targets MIPS muy comunes en routers domésticos y también targets ARM en modelos más recientes. Esto es un ejemplo excelente para MIPS/ARM en networking. [34]</li>
+			<li>En el mundo Apple, hay documentación oficial sobre desarrollo en arm64 y sobre binarios universales, lo que refuerza que ARM (AArch64) es una plataforma de escritorio real, no solo móvil, aunque con mecanismos de transición para software x86_64. [54]</li>
+			<li>En Windows, la documentación de Windows on Arm y su emulación describe explícitamente el escenario híbrido (apps Arm64 nativas + emulación x86/x64), lo cual conecta arquitectura con compatibilidad de aplicaciones. [55]</li>
 		</ul>
 		<h4 class="mt-4"><b>5.2 Compiladores, toolchains y herramientas</b></h4>
 		<ul>
-			<li>Para ARM, existen toolchains mantenidas y distribuidas por Arm Holdings[56], como el</li>
-			<li>Arm GNU Toolchain, además del soporte habitual en GCC/LLVM. [57]</li>
-			<li>Para MIPS en microcontroladores, un caso puede ser Microchip Technology[58]: su</li>
-			<li>documentación de PIC32M indica explícitamente que se trata de MCUs con core MIPS32,</li>
-			<li>y sus notas de versión del compilador XC32 muestran que el toolchain incluye drivers</li>
-			<li>xc32-gcc/xc32-g++, ensamblador, enlazador y utilidades. [59]</li>
-			<li>En el entorno Windows/Visual Studio, la documentación oficial explica cómo configurar</li>
-			<li>proyectos para distintas plataformas objetivo, incluyendo Arm64, e insiste en que</li>
-			<li>puedes compilar para una plataforma sin ejecutar el IDE en esa plataforma. [60]</li>
+			<li>Para ARM, existen toolchains mantenidas y distribuidas por Arm Holdings[56], como el Arm GNU Toolchain, además del soporte habitual en GCC/LLVM. [57]</li>
+			<li>Para MIPS en microcontroladores, un caso puede ser Microchip Technology[58]: su documentación de PIC32M indica explícitamente que se trata de MCUs con core MIPS32, y sus notas de versión del compilador XC32 muestran que el toolchain incluye drivers xc32-gcc/xc32-g++, ensamblador, enlazador y utilidades. [59]</li>
+			<li>En el entorno Windows/Visual Studio, la documentación oficial explica cómo configurar proyectos para distintas plataformas objetivo, incluyendo Arm64, e insiste en que puedes compilar para una plataforma sin ejecutar el IDE en esa plataforma. [60]</li>
 		</ul>
 		<h4 class="mt-4"><b>5.3 Ventajas y limitaciones técnicas comparadas</b></h4>
 		<ul>
-			<li>x86: ventaja fuerte en compatibilidad y ecosistema. Limitación técnica típica:</li>
-			<li>complejidad de decodificación y legado (por ejemplo, longitud variable hasta 15 bytes),</li>
-			<li>que empuja a microarquitecturas sofisticadas (µops, cachés de µops) para mantener</li>
-			<li>rendimiento alto. [61]</li>
-			<li>ARM: ventaja en modularidad de implementaciones (desde núcleos embebidos a</li>
-			<li>servidores) y un modelo de privilegios/virtualización bien integrado (EL2) para cloud y</li>
-			<li>dispositivos modernos. Limitación práctica frecuente: fragmentación de plataformas/SoC</li>
-			<li>(no es un problema de ISA, sino de “plataforma”). [62]</li>
+			<li>x86: ventaja fuerte en compatibilidad y ecosistema. Limitación técnica típica: complejidad de decodificación y legado (por ejemplo, longitud variable hasta 15 bytes), que empuja a microarquitecturas sofisticadas (µops, cachés de µops) para mantener rendimiento alto. [61]</li>
+			<li>ARM: ventaja en modularidad de implementaciones (desde núcleos embebidos a servidores) y un modelo de privilegios/virtualización bien integrado (EL2) para cloud y dispositivos modernos. Limitación práctica frecuente: fragmentación de plataformas/SoC (no es un problema de ISA, sino de “plataforma”). [62]</li>
 		</ul>
 		<p>
-			<br><b>Nota del autor:</b> <i>ARM diseña y licencia sus arquitecturas para que terceros<br>
-			puedan adaptarlas y ampliarlas a partir de un diseño base, como ocurre en<br>
-			familias de SoC de Qualcomm, Apple, Samsung, MediaTek o Rockchip.</i><br><br>
-			MIPS: ventaja en claridad conceptual y presencia real en nichos embebidos (routers,<br>
-			algunos MCUs). Limitación principal hoy: menor tracción del ecosistema generalista<br>
-			frente a x86/ARM, lo que afecta disponibilidad de binarios, herramientas comerciales o<br>
-			soporte en productos de consumo modernos. [63]<br>
+			<br><b>Nota del autor:</b> <i>ARM diseña y licencia sus arquitecturas para que terceros 
+			puedan adaptarlas y ampliarlas a partir de un diseño base, como ocurre en 
+			familias de SoC de Qualcomm, Apple, Samsung, MediaTek o Rockchip.</i><br> 
+			MIPS: ventaja en claridad conceptual y presencia real en nichos embebidos (routers, 
+			algunos MCUs). Limitación principal hoy: menor tracción del ecosistema generalista 
+			frente a x86/ARM, lo que afecta disponibilidad de binarios, herramientas comerciales o 
+			soporte en productos de consumo modernos. [63] 
 		</p>
 		<h4 class="mt-4"><b>5.4 Ejemplos y aplicaciones reales</b></h4>
 		<ul>
-			<li>Servidores en la nube (ARM): Amazon Web Services[64] presenta Graviton como</li>
-			<li>plataforma ARM para cargas de servidor. [30]</li>
-			<li>Escritorio/portátiles (ARM y x86): en sistemas Apple, la existencia de Rosetta 2 y</li>
-			<li>binarios universales documenta un escenario real de convivencia ARM nativo +</li>
-			<li>compatibilidad x86_64 mediante traducción, con límites técnicos concretos (p. ej., AVX-</li>
-			<li>512). [65]</li>
-			<li>Networking/routers (MIPS y ARM): la documentación de targets OpenWrt describe</li>
-			<li>familias MIPS ampliamente desplegadas en routers domésticos y también la transición</li>
-			<li>de parte del mercado hacia SoCs ARM en modelos más nuevos. [34]</li>
-			<li>Microcontroladores (MIPS): PIC32M se documenta como familia con core MIPS32, y</li>
-			<li>manuales de referencia detallan el “release” de arquitectura MIPS32 usado, lo que</li>
-			<li>permite enlazar ISA con periféricos, interrupciones y entorno de desarrollo. [35]</li>
-			<li>Supercomputación (x86 y ARM): TOP500 ofrece ejemplos de sistemas donde la CPU</li>
-			<li>principal es x86-64 (por ejemplo, sistemas basados en AMD EPYC en arquitecturas HPE Cray</li>
-			<li>EX) y también casos donde ARM ha sido competitivo en HPC (Fugaku basado en A64FX).</li>
-			<li>ARM no es “solo móvil”, y x86 no es “solo PC”; ambas ISAs existen en la frontera HPC,</li>
-			<li>normalmente acompañadas por aceleradores y redes especializadas. [66]</li>
+			<li>Servidores en la nube (ARM): Amazon Web Services[64] presenta Graviton como plataforma ARM para cargas de servidor. [30]</li>
+			<li>Escritorio/portátiles (ARM y x86): en sistemas Apple, la existencia de Rosetta 2 y binarios universales documenta un escenario real de convivencia ARM nativo + compatibilidad x86_64 mediante traducción, con límites técnicos concretos (p. ej., AVX- 512). [65]</li>
+			<li>Networking/routers (MIPS y ARM): la documentación de targets OpenWrt describe familias MIPS ampliamente desplegadas en routers domésticos y también la transición de parte del mercado hacia SoCs ARM en modelos más nuevos. [34]</li>
+			<li>Microcontroladores (MIPS): PIC32M se documenta como familia con core MIPS32, y manuales de referencia detallan el “release” de arquitectura MIPS32 usado, lo que permite enlazar ISA con periféricos, interrupciones y entorno de desarrollo. [35]</li>
+			<li>Supercomputación (x86 y ARM): TOP500 ofrece ejemplos de sistemas donde la CPU principal es x86-64 (por ejemplo, sistemas basados en AMD EPYC en arquitecturas HPE Cray EX) y también casos donde ARM ha sido competitivo en HPC (Fugaku basado en A64FX). ARM no es “solo móvil”, y x86 no es “solo PC”; ambas ISAs existen en la frontera HPC, normalmente acompañadas por aceleradores y redes especializadas. [66]</li>
 		</ul>
 		<h2 class="mt-4 mb-3"><b>6. Conclusiones</b></h2>
 		<p>
-			La comparación entre ARM, MIPS y x86 muestra que no existe una arquitectura<br>
-			universalmente superior, sino soluciones diseñadas para responder a necesidades distintas.<br>
+			La comparación entre ARM, MIPS y x86 muestra que no existe una arquitectura 
+			universalmente superior, sino soluciones diseñadas para responder a necesidades distintas. 
 		</p>
 		<ul>
-			<li>ARM ha demostrado una gran capacidad de adaptación, especialmente en entornos</li>
-			<li>donde el consumo energético, la integración en SoC y la escalabilidad son factores</li>
-			<li>decisivos.</li>
-			<li>MIPS, aunque hoy tiene menos protagonismo en la informática generalista, sigue siendo</li>
-			<li>una referencia muy útil para comprender los fundamentos de la arquitectura de</li>
-			<li>computadores y mantiene presencia en sistemas embebidos y de red.</li>
-			<li>x86 continúa destacando por la solidez de su ecosistema, su compatibilidad histórica y</li>
-			<li>su enorme implantación en ordenadores personales, estaciones de trabajo y servidores.</li>
-			<li>Como hemos podido comprobar, la diferencia entre RISC y CISC ya no puede</li>
-			<li>interpretarse de forma simplista, porque el rendimiento real depende también de la</li>
-			<li>microarquitectura, de las técnicas internas de ejecución y del entorno software disponible. En</li>
-			<li>conjunto, estas tres arquitecturas reflejan cómo la evolución de los procesadores no responde</li>
-			<li>solo a criterios técnicos, sino también a decisiones industriales, comerciales y de compatibilidad.</li>
+			<li>ARM ha demostrado una gran capacidad de adaptación, especialmente en entornos donde el consumo energético, la integración en SoC y la escalabilidad son factores decisivos.</li>
+			<li>MIPS, aunque hoy tiene menos protagonismo en la informática generalista, sigue siendo una referencia muy útil para comprender los fundamentos de la arquitectura de computadores y mantiene presencia en sistemas embebidos y de red.</li>
+			<li>x86 continúa destacando por la solidez de su ecosistema, su compatibilidad histórica y su enorme implantación en ordenadores personales, estaciones de trabajo y servidores.</li>
 		</ul>
+		<p>
+			Como hemos podido comprobar, la diferencia entre RISC y CISC ya no puede interpretarse de forma simplista, porque el rendimiento real depende también de la microarquitectura, de las técnicas internas de ejecución y del entorno software disponible. En conjunto, estas tres arquitecturas reflejan cómo la evolución de los procesadores no responde solo a criterios técnicos, sino también a decisiones industriales, comerciales y de compatibilidad.
+		</p>
 		<h2 class="mt-4 mb-3"><b>7. Bibliografía</b></h2>
 		<div class="text-muted small mb-2">[1] MIPS32® M4K® CPU Core ISA Overview - Developer Help. [En línea]. Disponible en:</div>
 		<p>
-			https://developerhelp.microchip.com/xwiki/bin/view/products/mcu-mpu/32bit-mcu/PIC32/mx-<br>
-			arch-cpu-overview/m4k-isa-overview/ [Consultado: 09-abr-2026]<br>
+			https://developerhelp.microchip.com/xwiki/bin/view/products/mcu-mpu/32bit-mcu/PIC32/mx- 
+			arch-cpu-overview/m4k-isa-overview/ [Consultado: 09-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[2] [36] AMD64 Architecture Programmer’s Manual, Volume 1: Application Programming. [En</div>
 		<p>
-			línea]. Disponible en:<br>
-			https://bluewaters.ncsa.illinois.edu/liferay-content/document-library/amd_1_24592_APM.pdf<br>
-			[Consultado: 09-abr-2026]<br>
+			línea]. Disponible en: 
+			https://bluewaters.ncsa.illinois.edu/liferay-content/document-library/amd_1_24592_APM.pdf 
+			[Consultado: 09-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[3] [14] [29] [47] Cortex-A15 MPCore Technical Reference Manual r3p3. [En línea]. Disponible</div>
 		<p>
-			en: https://developer.arm.com/documentation/ddi0438/h/Introduction/Features [Consultado:<br>
-			09-abr-2026]<br>
+			en: https://developer.arm.com/documentation/ddi0438/h/Introduction/Features [Consultado: 
+			09-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[4] [18] [34] Targets Overview - OpenWrt. [En línea]. Disponible en:</div>
 		<p>
-			https://mintlify.com/openwrt/openwrt/targets/overview [Consultado: 09-abr-2026]<br>
+			https://mintlify.com/openwrt/openwrt/targets/overview [Consultado: 09-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[5] [9] [10] [11] [64] A Tale of Two Processors: Revisiting the RISC-CISC Debate. [En línea].</div>
 		<p>
-			Disponible en: https://lca.ece.utexas.edu/pubs/spec09_ciji.pdf [Consultado: 09-abr-2026]<br>
+			Disponible en: https://lca.ece.utexas.edu/pubs/spec09_ciji.pdf [Consultado: 09-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[6] The Case for the Reduced Instruction Set Computer. [En línea]. Disponible en:</div>
 		<p>
-			https://www.cs.utexas.edu/~fussell/courses/cs352h/papers/risc.pdf [Consultado: 09-abr-2026]<br>
+			https://www.cs.utexas.edu/~fussell/courses/cs352h/papers/risc.pdf [Consultado: 09-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[7] [37] [39] [61] Intel® 64 and IA-32 Architectures Software Developer’s Manual Volume 2A:</div>
 		<p>
-			Instruction Set Reference, A-L. [En línea]. Disponible en:<br>
-			https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-<br>
-			architectures-software-developer-vol-2a-manual.pdf [Consultado: 09-abr-2026]<br>
+			Instruction Set Reference, A-L. [En línea]. Disponible en: 
+			https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32- 
+			architectures-software-developer-vol-2a-manual.pdf [Consultado: 09-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[8] El auge de la arquitectura ARM: eficiencia energética desde el consumo hasta la nube. [En</div>
 		<p>
-			línea]. Disponible en:<br>
-			https://aula.ui1.es/pluginfile.php/1730936/assignsubmission_file/submission_files/1679198/Est<br>
-			udio%20de%20caso%20UD1%20Estructura%20y%20Tecnolog%C3%ADa%20de%20Computad<br>
-			ores.pdf [Consultado: 09-abr-2026]<br>
+			línea]. Disponible en: 
+			https://aula.ui1.es/pluginfile.php/1730936/assignsubmission_file/submission_files/1679198/Est 
+			udio%20de%20caso%20UD1%20Estructura%20y%20Tecnolog%C3%ADa%20de%20Computad 
+			ores.pdf [Consultado: 09-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[12] [40] [45] 64-ia-32-architectures-software-developer- ... [En línea]. Disponible en:</div>
 		<p>
-			https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-<br>
-			architectures-software-developer-vol-3c-part-3-manual.pdf [Consultado: 09-abr-2026]<br>
+			https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32- 
+			architectures-software-developer-vol-3c-part-3-manual.pdf [Consultado: 09-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[15] [30] AWS Graviton Processor - Amazon EC2. [En línea]. Disponible en:</div>
 		<p>
-			https://aws.amazon.com/ec2/graviton/ [Consultado: 09-abr-2026]<br>
+			https://aws.amazon.com/ec2/graviton/ [Consultado: 09-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[16] [32] 1 This section covers the MIPS instruction set. [En línea]. Disponible en:</div>
 		<p>
-			https://training.mips.com/basic_mips/PDF/Instruction_Set.pdf [Consultado: 09-abr-2026]<br>
+			https://training.mips.com/basic_mips/PDF/Instruction_Set.pdf [Consultado: 09-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[17] Section 2. CPU for Devices with M4K Core. [En línea]. Disponible en:</div>
 		<p>
-			https://ww1.microchip.com/downloads/en/DeviceDoc/61113E.pdf [Consultado: 09-abr-2026]<br>
+			https://ww1.microchip.com/downloads/en/DeviceDoc/61113E.pdf [Consultado: 09-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[19] [20] The RISC-V Instruction Set Manual, Volume I. [En línea]. Disponible en:</div>
 		<p>
-			https://docs.riscv.org/reference/isa/unpriv/unpriv-index.html [Consultado: 09-abr-2026]<br>
+			https://docs.riscv.org/reference/isa/unpriv/unpriv-index.html [Consultado: 09-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[21] [22] [49] Instruction Set Architecture. [En línea]. Disponible en:</div>
 		<p>
-			https://openpowerfoundation.org/specifications/isa/ [Consultado: 09-abr-2026]<br>
+			https://openpowerfoundation.org/specifications/isa/ [Consultado: 09-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[23] Technical Documents | SPARC International, Inc. [En línea]. Disponible en:</div>
 		<p>
-			https://sparc.org/technical-documents/ [Consultado: 10-abr-2026]<br>
+			https://sparc.org/technical-documents/ [Consultado: 10-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[24] Oracle SPARC Architecture 2011. [En línea]. Disponible en:</div>
 		<p>
-			https://www.oracle.com/technetwork/server-storage/sun-sparc-<br>
-			enterprise/documentation/140521-ua2011-d096-p-ext-2306580.pdf [Consultado: 10-abr-2026]<br>
+			https://www.oracle.com/technetwork/server-storage/sun-sparc- 
+			enterprise/documentation/140521-ua2011-d096-p-ext-2306580.pdf [Consultado: 10-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[25] [41] [58] AVR® Instruction Set Manual. [En línea]. Disponible en:</div>
 		<p>
-			https://ww1.microchip.com/downloads/en/DeviceDoc/AVR-InstructionSet-Manual-<br>
-			DS40002198.pdf [Consultado: 10-abr-2026]<br>
+			https://ww1.microchip.com/downloads/en/DeviceDoc/AVR-InstructionSet-Manual- 
+			DS40002198.pdf [Consultado: 10-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[26] Five instruction execution steps. [En línea]. Disponible en:</div>
 		<p>
-			https://people.cs.pitt.edu/~cho/cs1541/current/handouts/lect-pipe_2up.pdf [Consultado: 10-<br>
-			abr-2026]<br>
+			https://people.cs.pitt.edu/~cho/cs1541/current/handouts/lect-pipe_2up.pdf [Consultado: 10- 
+			abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[27] [62] Exception levels. [En línea]. Disponible en:</div>
 		<p>
-			https://developer.arm.com/documentation/dui0801/a/Overview-of-AArch64-state/Exception-<br>
-			levels [Consultado: 10-abr-2026]<br>
+			https://developer.arm.com/documentation/dui0801/a/Overview-of-AArch64-state/Exception- 
+			levels [Consultado: 10-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[31] [63] MIPS Pipe Line. [En línea]. Disponible en:</div>
 		<p>
-			https://www.brunel.ac.uk/~eestppk/EE5531/06MIPSPipeline.pdf [Consultado: 10-abr-2026]<br>
+			https://www.brunel.ac.uk/~eestppk/EE5531/06MIPSPipeline.pdf [Consultado: 10-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[33] [OpenWrt Wiki] mipsel_74kc. [En línea]. Disponible en:</div>
 		<p>
-			https://openwrt.org/docs/techref/instructionset/mipsel_74kc [Consultado: 10-abr-2026]<br>
+			https://openwrt.org/docs/techref/instructionset/mipsel_74kc [Consultado: 10-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[35] [56] [59] PIC32M MCUs with MIPS32® Core - Developer Help. [En línea]. Disponible en:</div>
 		<p>
-			https://developerhelp.microchip.com/xwiki/bin/view/products/mcu-mpu/32bit-mcu/PIC32/<br>
-			[Consultado: 10-abr-2026]<br>
+			https://developerhelp.microchip.com/xwiki/bin/view/products/mcu-mpu/32bit-mcu/PIC32/ 
+			[Consultado: 10-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[38] [66] November 2025. [En línea]. Disponible en:</div>
 		<p>
-			https://top500.org/lists/top500/2025/11/ [Consultado: 11-abr-2026]<br>
+			https://top500.org/lists/top500/2025/11/ [Consultado: 11-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[42] Secure Virtual Machine Architecture REference Manual. [En línea]. Disponible en:</div>
 		<p>
-			https://www.0x04.net/doc/amd/33047.pdf [Consultado: 11-abr-2026]<br>
+			https://www.0x04.net/doc/amd/33047.pdf [Consultado: 11-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[43] Virtualization host extensions. [En línea]. Disponible en:</div>
 		<p>
-			https://developer.arm.com/documentation/102142/0100/Virtualization-host-extensions<br>
+			https://developer.arm.com/documentation/102142/0100/Virtualization-host-extensions 
 		</p>
 		<div class="text-muted small mb-2">[44] Virtualization Module for MIPS processors cores. [En línea]. Disponible en:</div>
 		<p>
-			https://training.mips.com/virtualization/Virtualization.pdf [Consultado: 11-abr-2026]<br>
+			https://training.mips.com/virtualization/Virtualization.pdf [Consultado: 11-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[46] Translator Internals — QEMU documentation. [En línea]. Disponible en:</div>
 		<p>
-			https://www.qemu.org/docs/master/devel/tcg.html [Consultado: 11-abr-2026]<br>
+			https://www.qemu.org/docs/master/devel/tcg.html [Consultado: 11-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[48] About the Rosetta translation environment. [En línea]. Disponible en:</div>
 		<p>
-			https://developer.apple.com/documentation/apple-silicon/about-the-rosetta-translation-<br>
-			environment [Consultado: 11-abr-2026]<br>
+			https://developer.apple.com/documentation/apple-silicon/about-the-rosetta-translation- 
+			environment [Consultado: 11-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[50] How emulation works on Arm. [En línea]. Disponible en:</div>
 		<p>
-			https://learn.microsoft.com/en-us/windows/arm/apps-on-arm-x86-emulation [Consultado: 11-<br>
-			abr-2026]<br>
+			https://learn.microsoft.com/en-us/windows/arm/apps-on-arm-x86-emulation [Consultado: 11- 
+			abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[51] Cross-compiler. [En línea]. Disponible en:</div>
 		<p>
-			https://learn.arm.com/install-guides/gcc/cross/ [Consultado: 11-abr-2026]<br>
+			https://learn.arm.com/install-guides/gcc/cross/ [Consultado: 11-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[52] 4. Cross compiling DPDK for aarch64 and aarch32. [En línea]. Disponible en:</div>
 		<p>
-			https://doc.dpdk.org/guides-21.11/linux_gsg/cross_build_dpdk_for_arm64.html<br>
-			11-abr-2026]<br>
-			[Consultado:<br>
+			https://doc.dpdk.org/guides-21.11/linux_gsg/cross_build_dpdk_for_arm64.html 
+			11-abr-2026] 
+			[Consultado: 
 		</p>
 		<div class="text-muted small mb-2">[53] CPU Architectures. [En línea]. Disponible en: https://docs.kernel.org/arch/index.html</div>
 		<p>
-			[Consultado: 11-abr-2026]<br>
+			[Consultado: 11-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[54] Writing ARM64 code for Apple platforms. [En línea]. Disponible en:</div>
 		<p>
-			https://developer.apple.com/documentation/xcode/writing-arm64-code-for-apple-platforms<br>
-			[Consultado: 11-abr-2026]<br>
+			https://developer.apple.com/documentation/xcode/writing-arm64-code-for-apple-platforms 
+			[Consultado: 11-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[55] Windows on Arm documentation. [En línea]. Disponible en:</div>
 		<p>
-			https://learn.microsoft.com/en-us/windows/arm/overview [Consultado: 11-abr-2026]<br>
+			https://learn.microsoft.com/en-us/windows/arm/overview [Consultado: 11-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[57] Arm GNU Toolchain Downloads. [En línea]. Disponible en:</div>
 		<p>
-			https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads<br>
-			2026]<br>
-			[Consultado:<br>
-			11-abr-<br>
+			https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads 
+			2026] 
+			[Consultado: 
+			11-abr- 
 		</p>
 		<div class="text-muted small mb-2">[60] Configure projects to target platforms - Visual Studio. [En línea]. Disponible en:</div>
 		<p>
-			https://learn.microsoft.com/en-us/visualstudio/ide/how-to-configure-projects-to-target-<br>
-			platforms?view=visualstudio [Consultado: 11-abr-2026]<br>
+			https://learn.microsoft.com/en-us/visualstudio/ide/how-to-configure-projects-to-target- 
+			platforms?view=visualstudio [Consultado: 11-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[65] Rosetta 2 on a Mac with Apple silicon. [En línea]. Disponible en:</div>
 		<p>
-			https://support.apple.com/guide/security/rosetta-2-on-a-mac-with-apple-silicon-<br>
-			secebb113be1/web [Consultado: 11-abr-2026]<br>
+			https://support.apple.com/guide/security/rosetta-2-on-a-mac-with-apple-silicon- 
+			secebb113be1/web [Consultado: 11-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[66] PlayStation Architecture. [En línea]. Disponible en:</div>
 		<p>
-			https://www.copetti.org/writings/consoles/playstation/ [Consultado: 11-abr-2026]<br>
+			https://www.copetti.org/writings/consoles/playstation/ [Consultado: 11-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[67] MIPS ZJ4770 Mobile Application Processor Data Sheet. [En línea]. Disponible en:</div>
 		<p>
-			https://ftp.radix-linux.su/3pp/Ingenic/legacy-ftp.ingenic.cn/2soc/4770/JZ4770_ds_new1.pdf<br>
-			[Consultado: 11-abr-2026]<br>
+			https://ftp.radix-linux.su/3pp/Ingenic/legacy-ftp.ingenic.cn/2soc/4770/JZ4770_ds_new1.pdf 
+			[Consultado: 11-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[68] Hardkernel’s ODROID XU4 User Manual and Spec Sheet. [En línea]. Disponible en:</div>
 		<p>
-			https://magazine.odroid.com/wp-content/uploads/odroid-xu4-user-manual.pdf<br>
-			11-abr-2026]<br>
-			[Consultado:<br>
+			https://magazine.odroid.com/wp-content/uploads/odroid-xu4-user-manual.pdf 
+			11-abr-2026] 
+			[Consultado: 
 		</p>
 		<div class="text-muted small mb-2">[69] Rockchip RK3588 Datasheet. [En línea]. Disponible en:</div>
 		<p>
-			https://rockchip.fr/RK3588%20datasheet%20V2.2.pdf [Consultado: 11-abr-2026]<br>
+			https://rockchip.fr/RK3588%20datasheet%20V2.2.pdf [Consultado: 11-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[70] OPENCCA: An Open Framework to Enable Arm CCA Research. [En línea]. Disponible en:</div>
 		<p>
-			https://systex-workshop.github.io/2025/papers/systex25-final60.pdf<br>
-			2026]<br>
-			[Consultado:<br>
-			11-abr-<br>
+			https://systex-workshop.github.io/2025/papers/systex25-final60.pdf 
+			2026] 
+			[Consultado: 
+			11-abr- 
 		</p>
 		<div class="text-muted small mb-2">[71] ARM1176JZF-S Technical Reference Manual. [En línea]. Disponible en:</div>
 		<p>
-			https://13thmonkey.org/documentation/ARM/DDI0301H_arm1176jzfs_r0p7_trm.pdf<br>
-			[Consultado: 13-abr-2026]<br>
+			https://13thmonkey.org/documentation/ARM/DDI0301H_arm1176jzfs_r0p7_trm.pdf 
+			[Consultado: 13-abr-2026] 
 		</p>
 		<div class="text-muted small mb-2">[72] Data Book POLLUX. [En línea]. Disponible en:</div>
 		<p>
-			https://d1.amobbs.com/bbs_upload782111/files_36/ourdev_613248DEU5MX.pdf<br>
-			13-abr-2026]<br>
-			[Consultado:<br>
+			https://d1.amobbs.com/bbs_upload782111/files_36/ourdev_613248DEU5MX.pdf 
+			13-abr-2026] 
+			[Consultado: 
 		</p>
 	</div>
 </div>
