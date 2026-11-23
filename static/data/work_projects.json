@@ -1,4 +1,69 @@
 [
+    {
+        "badges": [
+            {
+                "color": "badge-warning",
+                "name": "Java"
+            },
+            {
+                "color": "badge-danger",
+                "name": "GraphQL"
+            },
+            {
+                "color": "badge-primary",
+                "name": "Oracle + SQL Server"
+            },
+            {
+                "color": "badge-primary",
+                "name": "Azure Service Bus"
+            },
+            {
+                "color": "badge-primary",
+                "name": "Blob Storage"
+            },
+            {
+                "color": "badge-secondary",
+                "name": "Spring Batch"
+            },
+            {
+                "color": "badge-primary",
+                "name": "Kubernetes"
+            },
+            {
+                "color": "badge-success",
+                "name": "KEDA"
+            }
+        ],
+        "date": "2026/11/18",
+        "description": "<b>Distributed document queries and exports</b> with GraphQL, asynchronous Java workers, streaming transfers, Azure messaging and storage, and queue-driven Kubernetes scaling.",
+        "id": 15,
+        "img": "static/img/work_projects/distributed_document_platform.jpg",
+        "ribbon": {
+            "color": "bg-info",
+            "name": "Case Study"
+        },
+        "tags": [
+            "java",
+            "spring",
+            "spring_boot",
+            "graphql",
+            "oracle",
+            "sql_server",
+            "documents",
+            "api",
+            "azure",
+            "service_bus",
+            "blob_storage",
+            "spring_batch",
+            "kubernetes",
+            "keda",
+            "helm",
+            "devops"
+        ],
+        "title": "Distributed Document Management Platform",
+        "url": "",
+        "page": "work_projects/distributed_document_platform/article.html"
+    },
 	    {
         "badges": [
 			{
@@ -63,7 +128,7 @@
         ],
         "title": "Silestone Multinational MicroServices",
         "url": "",
-		"page": ""
+		"page": "work_projects/silestone_microservices/article.html"
     },
     {
         "badges": [
@@ -148,10 +213,6 @@
 			{
                 "color": "badge-warning",
                 "name": "Java"
-            },
-			{
-                "color": "badge-dark",
-                "name": "Spring Boot"
             },
 			{
                 "color": "badge-primary",
