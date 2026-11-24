@@ -45,6 +45,7 @@ a:hover {
 /* Shine */
 .article-image figure {
 	position: relative;
+	background: transparent;
 }
 .article-image figure::before {
 	position: absolute;
