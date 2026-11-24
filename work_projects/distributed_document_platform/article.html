@@ -1,0 +1,125 @@
+<div class="cl-preview-section">
+    <h1>Engineering a Distributed Document Platform</h1>
+    <p><em>Unifying document repositories with GraphQL, asynchronous Java workers, streaming transfers, and queue-driven Kubernetes scaling.</em></p>
+    <blockquote><p>A technical case study from my document-management work. Service names and implementation details have been generalized for publication.</p></blockquote>
+</div>
+
+<div class="row">
+    <div class="col-md-4 col-12"><div class="info-box bg-gradient-warning shadow-lg"><span class="info-box-icon"><i class="fas fa-search" aria-hidden="true"></i></span><div class="info-box-content"><span class="info-box-number">Unified Queries</span><span class="progress-description">GraphQL across repositories</span></div></div></div>
+    <div class="col-md-4 col-12"><div class="info-box bg-gradient-info shadow-lg"><span class="info-box-icon"><i class="fas fa-cogs" aria-hidden="true"></i></span><div class="info-box-content"><span class="info-box-number">Asynchronous Exports</span><span class="progress-description">Durable work and outcomes</span></div></div></div>
+    <div class="col-md-4 col-12"><div class="info-box bg-gradient-success shadow-lg"><span class="info-box-icon"><i class="fas fa-cloud" aria-hidden="true"></i></span><div class="info-box-content"><span class="info-box-number">Queue-driven Workers</span><span class="progress-description">AKS, Kubernetes, and KEDA</span></div></div></div>
+</div>
+
+<div class="cl-preview-section">
+    <h2>Project Overview</h2>
+    <p>A document had finished downloading, but its unfinished chunk kept returning through the queue. The worker would start again, reach roughly the same point, exhaust its heap, and terminate. The broker would eventually redeliver the interrupted work.</p>
+    <p>Investigating that failure brought the platform's boundaries into focus. <strong>Streaming controls transfer buffers; conversion can still build a large in-memory model.</strong> Redelivery recovers interrupted work, but repeating a deterministic processing failure needs a different response.</p>
+    <p>The platform connects existing document repositories, relational metadata, cloud storage, and independently deployed services. Its purpose is to offer a consistent query and retrieval interface, then turn selected documents into downloadable exports without tying their processing to one HTTP request.</p>
+</div>
+
+<div class="cl-preview-section">
+    <h2>Skills &amp; Experience Involved</h2>
+    <ul>
+        <li>Java services with GraphQL and source-specific database adapters.</li>
+        <li>Cross-source filtering, deterministic ordering, and cursor pagination.</li>
+        <li>Durable export orchestration and message-based processing.</li>
+        <li>Streaming downloads, document conversion, and temporary-file management.</li>
+        <li>Recovery, bounded retries, correlated outcomes, and partial exports.</li>
+        <li>Kubernetes resource tuning, queue-based scaling, and end-to-end performance investigation.</li>
+    </ul>
+</div>
+
+<div class="cl-preview-section">
+    <h2>Technology Stack</h2>
+    <div class="table-responsive table-wrapper shadow-lg">
+        <table class="table table-hover table-striped">
+            <thead class="thead-dark"><tr><th scope="col">Area</th><th scope="col">Technologies</th><th scope="col">Purpose</th></tr></thead>
+            <tbody>
+                <tr><th scope="row">Service APIs</th><td>Java, Spring Boot, Spring GraphQL, Spring Security</td><td>Normalized metadata queries and HTTP content retrieval.</td></tr>
+                <tr><th scope="row">Data access</th><td>JDBC, JPA, Oracle, SQL Server, Liquibase</td><td>Source adapters, operational state, audit records, and schema evolution.</td></tr>
+                <tr><th scope="row">Processing</th><td>Spring Batch, Aspose.Words</td><td>Per-document partitions and conversion of supported Word-family formats to PDF.</td></tr>
+                <tr><th scope="row">Messaging &amp; storage</th><td>Azure Service Bus, Azure Blob Storage</td><td>Work queues, completion results, change topics, and binary storage.</td></tr>
+                <tr><th scope="row">Runtime &amp; scaling</th><td>AKS, Kubernetes, KEDA, Helm</td><td>Independent deployments, scheduled detectors, resource budgets, and queue-driven replicas.</td></tr>
+                <tr><th scope="row">Delivery &amp; measurement</th><td>Maven, Azure DevOps, Azure Container Registry, Go tooling</td><td>Builds, container deployment, and complete-export performance checks.</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="cl-preview-section mt-4">
+    <h2>Platform Architecture</h2>
+    <p>The source applications retain ownership of content access. Metadata is queried through database adapters, while binary retrieval follows the source applications' APIs, including SharePoint integration behind those boundaries where required.</p>
+    <div class="table-responsive table-wrapper shadow-lg">
+        <table class="table table-hover table-striped">
+            <thead class="thead-dark"><tr><th scope="col">Component</th><th scope="col">Responsibility</th><th scope="col">Main connections</th></tr></thead>
+            <tbody>
+                <tr><th scope="row">Document Query Service</th><td>Normalize metadata and expose downloads.</td><td>GraphQL clients, Oracle/SQL Server adapters, source application APIs.</td></tr>
+                <tr><th scope="row">Export Service</th><td>Persist requests, select documents, distribute chunks, and assemble archives.</td><td>Query service, execution database, work/completion queues, Blob Storage.</td></tr>
+                <tr><th scope="row">Processing Workers</th><td>Retrieve originals, convert supported formats, and report document outcomes.</td><td>Work queue, query service, Blob Storage, completion queue.</td></tr>
+                <tr><th scope="row">Change Detectors</th><td>Find source changes after a persisted watermark.</td><td>Source adapters, scheduled Kubernetes jobs, Service Bus topics.</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="mt-3">Work messages carry identifiers and outcomes. Large binaries move through HTTP and object storage, keeping message size independent of document size. Query orchestration, export coordination, and conversion can therefore use different resource budgets.</p>
+</div>
+
+<div class="cl-preview-section">
+    <h2>Unified Queries &amp; Cross-source Pagination</h2>
+    <p>Spring GraphQL supplies the query entry point. Below it, search services choose sources, adapters interpret revisions and metadata, and SQL dialects handle database differences such as pagination syntax and null ordering. Filters use a known metadata catalog, typed operations, and parameterized values.</p>
+    <p>Related fields can multiply database calls. Batch mappings collect parent identifiers into bounded groups, while request-scoped reuse shares results across fields. Missing relationships are remembered too, avoiding repeated queries for the same absent parent.</p>
+    <p>A global page cannot be built by requesting the same page number from both repositories and concatenating the results. The service reads ordered candidates from each source, merges them, and advances each source's position only for records that enter the returned page.</p>
+    <p>The continuation cursor records the primary sort value and an identifier for deterministic tie-breaking. It is signed and bound to the query criteria. Cross-source ordering accepts one primary field, keeping the seek expressions and merge contract manageable. This federation happens in Java and SQL adapters.</p>
+    <p>Export pagination adds another layer because eligibility filtering can discard metadata candidates. Its cursor also tracks pending eligible identifiers. These are live repositories: a continuation position does not establish a snapshot across independently changing sources.</p>
+</div>
+
+<div class="cl-preview-section">
+    <h2>Sample Workflow: From Request to Download</h2>
+    <ol>
+        <li><strong>Accept and persist:</strong> the Export Service saves the request and preparation state, then returns an accepted response with a batch identifier.</li>
+        <li><strong>Select documents:</strong> a background preparation executor queries metadata and stores the ordered document list. Persisted preparation work can be rediscovered after a restart.</li>
+        <li><strong>Publish chunks:</strong> the combined list is split into bounded work units and sent to Service Bus.</li>
+        <li><strong>Process documents:</strong> workers use Spring Batch partitions, download originals, convert eligible formats, and upload results to Blob Storage.</li>
+        <li><strong>Record outcomes:</strong> correlated completion messages report stored results or explicit failures. Missing outcomes are checked before completion is published.</li>
+        <li><strong>Finalize:</strong> the Export Service assembles metadata and binaries into a temporary ZIP, uploads it, and exposes the archive for streaming download.</li>
+    </ol>
+    <p>A partial export is distinguishable from a complete one. Every chunk being accounted for also differs from the final archive being available: compression and upload remain a separate finalization stage.</p>
+</div>
+
+<div class="cl-preview-section">
+    <h2>Recovery &amp; Message Acknowledgement</h2>
+    <p>Service Bus messages use a lock-based receive mode. Workers renew the lock while processing and acknowledge after the work finishes. If a process stops first, the broker can redeliver the chunk.</p>
+    <p>This is an <strong>at-least-once workflow</strong>. Workers check persisted completion evidence before repeating a finished chunk, and the Export Service recognizes previously completed chunks when consuming results. Publication, persistence, and acknowledgement still cross system boundaries, so recovery must account for interruptions between those steps.</p>
+    <p>Startup recovery handles persisted pending work and batches awaiting archive finalization. A conditional database update claims finalization across replicas, with a retry interval for abandoned claims. A lock inside one JVM would not coordinate overlapping replicas.</p>
+    <p>Structured download errors guide bounded retry policies, and a shared retry budget limits the time one chunk spends retrying documents. Invalid messages are explicitly dead-lettered; replay after exhausted delivery retries remains an operational responsibility.</p>
+</div>
+
+<div class="cl-preview-section">
+    <h2>Streaming, Conversion &amp; Memory</h2>
+    <p>Workers stream downloads into temporary files using a fixed-size copy buffer, enforce size limits during copying, and verify the received length when the source declares one. Interrupted transfers leave partial files that the helper removes.</p>
+    <p>Aspose.Words converts an explicit allowlist of supported Word-family formats, removes headers and footers, and produces PDFs. Other formats pass through as originals. Checking eligibility before invoking the parser avoids using a conversion exception as the normal format-rejection path.</p>
+    <p>Disk staging keeps the input and output bytes out of large application buffers, but the parser still constructs an in-memory document model. Layout complexity can dominate heap demand. A semaphore therefore serializes conversions within each process while other stages retain limited overlap.</p>
+    <p>Temporary storage has its own peak: originals and generated PDFs coexist during conversion, and archive assembly needs space for the finished ZIP. Cleanup surrounds response and processing lifecycles, including failed transfers. Uploaded originals retain their actual extensions.</p>
+    <blockquote><p><strong>Practical lesson:</strong> transfer buffers, parser memory, temporary disk, and final archive assembly need separate budgets. Increasing parallelism puts pressure on all of them.</p></blockquote>
+</div>
+
+<div class="cl-preview-section">
+    <h2>Change Detection, Scaling &amp; Deployment</h2>
+    <p>Scheduled Kubernetes CronJobs query changes after a persisted watermark and publish bounded notifications to Service Bus topics. The watermark advances after successful publication. A partially published run can reappear, so deterministic message identifiers provide stable identities for repeated content.</p>
+    <p>Helm defines separate query, export, and worker deployments with CPU, memory, and ephemeral-storage budgets. Disk-backed temporary volumes support processing with a read-only root filesystem. KEDA uses Service Bus queue depth to adjust worker replicas within configured limits.</p>
+    <p>Queue messages have unequal costs. Replica decisions also need processing duration, conversion concurrency, downstream capacity, and schedulable node resources. Additional workers increase demand on source APIs, database connections, and storage.</p>
+    <p>JVM heap limits cover only part of container memory. Thread stacks, metaspace, native allocations, and I/O overhead also matter. A Java heap-space error, a container memory kill, and a probe-triggered restart require different evidence. More tolerant probes can accommodate a transient garbage-collection pause, but cannot resolve a parser that exhausts its heap.</p>
+    <p>Azure DevOps builds container images through Azure Container Registry tasks and deploys environment-specific Helm values to AKS. Build-qualified tags identify artifacts, while chart linting, manifest rendering, and rollout checks validate delivery.</p>
+</div>
+
+<div class="cl-preview-section">
+    <h2>Measuring the Complete Export</h2>
+    <p>A Go runner submits requests, polls terminal state, downloads archives, checks ZIP integrity, and correlates HTTP timings with audit records. Acceptance latency, time to terminal state, and archive-transfer time describe different parts of the workflow.</p>
+    <p>Timing checks accompany delivered counts, explicit failures, and document-identity checks. A fast partial export is different from a complete result, and polling introduces uncertainty into observed completion time. Relationship resolvers can also add database work after the initial metadata lookup.</p>
+    <p>These measurements guide controlled experiments with page size, concurrency, and resource budgets. They do not establish sustained capacity without comparable workloads and recorded results.</p>
+</div>
+
+<div class="cl-preview-section">
+    <h2>What I Learned</h2>
+    <p>The strongest decisions made ownership explicit: source applications own content access, adapters own metadata interpretation, workers own transformation, and export coordination owns the difference between accepted work, finished chunks, and a downloadable archive.</p>
+    <p>The recurring question was what evidence survives an interruption. A persisted request can be recovered, a recorded outcome can be recognized on redelivery, and a cursor can explain where traversal resumes. Those contracts make failures across independently deployed services reconstructable.</p>
+</div>

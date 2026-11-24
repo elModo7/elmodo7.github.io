@@ -1,0 +1,102 @@
+<div class="cl-preview-section">
+    <h1>Silestone Multinational Microservices</h1>
+    <p><em>Java, Spring, Angular, relational data, enterprise integrations, and cloud delivery in practice.</em></p>
+    <blockquote><p>This article brings together my experience across several enterprise applications. The architecture examples are simplified, and internal workflows and integration details have been generalized.</p></blockquote>
+</div>
+
+<div class="row">
+    <div class="col-md-4 col-12"><div class="info-box bg-gradient-warning shadow-lg"><span class="info-box-icon"><i class="fab fa-java" aria-hidden="true"></i></span><div class="info-box-content"><span class="info-box-number">Java &amp; Spring</span><span class="progress-description">APIs, data, and integrations</span></div></div></div>
+    <div class="col-md-4 col-12"><div class="info-box bg-gradient-danger shadow-lg"><span class="info-box-icon"><i class="fab fa-angular" aria-hidden="true"></i></span><div class="info-box-content"><span class="info-box-number">Angular &amp; Ionic</span><span class="progress-description">Enterprise interfaces</span></div></div></div>
+    <div class="col-md-4 col-12"><div class="info-box bg-gradient-info shadow-lg"><span class="info-box-icon"><i class="fas fa-cloud" aria-hidden="true"></i></span><div class="info-box-content"><span class="info-box-number">Azure &amp; Kubernetes</span><span class="progress-description">Application delivery</span></div></div></div>
+</div>
+
+<div class="cl-preview-section">
+    <h2>Project Overview</h2>
+    <p>Enterprise software becomes interesting where technologies meet. A frontend action depends on an API contract, that contract depends on reference data, and an external integration depends on authentication and environment configuration. My work on these applications involved keeping those connections working as the systems evolved.</p>
+    <p>I contributed to <strong>Java backend development, external integrations, validation, spreadsheet exports, localized notifications, and deployment configuration</strong>. The surrounding applications also provided practical experience with Angular interfaces, persistence, asynchronous execution, and containerized delivery.</p>
+    <p>These examples come from multiple applications, rather than one universal architecture. Maintaining them meant respecting their existing framework versions and compatibility constraints.</p>
+</div>
+
+<div class="cl-preview-section">
+    <h2>Skills &amp; Experience Involved</h2>
+    <ul>
+        <li>Java REST API development and defensive integration mapping.</li>
+        <li>Validation across user input, request models, and reference data.</li>
+        <li>Relational queries, schema evolution, and environment troubleshooting.</li>
+        <li>Spreadsheet generation and compatible multilingual notifications.</li>
+        <li>Focused regression tests with JUnit and AssertJ.</li>
+        <li>Application build and deployment configuration with Azure DevOps and Helm.</li>
+    </ul>
+</div>
+
+<div class="cl-preview-section">
+    <h2>Technology Stack</h2>
+    <div class="table-responsive table-wrapper shadow-lg">
+        <table class="table table-hover table-striped">
+            <thead class="thead-dark"><tr><th scope="col">Layer</th><th scope="col">Technologies</th><th scope="col">Role in the applications</th></tr></thead>
+            <tbody>
+                <tr><th scope="row">Frontend</th><td>Angular, TypeScript, Ionic, RxJS, Kendo UI</td><td>Modular interfaces, reactive forms, typed HTTP services, and configurable grids.</td></tr>
+                <tr><th scope="row">Identity &amp; localization</th><td>MSAL, ngx-translate</td><td>Enterprise sign-in integration and translated interface messages.</td></tr>
+                <tr><th scope="row">Backend</th><td>Java, Spring Boot, Spring Framework, MapStruct</td><td>REST endpoints, dependency injection, validation, service logic, and DTO mapping.</td></tr>
+                <tr><th scope="row">Persistence</th><td>Spring Data JPA, Hibernate, MySQL-compatible databases, Liquibase</td><td>Entity persistence, dynamic filtering, SQL projections, and versioned schema changes.</td></tr>
+                <tr><th scope="row">Background work</th><td>Spring executors, Hazelcast configuration</td><td>Bounded asynchronous work, security-context propagation, and cache integration.</td></tr>
+                <tr><th scope="row">Generated content</th><td>Apache POI, Thymeleaf</td><td>XLSX exports and localized notification templates.</td></tr>
+                <tr><th scope="row">Delivery</th><td>Maven, Docker, Nginx, Azure DevOps, Azure Container Registry, Helm, Kubernetes</td><td>Builds, runtime packaging, frontend serving, and environment-specific deployment.</td></tr>
+                <tr><th scope="row">Quality &amp; operations</th><td>JUnit, AssertJ, Jasmine/Karma configuration, management endpoints, metrics and tracing</td><td>Regression coverage and tools for investigating application behavior.</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="cl-preview-section mt-4">
+    <h2>Application Architecture</h2>
+    <p>A typical interaction moves from an Angular component through a typed HTTP service to a Spring controller. Application services enforce rules, then use repositories or integration adapters to reach the required data.</p>
+    <div class="row text-center">
+        <div class="col-md-3 col-12 mb-3"><div class="info-box bg-gradient-danger h-100"><div class="info-box-content"><strong>1. Interface</strong><span>Angular / Ionic components</span></div></div></div>
+        <div class="col-md-3 col-12 mb-3"><div class="info-box bg-gradient-info h-100"><div class="info-box-content"><strong>2. API client</strong><span>Typed HTTP services / RxJS</span></div></div></div>
+        <div class="col-md-3 col-12 mb-3"><div class="info-box bg-gradient-warning h-100"><div class="info-box-content"><strong>3. Backend</strong><span>Spring controllers / services</span></div></div></div>
+        <div class="col-md-3 col-12 mb-3"><div class="info-box bg-gradient-success h-100"><div class="info-box-content"><strong>4. Dependencies</strong><span>Repositories / API adapters</span></div></div></div>
+    </div>
+    <p>This separation makes changes easier to locate. Components coordinate interactions, HTTP services construct requests, and backend services remain authoritative for validation and application rules. DTOs and MapStruct mappings help keep persistence models separate from external contracts.</p>
+</div>
+
+<div class="cl-preview-section">
+    <h2>Frontend: Forms, Grids &amp; Reactive Requests</h2>
+    <p>Angular feature modules and reusable components organize the interface. Dynamic route imports define loading boundaries, while router preloading can fetch those modules before navigation. Ionic supplies shared interaction patterns, including toast feedback.</p>
+    <p>Reactive forms use <strong>FormBuilder, FormGroup, and validators</strong> for immediate feedback. Kendo UI grids add configurable columns, ordering, visibility, and sorting events. These controls still depend on a clear server contract: a sorting choice in the browser must have the same meaning in the backend.</p>
+    <p>HttpClient services return RxJS Observables. Operators such as <code>concatMap</code> support dependent request sequences, while <code>tap</code> can observe results or trigger feedback. Showing an error notification does not itself recover the failed request, so error handling and subscription lifetimes need explicit attention.</p>
+    <p>With ngx-translate, localization covers validation, grid labels, actions, and failures as well as navigation. Keeping those messages consistent is part of making the workflow understandable.</p>
+</div>
+
+<div class="cl-preview-section">
+    <h2>Backend: Validation, Persistence &amp; Integrations</h2>
+    <p>Spring Data JPA and specification-based query services support dynamic filtering, while SQL views provide reporting-oriented projections. Read-only transactions define query boundaries, and transactional services coordinate local changes.</p>
+    <p>Bean Validation checks required fields and nested request structures. Custom validators can also check whether a requested combination exists in local master data. A request can be valid JSON and still refer to a combination the application does not recognize.</p>
+    <h3>Defensive integration mapping</h3>
+    <p>One of my concrete changes hardened an external API mapper against missing requests and blank optional selections, normalized incoming codes, and retained explicit eligibility checks. Keeping provider-specific rules in the adapter prevents those conventions from spreading through the application.</p>
+    <p>A missing optional field still needs a defined policy: omit it, reject it, or apply a contractually valid default. A null check prevents a crash, but does not decide the correct business behavior. Likewise, a local database transaction cannot make an external HTTP operation atomic with a database update.</p>
+</div>
+
+<div class="cl-preview-section">
+    <h2>Practical Engineering Challenges</h2>
+    <h3>Migration history versus the physical schema</h3>
+    <p>During a preproduction investigation, comparing Liquibase records with the actual schema exposed a missing additive change even though its migration was marked as executed. The useful evidence was the presence of the expected tables, columns, and indexes. Replaying migrations broadly could introduce duplicate objects, so recovery required identifying the exact missing effects and their dependencies.</p>
+    <h3>Following an authentication failure</h3>
+    <p>Another investigation began with a generic frontend server error. Following the backend execution order showed that a service-token request failed before the database query ran. Browser authentication and service authentication were separate dependencies; a valid user session did not establish that the downstream service account could authenticate.</p>
+    <h3>Exports and compatible notifications</h3>
+    <p>I added validation and an XLSX export path for administrative data using Apache POI. Resource cleanup matters here, and writing to an OutputStream does not remove the memory retained by an in-memory workbook.</p>
+    <p>For notifications, I added localized HTML descriptions and action links alongside richer adaptive-card content. Essential information remained available in clients that could not render the card. Focused JUnit and AssertJ tests checked the fallback content and its placement.</p>
+</div>
+
+<div class="cl-preview-section">
+    <h2>Background Work &amp; Application Delivery</h2>
+    <p>Spring executor configuration bounds thread pools and queue capacity, with a wrapper that propagates the security context into asynchronous tasks. Increasing concurrency also increases pressure on databases and external APIs. Process-level synchronization coordinates one JVM; coordination across replicas requires shared state.</p>
+    <p>Maven defines Java builds, Docker packages runtimes, and Nginx serves compiled frontend assets. Azure DevOps pipelines reference shared templates, while Helm supplies Kubernetes values for each environment. My direct delivery contributions included pipeline environment updates and Helm values changes.</p>
+    <p>Deployment configuration includes replicas, probes, resources, and environment settings. Management endpoints, metrics, and tracing support investigation, but configured tooling alone does not establish a measured performance improvement. Container memory also includes thread stacks, metaspace, native allocations, and other overhead beyond the Java heap.</p>
+</div>
+
+<div class="cl-preview-section">
+    <h2>What I Learned</h2>
+    <p>The most useful experience was learning how the boundaries behave under change: frontend and backend validation have distinct responsibilities, migration records need to match physical effects, and an apparent data error may originate in an authentication prerequisite.</p>
+    <p>Across these applications, my contributions connected defensive Java code, rule changes, validation, document generation, tested notification fallbacks, and environment delivery configuration. Keeping contracts, data, configuration, and user interactions aligned was the recurring engineering task.</p>
+</div>
